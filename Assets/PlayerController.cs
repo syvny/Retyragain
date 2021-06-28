@@ -5,7 +5,7 @@ using UnityEngine;
 public class PlayerController : MonoBehaviour
 {
 
-    public float MoveSpeed = 8f;
+    public float MoveSpeed = 6f;
     float currentVelocity;
     public float smoothRotationTime = 0.25f;
     public bool mobileControls = false;
