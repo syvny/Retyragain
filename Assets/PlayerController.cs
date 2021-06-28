@@ -18,6 +18,11 @@ public class PlayerController : MonoBehaviour
 
     public Animator animator;
 
+    Transform swordHand;
+
+    public bool attacking;
+    public float attackTimer;
+
     
 
 
@@ -36,7 +41,35 @@ public class PlayerController : MonoBehaviour
 
     void Update(){
 
+        
+
+        if (attacking)
+        {
+            attackTimer -= Time.deltaTime;
+            if (attackTimer <= 0)
+            {
+                attacking = false;
+               
+            }
+        }
+        else if (Input.GetKey(KeyCode.F))
+        {
+            attacking = true;
+            attackTimer = 1.2f;
+            //Set animator to attack
+            
+        }
+
+
+
+       Movement();
+    }
+
+    void Movement(){
+
         Vector2 input = Vector2.zero;
+
+        
         if(mobileControls){
             input = new Vector2(joystick.Horizontal, joystick.Vertical);
 
@@ -71,6 +104,7 @@ public class PlayerController : MonoBehaviour
            animator.SetBool("MOVING", false);
             
         }
+
 
     }
 
