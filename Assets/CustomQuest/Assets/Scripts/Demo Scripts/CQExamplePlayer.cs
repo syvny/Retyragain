@@ -103,13 +103,17 @@ public class CQExamplePlayer : MonoBehaviour
     /// </summary>
     private void Update()
     {
+        animator.SetBool("Normal Attack (Warrior)", false);
+        
         if (attacking)
         {
             attackTimer -= Time.deltaTime;
             if (attackTimer <= 0)
             {
+                 
                 attacking = false;
-                animator.SetBool("Normal Attack (Warrior)",false);
+                
+               
             }
         }
         else if (Input.GetKey(KeyCode.F))
@@ -118,6 +122,14 @@ public class CQExamplePlayer : MonoBehaviour
             attackTimer = 1.2f;
             animator.SetBool("Normal Attack (Warrior)",true);
         }
+         else if (Input.GetKey(KeyCode.G))
+        {
+            attacking = true;
+            attackTimer = 10f;
+            animator.SetBool("Normal Attack (Warrior)",true);
+        }
+
+        
 
         Movement();
     }

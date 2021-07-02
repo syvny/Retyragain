@@ -5,7 +5,10 @@
 /// </summary>
 public class Sword : MonoBehaviour
 {
-    private CQExamplePlayer player;
+    public CQExamplePlayer player;
+    public GameObject edge;
+
+
 
     /// <summary>
     /// Use this for initialization
@@ -23,13 +26,14 @@ public class Sword : MonoBehaviour
     /// </summary>
     private void Update()
     {
+ 
         if (player.attacking)
         {
-            GetComponent<Collider>().enabled = true;
+            edge.GetComponent<Collider>().enabled = true;
         }
         else
         {
-            GetComponent<Collider>().enabled = false;
+            edge.GetComponent<Collider>().enabled = false;
         }
     }
 }

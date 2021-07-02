@@ -43,7 +43,7 @@ public class Enemy : MonoBehaviour
     /// <param name="other">The other object colliding with this one</param>
     public void OnTriggerEnter(Collider other)
     {
-        if (other.GetComponent<Sword>())
+        if (other.tag == "playerAttack")
         {
             health -= other.GetComponentInParent<CQExamplePlayer>().Damage;
             player = other.GetComponentInParent<CQPlayerObject>();
@@ -52,7 +52,7 @@ public class Enemy : MonoBehaviour
             if (health <= 0)
             { // Checks if this object is out of health, kills it if that is true
                 health = 0;
-                if (questObject == null) { questObject = GetComponent<QuestObject>(); }
+                if (questObject == null) { questObject = GetComponent<QuestObject>(); Destroy(this.gameObject); }
                 if (questObject != null)
                 {
                     if (questObject.criteria)
