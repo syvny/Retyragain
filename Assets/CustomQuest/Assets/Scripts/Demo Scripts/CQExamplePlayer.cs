@@ -68,7 +68,15 @@ public class CQExamplePlayer : MonoBehaviour
     private CQPlayerObject cQPlayer;
 
      public FixedJoystick joystick;
+
+     public FixedButton attackButton;
     public Animator animator;
+
+    public bool canMove;
+
+    public bool dashing;
+
+    float dashTimer;
 
 
     #endregion Field
@@ -104,6 +112,13 @@ public class CQExamplePlayer : MonoBehaviour
     private void Update()
     {
         animator.SetBool("Normal Attack (Warrior)", false);
+        animator.SetBool("Strong Hit",false);
+
+     
+        canMove=true;
+
+
+        //attacking
         
         if (attacking)
         {
@@ -115,23 +130,39 @@ public class CQExamplePlayer : MonoBehaviour
                 
                
             }
+            canMove=false;
+        
         }
-        else if (Input.GetKey(KeyCode.F))
+        else if (attackButton.Pressed)
         {
             attacking = true;
             attackTimer = 1.2f;
+            canMove=false;
+
+            animator.SetBool("MOVING", false);
             animator.SetBool("Normal Attack (Warrior)",true);
+            
         }
-         else if (Input.GetKey(KeyCode.G))
+         else if (Input.GetKey(KeyCode.F))
         {
+            //spin attack still not working
             attacking = true;
-            attackTimer = 10f;
-            animator.SetBool("Normal Attack (Warrior)",true);
+            attackTimer = 2f;
+            canMove=false;
+            animator.SetBool("MOVING", false);
+            animator.SetBool("Strong Hit",true);
         }
 
-        
 
-        Movement();
+        if(canMove){
+            
+           
+            Movement();
+        }
+
+       
+    
+        
     }
 
     public void Movement()
@@ -163,15 +194,34 @@ public class CQExamplePlayer : MonoBehaviour
 
          if(inputDir.magnitude>0){
 
-            animator.SetBool("MOVING", true);
-            
-       
-          
+             //check dash (add cooldown to dash) no cooldown yet
+
+              if(dashing){
+                dashTimer -= Time.deltaTime;
+                if (dashTimer <= 0)
+                     {
+                 
+                    dashing = false;
+                    MoveSpeed -= 10f;
+                    animator.SetBool("Dashing",false);
+                    }
+                animator.SetBool("MOVING", false);
+                animator.SetBool("Dashing",true);
+            }
+            else if(Input.GetKey(KeyCode.G)){
+                dashing=true;
+                MoveSpeed +=10f;
+                dashTimer = 3f;
+            }
+          animator.SetBool("MOVING", true);
+                
+
    
         }
         else{
             
            animator.SetBool("MOVING", false);
+           animator.SetBool("Dashing",false);
             
         }
 
