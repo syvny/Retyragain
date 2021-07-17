@@ -47,7 +47,7 @@ public class camController : MonoBehaviour
         targetRotation = Vector3.SmoothDamp(targetRotation, new Vector3(Xaxis,Yaxis),ref currentvel,smoothtime);
         transform.eulerAngles = targetRotation;
 
-        transform.position = target.position - transform.forward * 5f;
+        transform.position = target.position - transform.forward * 10f;
 
 
     }

@@ -20,8 +20,17 @@ public class PlayerController : MonoBehaviour
 
     Transform swordHand;
 
+    public FixedButton attackButton;
+
     public bool attacking;
     public float attackTimer;
+
+     public bool canMove;
+
+    public bool dashing;
+
+    float dashTimer;
+
 
     
 
@@ -42,32 +51,61 @@ public class PlayerController : MonoBehaviour
     void Update(){
 
         
+        animator.SetBool("Normal Attack (Warrior)", false);
+        animator.SetBool("Strong Hit",false);
 
+     
+        canMove=true;
+
+
+        //attacking
+        
         if (attacking)
         {
             attackTimer -= Time.deltaTime;
             if (attackTimer <= 0)
             {
+                 
                 attacking = false;
+                
                
             }
+            canMove=false;
+        
         }
-        else if (Input.GetKey(KeyCode.F))
+        else if (attackButton.Pressed)
         {
             attacking = true;
             attackTimer = 1.2f;
-            //Set animator to attack
+            canMove=false;
+
+            animator.SetBool("MOVING", false);
+            animator.SetBool("Normal Attack (Warrior)",true);
             
+        }
+         else if (Input.GetKey(KeyCode.F))
+        {
+            //spin attack still not working
+            attacking = true;
+            attackTimer = 2f;
+            canMove=false;
+            animator.SetBool("MOVING", false);
+            animator.SetBool("Strong Hit",true);
         }
 
 
+        if(canMove){
+            
+           
+            Movement();
+        }
 
-       Movement();
+       
     }
 
     void Movement(){
 
-        Vector2 input = Vector2.zero;
+         Vector2 input = Vector2.zero;
 
         
         if(mobileControls){
@@ -91,24 +129,42 @@ public class PlayerController : MonoBehaviour
         currentSpeed = Mathf.SmoothDamp(currentSpeed,targetSpeed,ref speedVelocity,0.1f);
         transform.Translate(transform.forward *targetSpeed * Time.deltaTime,Space.World);
 
-        if(inputDir.magnitude>0){
+         if(inputDir.magnitude>0){
 
-            animator.SetBool("MOVING", true);
-            
-       
-          
+             //check dash (add cooldown to dash) no cooldown yet
+
+              if(dashing){
+                dashTimer -= Time.deltaTime;
+                if (dashTimer <= 0)
+                     {
+                 
+                    dashing = false;
+                    MoveSpeed -= 10f;
+                    
+                    }
+                
+                
+            }
+            else if(Input.GetKey(KeyCode.G)){
+                dashing=true;
+                MoveSpeed +=10f;
+                dashTimer = 3f;
+            }
+          animator.SetBool("MOVING", true);
+                
+
    
         }
         else{
             
            animator.SetBool("MOVING", false);
+          
             
         }
 
 
-    }
-
   
     }
 
+}
 

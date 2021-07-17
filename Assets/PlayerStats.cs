@@ -22,7 +22,7 @@ public class PlayerStats : MonoBehaviour
     public int statPoints = 0;
 
 
-    public int damage;
+    public int damage = 25;
 
     
 
@@ -35,14 +35,18 @@ public class PlayerStats : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        UpdateStats();
     }
 
-    void UpdateLife(){
+    void UpdateStats(){
 
         if(health > maxHealth){
 
             health = maxHealth;
+        }
+        if(mana > maxMana){
+
+            mana = maxMana;
         }
     }
 }
