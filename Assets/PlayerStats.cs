@@ -9,23 +9,39 @@ public class PlayerStats : MonoBehaviour
 
     public static PlayerStats playerStats;
 
+
+    //leveling
     public int level = 1;
+
+    public int experience;
+    public int maxExperience;
+
+    //Stats
 
     public int health = 100;
     public int maxHealth = 100;
     public int mana = 100;
     public int maxMana = 100;
 
-    public int strength = 1;
-    public int intelligence = 1;
 
-    public int statPoints = 0;
-
-
+    //Damage increases as player levels up
     public int damage = 25;
 
-    
+    //Potions
 
+    public int healthPotions;
+
+    public int manaPotions;
+
+    //max number of potions player can carry
+    public int maxPotions = 10;
+
+
+    //Effect values of potions here so i dont need to reference potions in player controller
+    //Values are increased as player progresses
+
+    public int healValue = 50;
+    public int restoreValue = 50;
 
     void Start()
     {
@@ -39,7 +55,8 @@ public class PlayerStats : MonoBehaviour
     }
 
     void UpdateStats(){
-
+        
+        //Health and mana
         if(health > maxHealth){
 
             health = maxHealth;
@@ -48,5 +65,31 @@ public class PlayerStats : MonoBehaviour
 
             mana = maxMana;
         }
+
+        //Potions
+        if(healthPotions>maxPotions){
+            healthPotions=maxPotions;
+
+        }
+
+        if(manaPotions>maxPotions){
+            manaPotions=maxPotions;
+        }
+
+        //Levels
+
+        if(experience>=maxExperience){
+
+            //reset experience
+            experience = experience - maxExperience;
+            //maxexp = maxexp*1.5
+            maxExperience = maxExperience + 100;
+            //leveled up
+            level++;
+            damage+=10;
+            maxHealth+=50;
+            maxMana+=50;
+        }
+
     }
 }

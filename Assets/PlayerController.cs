@@ -5,28 +5,46 @@ using UnityEngine;
 public class PlayerController : MonoBehaviour
 {
 
+    //Movement Variables
+    public bool mobileControls = false;
     public float MoveSpeed = 6f;
     float currentVelocity;
     public float smoothRotationTime = 0.25f;
-    public bool mobileControls = false;
-
-
+    
     float currentSpeed;
     float speedVelocity;
 
+
+    //Cam
     Transform cameraTransform;
 
     public Animator animator;
 
     Transform swordHand;
 
-    public FixedButton attackButton;
+    
 
+    //Buttons
+
+    public FixedButton attackButton;
+    public FixedButton dashButton;
+    public FixedButton specialAttackButton;
+
+    public FixedButton useHealthPotion;
+    public FixedButton useManaPotion;
+
+    //Ref Player Stats
+
+    public PlayerStats playerStats;
+
+
+//Attacking
     public bool attacking;
     public float attackTimer;
 
      public bool canMove;
 
+//Dashing
     public bool dashing;
 
     float dashTimer;
@@ -57,6 +75,21 @@ public class PlayerController : MonoBehaviour
      
         canMove=true;
 
+        //using Potions
+
+        if(useHealthPotion.Pressed && playerStats.healthPotions>=1){
+            playerStats.health+=playerStats.healValue;
+            playerStats.healthPotions--;
+
+        }
+   
+        if(useManaPotion.Pressed && playerStats.manaPotions>=1){
+            playerStats.mana+=playerStats.restoreValue;
+            playerStats.manaPotions--;
+
+        }
+        
+
 
         //attacking
         
@@ -65,7 +98,7 @@ public class PlayerController : MonoBehaviour
             attackTimer -= Time.deltaTime;
             if (attackTimer <= 0)
             {
-                 
+                 Debug.Log("Attacking False");
                 attacking = false;
                 
                
@@ -75,6 +108,7 @@ public class PlayerController : MonoBehaviour
         }
         else if (attackButton.Pressed)
         {
+            Debug.Log("Attacking true");
             attacking = true;
             attackTimer = 1.2f;
             canMove=false;
@@ -83,7 +117,7 @@ public class PlayerController : MonoBehaviour
             animator.SetBool("Normal Attack (Warrior)",true);
             
         }
-         else if (Input.GetKey(KeyCode.F))
+         else if (specialAttackButton.Pressed)
         {
             //spin attack still not working
             attacking = true;
@@ -145,7 +179,8 @@ public class PlayerController : MonoBehaviour
                 
                 
             }
-            else if(Input.GetKey(KeyCode.G)){
+            else if(dashButton.Pressed){
+                Debug.Log("Dahs");
                 dashing=true;
                 MoveSpeed +=10f;
                 dashTimer = 3f;

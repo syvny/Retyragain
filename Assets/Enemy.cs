@@ -9,6 +9,15 @@ public class Enemy : MonoBehaviour
     public PlayerController player;
   
 
+    //Dropable Items
+
+    public GameObject[] dropables;
+    //Dropable item spawn position
+    public GameObject dropPosition;
+
+    //Sight and Attack Ranges
+   
+
     
     public int health = 100;
     
@@ -28,6 +37,7 @@ public class Enemy : MonoBehaviour
 
     void OnTriggerEnter(Collider other){
         if(other.tag == "playerAttack" && player.attacking == true){
+            Debug.Log("Hit");
             //health - playerStats damage
 
             health -= playerStats.damage;
@@ -38,8 +48,24 @@ public class Enemy : MonoBehaviour
     void UpdateHealth(){
 
         if(health<=0){
-            Destroy(gameObject);
+            Die();
 
         }
+    }
+
+    void Die(){
+        //check if array is empty
+        if(dropables[0]!=null){
+            //random number generator
+            var i = Random.Range(0,10);
+            Debug.Log(i);
+            if(i<=dropables.Length){
+                var dropSpawn = (GameObject) Instantiate(dropables[i],dropPosition.transform.position,dropPosition.transform.rotation);
+
+            }
+
+        }
+        Destroy(gameObject);
+
     }
 }
