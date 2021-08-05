@@ -14,6 +14,9 @@ public class PlayerController : MonoBehaviour
     float currentSpeed;
     float speedVelocity;
 
+    public Rigidbody rb;
+
+
 
     //Cam
     Transform cameraTransform;
@@ -39,7 +42,7 @@ public class PlayerController : MonoBehaviour
 
 
 //Attacking
-    public bool attacking;
+    public static bool attacking;
     public float attackTimer;
 
      public bool canMove;
@@ -48,6 +51,9 @@ public class PlayerController : MonoBehaviour
     public bool dashing;
 
     float dashTimer;
+
+//Has Killed Enemy ID of recent kill
+    public static int hasKilled;
 
 
     
@@ -69,8 +75,7 @@ public class PlayerController : MonoBehaviour
     void Update(){
 
         
-        animator.SetBool("Normal Attack (Warrior)", false);
-        animator.SetBool("Strong Hit",false);
+        
 
      
         canMove=true;
@@ -114,7 +119,7 @@ public class PlayerController : MonoBehaviour
             canMove=false;
 
             animator.SetBool("MOVING", false);
-            animator.SetBool("Normal Attack (Warrior)",true);
+            animator.SetTrigger("Attack Sword");
             
         }
          else if (specialAttackButton.Pressed)
@@ -124,12 +129,30 @@ public class PlayerController : MonoBehaviour
             attackTimer = 2f;
             canMove=false;
             animator.SetBool("MOVING", false);
-            animator.SetBool("Strong Hit",true);
+            animator.SetTrigger("Special Attack");
         }
 
 
         if(canMove){
             
+              if(dashing){
+                dashTimer -= Time.deltaTime;
+                if (dashTimer <= 0)
+                     {
+                 
+                    dashing = false;
+                    MoveSpeed -= 10f;
+                    
+                    }
+                
+                
+            }
+            else if(dashButton.Pressed){
+                Debug.Log("Dahs");
+                dashing=true;
+                MoveSpeed +=10f;
+                dashTimer = 3f;
+            }
            
             Movement();
         }
@@ -161,30 +184,19 @@ public class PlayerController : MonoBehaviour
         }
         float targetSpeed = (MoveSpeed * inputDir.magnitude);
         currentSpeed = Mathf.SmoothDamp(currentSpeed,targetSpeed,ref speedVelocity,0.1f);
-        transform.Translate(transform.forward *targetSpeed * Time.deltaTime,Space.World);
+
+       // transform.Translate(transform.forward *targetSpeed * Time.deltaTime,Space.World);
+       Vector3 I =  new Vector3(joystick.Horizontal * MoveSpeed,0,joystick.Vertical * MoveSpeed);
+       
+
+        rb.velocity =  I;
+        
 
          if(inputDir.magnitude>0){
 
              //check dash (add cooldown to dash) no cooldown yet
 
-              if(dashing){
-                dashTimer -= Time.deltaTime;
-                if (dashTimer <= 0)
-                     {
-                 
-                    dashing = false;
-                    MoveSpeed -= 10f;
-                    
-                    }
-                
-                
-            }
-            else if(dashButton.Pressed){
-                Debug.Log("Dahs");
-                dashing=true;
-                MoveSpeed +=10f;
-                dashTimer = 3f;
-            }
+            
           animator.SetBool("MOVING", true);
                 
 

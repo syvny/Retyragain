@@ -7,13 +7,13 @@ public class PlayerStats : MonoBehaviour
     // Start is called before the first frame update
 
 
-    public static PlayerStats playerStats;
+    
 
 
     //leveling
     public int level = 1;
 
-    public int experience;
+    public static int experience = 0;
     public int maxExperience;
 
     //Stats
@@ -25,7 +25,7 @@ public class PlayerStats : MonoBehaviour
 
 
     //Damage increases as player levels up
-    public int damage = 25;
+    public static int damage = 25;
 
     //Potions
 

@@ -54,67 +54,7 @@ ModelImporter:
     rigImportErrors: 
     rigImportWarnings: 
     animationImportErrors: 
-    animationImportWarnings: "\nClip 'Armature|Armature|Animation|Layer0' has import
-      animation warnings that might lower retargeting quality:\nNote: Activate translation
-      DOF on avatar to improve retargeting quality.\n\t'b_L_thumbA' has translation
-      animation that will be discarded.\n\t'b_L_thumbB' has translation animation
-      that will be discarded.\n\t'b_L_thumbC' has translation animation that will
-      be discarded.\n\t'b_L_indexA' has translation animation that will be discarded.\n\t'b_L_indexB'
-      has translation animation that will be discarded.\n\t'b_L_indexC' has translation
-      animation that will be discarded.\n\t'b_L_fingersA' has translation animation
-      that will be discarded.\n\t'b_L_fingersC' has translation animation that will
-      be discarded.\n\t'b_R_thumbA' has translation animation that will be discarded.\n\t'b_R_thumbB'
-      has translation animation that will be discarded.\n\t'b_R_thumbC' has translation
-      animation that will be discarded.\n\t'b_R_fingersA' has translation animation
-      that will be discarded.\n\t'b_R_fingersC' has translation animation that will
-      be discarded.\n\t'b_R_indexA' has translation animation that will be discarded.\n\t'b_R_indexB'
-      has translation animation that will be discarded.\n\t'b_R_indexC' has translation
-      animation that will be discarded.\n\nClip 'Armature|Armature|Default Take|Layer0'
-      has import animation warnings that might lower retargeting quality:\nNote:
-      Activate translation DOF on avatar to improve retargeting quality.\n\t'b_L_thumbA'
-      has translation animation that will be discarded.\n\t'b_L_thumbB' has translation
-      animation that will be discarded.\n\t'b_L_thumbC' has translation animation
-      that will be discarded.\n\t'b_L_indexA' has translation animation that will
-      be discarded.\n\t'b_L_indexB' has translation animation that will be discarded.\n\t'b_L_indexC'
-      has translation animation that will be discarded.\n\t'b_L_fingersA' has translation
-      animation that will be discarded.\n\t'b_L_fingersC' has translation animation
-      that will be discarded.\n\t'b_R_thumbA' has translation animation that will
-      be discarded.\n\t'b_R_thumbB' has translation animation that will be discarded.\n\t'b_R_thumbC'
-      has translation animation that will be discarded.\n\t'b_R_fingersA' has translation
-      animation that will be discarded.\n\t'b_R_fingersC' has translation animation
-      that will be discarded.\n\t'b_R_indexA' has translation animation that will
-      be discarded.\n\t'b_R_indexB' has translation animation that will be discarded.\n\t'b_R_indexC'
-      has translation animation that will be discarded.\n\nClip 'Armature|Armature|start01_Take_001_BaseLayer_001|Layer0'
-      has import animation warnings that might lower retargeting quality:\nNote:
-      Activate translation DOF on avatar to improve retargeting quality.\n\t'b_L_thumbA'
-      has translation animation that will be discarded.\n\t'b_L_thumbB' has translation
-      animation that will be discarded.\n\t'b_L_thumbC' has translation animation
-      that will be discarded.\n\t'b_L_indexA' has translation animation that will
-      be discarded.\n\t'b_L_indexB' has translation animation that will be discarded.\n\t'b_L_indexC'
-      has translation animation that will be discarded.\n\t'b_L_fingersA' has translation
-      animation that will be discarded.\n\t'b_L_fingersC' has translation animation
-      that will be discarded.\n\t'b_R_thumbA' has translation animation that will
-      be discarded.\n\t'b_R_thumbB' has translation animation that will be discarded.\n\t'b_R_thumbC'
-      has translation animation that will be discarded.\n\t'b_R_fingersA' has translation
-      animation that will be discarded.\n\t'b_R_fingersC' has translation animation
-      that will be discarded.\n\t'b_R_indexA' has translation animation that will
-      be discarded.\n\t'b_R_indexB' has translation animation that will be discarded.\n\t'b_R_indexC'
-      has translation animation that will be discarded.\n\nClip 'Armature|Armature|start01_Take_001_BaseLayer|Layer0'
-      has import animation warnings that might lower retargeting quality:\nNote:
-      Activate translation DOF on avatar to improve retargeting quality.\n\t'b_L_thumbA'
-      has translation animation that will be discarded.\n\t'b_L_thumbB' has translation
-      animation that will be discarded.\n\t'b_L_thumbC' has translation animation
-      that will be discarded.\n\t'b_L_indexA' has translation animation that will
-      be discarded.\n\t'b_L_indexB' has translation animation that will be discarded.\n\t'b_L_indexC'
-      has translation animation that will be discarded.\n\t'b_L_fingersA' has translation
-      animation that will be discarded.\n\t'b_L_fingersC' has translation animation
-      that will be discarded.\n\t'b_R_thumbA' has translation animation that will
-      be discarded.\n\t'b_R_thumbB' has translation animation that will be discarded.\n\t'b_R_thumbC'
-      has translation animation that will be discarded.\n\t'b_R_fingersA' has translation
-      animation that will be discarded.\n\t'b_R_fingersC' has translation animation
-      that will be discarded.\n\t'b_R_indexA' has translation animation that will
-      be discarded.\n\t'b_R_indexB' has translation animation that will be discarded.\n\t'b_R_indexC'
-      has translation animation that will be discarded.\n"
+    animationImportWarnings: 
     animationRetargetingWarnings: 
     animationDoRetargetingWarnings: 0
     importAnimatedCustomProperties: 0
@@ -518,7 +458,7 @@ ModelImporter:
     skeletonHasParents: 1
   lastHumanDescriptionAvatarSource: {instanceID: 0}
   autoGenerateAvatarMappingIfUnspecified: 1
-  animationType: 2
+  animationType: 3
   humanoidOversampling: 1
   avatarSetup: 1
   addHumanoidExtraRootOnlyWhenUsingAvatar: 1

@@ -27,7 +27,7 @@ public class Sword : MonoBehaviour
     private void Update()
     {
  
-        if (player.attacking)
+        if (PlayerController.attacking)
         {
             edge.GetComponent<Collider>().enabled = true;
         }

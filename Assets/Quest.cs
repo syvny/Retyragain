@@ -22,6 +22,12 @@ public class Quest : MonoBehaviour
     //Quest Predecessor
     public Quest predecessor;
 
+    //Quest Object -- Enemy
+    public Enemy questObject;
+
+    //Reward
+
+    public int rewardExperience = 100;
 
 
     // Start is called before the first frame update
@@ -49,30 +55,39 @@ public class Quest : MonoBehaviour
         //quest not completed yet
         if(!Completed){
             if(isActive){
+
+                 //Listen to quest needs, kill skeleton
+
+              if(PlayerController.hasKilled == questObject.enemyID){
+                 currentAmount++;
+                //revert to zero
+    
+                 PlayerController.hasKilled = 0;
+                   }
             //check Criteria, current amount meets requirement
                  if(currentAmount >= requiredAmount){
                 //completed quest
                       Completed = true;
+                      //reward player experience points
+                      PlayerStats.experience+=rewardExperience;
                 //isActive false to allow next quest to be active
-                     isActive = false;
+                      isActive = false;
 
                  }
+                else{
+
+                    currentAmount = 0;
+                }
 
             }
 
         }
 
-        
-
-    //Listen to quest needs, kill skeleton
-
-    
-
-        
-
-        //if(completed) then destroy?
 
 
 
     }
+
+
+
 }
