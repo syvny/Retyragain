@@ -72,10 +72,7 @@ public class Enemy : MonoBehaviour
         if(distance<=sightRange){
             //chase player
             //moving
-            Debug.Log("IN SIGHT RANGE");
-            animator.SetBool("IDLE", false);
-            animator.SetBool("RUNNING",true);
-            agent.SetDestination(player.position);
+            chasePlayer();
 
                 if(distance<=attackRange){
 
@@ -96,8 +93,7 @@ public class Enemy : MonoBehaviour
                     //     animator.SetBool("RUNNING",false);
                     //     animator.SetTrigger("ENEMY ATTACK");
                     // }
-                    animator.SetBool("RUNNING",false);
-                 animator.SetTrigger("ENEMY ATTACK");
+                    attackPlayer();
                     
                 }
         }
@@ -112,6 +108,19 @@ public class Enemy : MonoBehaviour
         
     }
 
+    void chasePlayer(){
+         Debug.Log("IN SIGHT RANGE");
+            animator.SetBool("IDLE", false);
+            animator.SetBool("RUNNING",true);
+            agent.SetDestination(player.position);
+
+    }
+
+    void attackPlayer(){
+        //set collider of sword to active
+        animator.SetBool("RUNNING",false);
+        animator.SetTrigger("ENEMY ATTACK");
+    }
     void OnCollisionEnter(Collision other){
         if(other.gameObject.tag == "playerAttack" && PlayerController.attacking == true){
             Debug.Log("Hit");

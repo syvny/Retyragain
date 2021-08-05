@@ -45,6 +45,7 @@ public class Quest : MonoBehaviour
             if(predecessor.Completed){
                 //this quest is activated
                 isActive = true;
+                
             }
         }
         else{
@@ -74,10 +75,7 @@ public class Quest : MonoBehaviour
                       isActive = false;
 
                  }
-                else{
-
-                    currentAmount = 0;
-                }
+               
 
             }
 

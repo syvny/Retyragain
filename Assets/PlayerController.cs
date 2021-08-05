@@ -103,7 +103,7 @@ public class PlayerController : MonoBehaviour
             attackTimer -= Time.deltaTime;
             if (attackTimer <= 0)
             {
-                 Debug.Log("Attacking False");
+                
                 attacking = false;
                 
                
@@ -113,7 +113,7 @@ public class PlayerController : MonoBehaviour
         }
         else if (attackButton.Pressed)
         {
-            Debug.Log("Attacking true");
+            
             attacking = true;
             attackTimer = 1.2f;
             canMove=false;
