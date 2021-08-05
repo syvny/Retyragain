@@ -80,22 +80,24 @@ public class Enemy : MonoBehaviour
                 if(distance<=attackRange){
 
                     
-                    Debug.Log("IN Attack RANGE");
-                    //attack timer
-                    if(attacking){
-                        attackTimer-=Time.deltaTime;
-                        if(attackTimer<=0){
-                            attacking = false;
-                        }
+                    // Debug.Log("IN Attack RANGE");
+                    // //attack timer
+                    // if(attacking){
+                    //     attackTimer-=Time.deltaTime;
+                    //     if(attackTimer<=0){
+                    //         attacking = false;
+                    //     }
 
-                    }else{
-                        //enemy attacks
-                        attacking = true;
-                        attackTimer = 2f;
+                    // }else{
+                    //     //enemy attacks
+                    //     attacking = true;
+                    //     attackTimer = 2f;
                         
-                        animator.SetBool("RUNNING",false);
-                        animator.SetTrigger("ENEMY ATTACK");
-                    }
+                    //     animator.SetBool("RUNNING",false);
+                    //     animator.SetTrigger("ENEMY ATTACK");
+                    // }
+                    animator.SetBool("RUNNING",false);
+                 animator.SetTrigger("ENEMY ATTACK");
                     
                 }
         }
