@@ -9,7 +9,8 @@ public class Quest : MonoBehaviour
     public string questName;
     public string questDescription;
 
-
+    //Check if player can accept a quest
+    public bool canAccept;
     //Check if quest is active
     public bool isActive = false;
     //Check if quest is completed
@@ -44,13 +45,13 @@ public class Quest : MonoBehaviour
             //predecessor is completed
             if(predecessor.Completed){
                 //this quest is activated
-                isActive = true;
+                canAccept = true;
                 
             }
         }
         else{
             //first quest has no predecessor
-            isActive =true;
+            canAccept=true;
         }
 
         //quest not completed yet
@@ -69,6 +70,7 @@ public class Quest : MonoBehaviour
                  if(currentAmount >= requiredAmount){
                 //completed quest
                       Completed = true;
+                      PlayerStats.playerOnQuest = false;
                       //reward player experience points
                       PlayerStats.experience+=rewardExperience;
                 //isActive false to allow next quest to be active
@@ -76,16 +78,16 @@ public class Quest : MonoBehaviour
 
                  }
                
-
             }
-
         }
-
-
-
-
     }
 
+public void acceptQuest(){
 
+    if(canAccept==true){
+        PlayerStats.playerOnQuest = true;
+        isActive = true;
+    }
+}
 
 }

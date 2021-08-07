@@ -44,6 +44,8 @@ public class PlayerStats : MonoBehaviour
     public int restoreValue = 50;
 
     public Animator animator;
+
+    public static bool playerOnQuest = false;
     void Start()
     {
         animator = GetComponent<Animator>();

@@ -62,6 +62,7 @@ public class Enemy : MonoBehaviour
     {
         agent.enabled = true;
         
+        
         animator.SetBool("IDLE", true);
         UpdateHealth();
 
@@ -75,16 +76,12 @@ public class Enemy : MonoBehaviour
             //chase player
             //moving
             chasePlayer();
+            
 
                 if(distance<=attackRange){
+
                     facePlayer();
-                    
-                    // Debug.Log("IN Attack RANGE");
-                   
-                        
-                    //     animator.SetBool("RUNNING",false);
-                    //     animator.SetTrigger("ENEMY ATTACK");
-                    // }
+      
                     attackPlayer();
                     
                 }
@@ -125,16 +122,11 @@ public class Enemy : MonoBehaviour
     void OnCollisionEnter(Collision other){
         if(other.gameObject.tag == "playerAttack" && PlayerController.attacking == true){
             Debug.Log("Hit");
-            //health - playerStats damage
-            
-            //knock back
-
-            //hit animation
-            //knock back
-            rb.AddForce(-agent.nextPosition*500f);
+          
+           
             animator.SetTrigger("Get hit");
             health -= PlayerStats.damage;
-            Debug.Log(health);
+           
         }
 
 
@@ -162,7 +154,14 @@ public class Enemy : MonoBehaviour
             }
 
         }
-        PlayerController.hasKilled = enemyID;
+        //check if player is on quest before changing has killed
+        if(PlayerStats.playerOnQuest){
+             PlayerController.hasKilled = enemyID;
+
+        }
+        else{
+            PlayerController.hasKilled = 0;
+        }
 
         
         col.enabled =false;
