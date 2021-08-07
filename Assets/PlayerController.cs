@@ -55,6 +55,12 @@ public class PlayerController : MonoBehaviour
 //Has Killed Enemy ID of recent kill
     public static int hasKilled;
 
+//Respawn Position
+    public static Transform playerRespawnPosition;
+
+//Dead
+    public static bool isDead =false;
+
 
     
 
@@ -75,7 +81,10 @@ public class PlayerController : MonoBehaviour
     void Update(){
 
         
-        
+        if(isDead){
+            canMove=false;
+            
+        }
 
      
         canMove=true;
@@ -211,6 +220,15 @@ public class PlayerController : MonoBehaviour
 
 
   
+    }
+
+
+    void OnCollisionEnter(Collision other){
+        if(other.gameObject.tag == "enemyAttack"){
+            Debug.Log(playerStats.health);
+            animator.SetTrigger("Get Hit");
+
+        }
     }
 
 }

@@ -21,6 +21,6 @@ public class camController : MonoBehaviour
     {
 
       
-        transform.position = new Vector3(target.transform.position.x,height,target.transform.position.z -10 );
+        transform.position = new Vector3(target.transform.position.x,target.transform.position.y + height,target.transform.position.z -10 );
     }
 }

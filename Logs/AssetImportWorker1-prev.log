@@ -1,0 +1,732 @@
+Using pre-set license
+Built from '2020.3/release' branch; Version is '2020.3.12f1 (b3b2c6512326) revision 11776710'; Using compiler version '192528614'; Build Type 'Release'
+OS: 'Windows 10 Pro; OS build 19042.1110; Version 2009; 64bit' Language: 'en' Physical Memory: 8148 MB
+BatchMode: 1, IsHumanControllingUs: 0, StartBugReporterOnCrash: 0, Is64bit: 1, IsPro: 0
+
+ COMMAND LINE ARGUMENTS:
+D:\UnityEditors\2020.3.12f1\Editor\Unity.exe
+-adb2
+-batchMode
+-noUpm
+-name
+AssetImportWorker1
+-projectPath
+E:/unity projects/Retyragain
+-logFile
+Logs/AssetImportWorker1.log
+-srvPort
+61837
+Successfully changed project path to: E:/unity projects/Retyragain
+E:/unity projects/Retyragain
+Using Asset Import Pipeline V2.
+Refreshing native plugins compatible for Editor in 78.02 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Initialize engine version: 2020.3.12f1 (b3b2c6512326)
+[Subsystems] Discovering subsystems at path D:/UnityEditors/2020.3.12f1/Editor/Data/Resources/UnitySubsystems
+[Subsystems] Discovering subsystems at path E:/unity projects/Retyragain/Assets
+GfxDevice: creating device client; threaded=0
+Direct3D:
+    Version:  Direct3D 11.0 [level 11.1]
+    Renderer: NVIDIA GeForce GTX 1050 Ti (ID=0x1c82)
+    Vendor:   
+    VRAM:     4018 MB
+    Driver:   27.21.14.6647
+Initialize mono
+Mono path[0] = 'D:/UnityEditors/2020.3.12f1/Editor/Data/Managed'
+Mono path[1] = 'D:/UnityEditors/2020.3.12f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit'
+Mono config path = 'D:/UnityEditors/2020.3.12f1/Editor/Data/MonoBleedingEdge/etc'
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56216
+Begin MonoManager ReloadAssembly
+Registering precompiled unity dll's ...
+Register platform support module: D:/UnityEditors/2020.3.12f1/Editor/Data/PlaybackEngines/WebGLSupport/UnityEditor.WebGL.Extensions.dll
+Register platform support module: D:/UnityEditors/2020.3.12f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
+Registered in 0.002533 seconds.
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 103.60 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  4.449 seconds
+Platform modules already initialized, skipping
+Registering precompiled user dll's ...
+Registered in 0.028777 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 0.40 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  2.731 seconds
+Platform modules already initialized, skipping
+========================================================================
+Worker process is ready to serve import requests
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.20 seconds
+Refreshing native plugins compatible for Editor in 0.38 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1413 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 79.7 MB.
+System memory in use after: 79.8 MB.
+
+Unloading 19 unused Assets to reduce memory usage. Loaded Objects now: 1862.
+Total: 2.001300 ms (FindLiveObjects: 0.152900 ms CreateObjectMapping: 0.051800 ms MarkObjects: 1.688300 ms  DeleteObjects: 0.107000 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Import Request.
+  path: Assets/neil 1/New Terrain 2.asset
+  artifactKey: Guid(d967c883f7eebb44098826d371ee6c71) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/neil 1/New Terrain 2.asset using Guid(d967c883f7eebb44098826d371ee6c71) Importer(815301076,1909f56bfc062723c751e8b465ee728b) The tree 02 must use the Nature/Soft Occlusion shader. Otherwise billboarding/lighting will not work correctly.
+
+The tree f05 must use the Nature/Soft Occlusion shader. Otherwise billboarding/lighting will not work correctly.
+
+The tree rock must use the Nature/Soft Occlusion shader. Otherwise billboarding/lighting will not work correctly.
+
+The tree TREE must use the Nature/Soft Occlusion shader. Otherwise billboarding/lighting will not work correctly.
+
+The tree grass couldn't be instanced because the prefab contains no valid mesh renderer.
+
+The tree treee couldn't be instanced because the prefab contains no valid mesh renderer.
+
+The tree Tree Type1 04 must use the Nature/Soft Occlusion shader. Otherwise billboarding/lighting will not work correctly.
+
+The tree Tree_07 (7) Variant must use the Nature/Soft Occlusion shader. Otherwise billboarding/lighting will not work correctly.
+
+The tree 10 must use the Nature/Soft Occlusion shader. Otherwise billboarding/lighting will not work correctly.
+
+The tree 3 must use the Nature/Soft Occlusion shader. Otherwise billboarding/lighting will not work correctly.
+
+ -> (artifact id: 'd0c71f9ca7d175d0fe9a3917944521fb') in 0.581823 seconds 
+  Import took 0.604640 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000320 seconds.
+  path: Assets/TerrainData_d7fca4ba-92c9-48df-9c86-742d22f17fb9.asset
+  artifactKey: Guid(19eae5d2095825b4086ce263d25f6dbc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/TerrainData_d7fca4ba-92c9-48df-9c86-742d22f17fb9.asset using Guid(19eae5d2095825b4086ce263d25f6dbc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '096ae2e2c09ff4bb6d0e6834ccb95f8f') in 0.045268 seconds 
+  Import took 0.056451 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000189 seconds.
+  path: Assets/neil 1/map.unity
+  artifactKey: Guid(920ab3c885375284e8b38332e2d8db59) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/neil 1/map.unity using Guid(920ab3c885375284e8b38332e2d8db59) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '29a0b119f90eeac7fa2058fb78e4c269') in 0.031801 seconds 
+  Import took 0.037031 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000334 seconds.
+  path: Assets/TerrainData_ec44fdb7-529b-4ffd-9cea-73b9bdb7d133.asset
+  artifactKey: Guid(2935e58ba4b879e43a7789e016be56fc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/TerrainData_ec44fdb7-529b-4ffd-9cea-73b9bdb7d133.asset using Guid(2935e58ba4b879e43a7789e016be56fc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '39e1a6b9f3294a7726f2d638295c92c4') in 0.055794 seconds 
+  Import took 0.059010 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000184 seconds.
+  path: Assets/TerrainData_c5dd9950-bba6-4763-ab51-c104eda97d6d.asset
+  artifactKey: Guid(7a07e38a1c7af9b4b92dc5a8af4b23e3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/TerrainData_c5dd9950-bba6-4763-ab51-c104eda97d6d.asset using Guid(7a07e38a1c7af9b4b92dc5a8af4b23e3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '440f3be09210c5840cd940439a6ebaaa') in 0.055288 seconds 
+  Import took 0.058175 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000196 seconds.
+  path: Assets/neil 1/TerrainData_23c76efc-4f58-4501-9360-e851cb3570ef.asset
+  artifactKey: Guid(fcac8585a2ca2bf458080109f5fb7e21) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/neil 1/TerrainData_23c76efc-4f58-4501-9360-e851cb3570ef.asset using Guid(fcac8585a2ca2bf458080109f5fb7e21) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd94de5b01e0bd5e2f3635a600e5b6f03') in 0.047904 seconds 
+  Import took 0.063806 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000178 seconds.
+  path: Assets/TerrainData_00359ce5-09b7-4a5a-aff6-8d90015f19ea.asset
+  artifactKey: Guid(1d61e9c57249efb4f8c0c11af16e6695) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/TerrainData_00359ce5-09b7-4a5a-aff6-8d90015f19ea.asset using Guid(1d61e9c57249efb4f8c0c11af16e6695) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e74ff68915759d1a96473e51aadcd97d') in 0.057904 seconds 
+  Import took 0.060371 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000181 seconds.
+  path: Assets/TerrainData_811c7748-55fd-499f-8b2c-25143b1a9954.asset
+  artifactKey: Guid(ad5ab762f6b0f5c41b74845c9cbc08b1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/TerrainData_811c7748-55fd-499f-8b2c-25143b1a9954.asset using Guid(ad5ab762f6b0f5c41b74845c9cbc08b1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6db118ad12d06cfaace5a240c55fcf17') in 0.040701 seconds 
+  Import took 0.060274 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000182 seconds.
+  path: Assets/neil 1/TerrainData_27f17373-9683-4b55-8ff4-a9f37107b748.asset
+  artifactKey: Guid(32298c18811a1df4ba7b8c9e0ca39865) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/neil 1/TerrainData_27f17373-9683-4b55-8ff4-a9f37107b748.asset using Guid(32298c18811a1df4ba7b8c9e0ca39865) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f2936d526c40331a1d4bbc8cb7d4c7c4') in 0.038599 seconds 
+  Import took 0.047331 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000187 seconds.
+  path: Assets/TerrainData_1139d718-9f8f-41f8-8fe3-702f2c15dd69.asset
+  artifactKey: Guid(807ba8084d9fee54caa2cfebf5a6bb8a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/TerrainData_1139d718-9f8f-41f8-8fe3-702f2c15dd69.asset using Guid(807ba8084d9fee54caa2cfebf5a6bb8a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e62f58568d87c06c639975ae1e5fe1e9') in 0.038433 seconds 
+  Import took 0.040868 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000176 seconds.
+  path: Assets/TerrainData_bc1cb08e-86e8-41ba-9e5e-463dee00b512.asset
+  artifactKey: Guid(53bf4c4d4bd53b8468eea3253d1c9e26) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/TerrainData_bc1cb08e-86e8-41ba-9e5e-463dee00b512.asset using Guid(53bf4c4d4bd53b8468eea3253d1c9e26) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ba9ad93bf3e5f2fc97816fc41df913b9') in 0.052411 seconds 
+  Import took 0.055112 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000192 seconds.
+  path: Assets/neil 1/TerrainData_5119c2ae-e412-4784-a697-ade43da2e97d.asset
+  artifactKey: Guid(d7d3df14bdb4dd041a5870c610c5583e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/neil 1/TerrainData_5119c2ae-e412-4784-a697-ade43da2e97d.asset using Guid(d7d3df14bdb4dd041a5870c610c5583e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c46da8fc398f7f9d986102fff6f94eff') in 0.051275 seconds 
+  Import took 0.060060 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000204 seconds.
+  path: Assets/TerrainData_5c09f6bd-f88d-4361-a86e-069421d97fd3.asset
+  artifactKey: Guid(c2960572900327e4b9173bbfa0090e77) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/TerrainData_5c09f6bd-f88d-4361-a86e-069421d97fd3.asset using Guid(c2960572900327e4b9173bbfa0090e77) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9ec12af43d4eb929d8656dfa296e9186') in 0.046976 seconds 
+  Import took 0.060496 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000178 seconds.
+  path: Assets/TerrainData_a1dbe471-a63a-42f0-869d-beff93fbae98.asset
+  artifactKey: Guid(906624b51d905964e94b9be7eed83b2a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/TerrainData_a1dbe471-a63a-42f0-869d-beff93fbae98.asset using Guid(906624b51d905964e94b9be7eed83b2a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e7273c1ca29f44a281ea80d20afc7a21') in 0.043827 seconds 
+  Import took 0.046212 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000194 seconds.
+  path: Assets/TerrainData_aeb46db3-f514-41e4-8a9d-0bba341d27ac.asset
+  artifactKey: Guid(243ba6d0379f65041a638cf143552c61) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/TerrainData_aeb46db3-f514-41e4-8a9d-0bba341d27ac.asset using Guid(243ba6d0379f65041a638cf143552c61) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1fff6aece1f7de32322dc9cc0c83942a') in 0.019787 seconds 
+  Import took 0.045744 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000320 seconds.
+  path: Assets/TerrainData_d40a4ed9-40eb-4939-a8b3-5cb864c05007.asset
+  artifactKey: Guid(31b3a5a3c74d5bf48babedbb93ff0f9e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/TerrainData_d40a4ed9-40eb-4939-a8b3-5cb864c05007.asset using Guid(31b3a5a3c74d5bf48babedbb93ff0f9e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2ebaed66fbed0fa364ecd25fc357ce78') in 0.034584 seconds 
+  Import took 0.037358 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000208 seconds.
+  path: Assets/neil 1/TerrainData_7dcb6846-ac8b-426e-88d2-981137320612.asset
+  artifactKey: Guid(319959e92d9c8a34892ed272385c6fd3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/neil 1/TerrainData_7dcb6846-ac8b-426e-88d2-981137320612.asset using Guid(319959e92d9c8a34892ed272385c6fd3) Importer(815301076,1909f56bfc062723c751e8b465ee728b) The tree TREE must use the Nature/Soft Occlusion shader. Otherwise billboarding/lighting will not work correctly.
+
+The tree Tree_07 must use the Nature/Soft Occlusion shader. Otherwise billboarding/lighting will not work correctly.
+
+The tree ONE must use the Nature/Soft Occlusion shader. Otherwise billboarding/lighting will not work correctly.
+
+The tree 10 must use the Nature/Soft Occlusion shader. Otherwise billboarding/lighting will not work correctly.
+
+The tree rock must use the Nature/Soft Occlusion shader. Otherwise billboarding/lighting will not work correctly.
+
+The tree 02 must use the Nature/Soft Occlusion shader. Otherwise billboarding/lighting will not work correctly.
+
+ -> (artifact id: 'c363bc48f771e70133fdf9bbcf1b3dad') in 0.054709 seconds 
+  Import took 0.059520 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000179 seconds.
+  path: Assets/TerrainData_045c75cc-791e-4a14-a582-ab87209950bc.asset
+  artifactKey: Guid(86641a860c542a04591bd91ec24fec04) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/TerrainData_045c75cc-791e-4a14-a582-ab87209950bc.asset using Guid(86641a860c542a04591bd91ec24fec04) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e117d5355ad7c889d1a0316bc5874518') in 0.035940 seconds 
+  Import took 0.043477 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000183 seconds.
+  path: Assets/neil 1/TerrainData_40f1bdd5-9208-44fa-97a3-73a1fb2d4a91.asset
+  artifactKey: Guid(b2490b593701f194a8cda55f6041ad6e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/neil 1/TerrainData_40f1bdd5-9208-44fa-97a3-73a1fb2d4a91.asset using Guid(b2490b593701f194a8cda55f6041ad6e) Importer(815301076,1909f56bfc062723c751e8b465ee728b) The tree TREE must use the Nature/Soft Occlusion shader. Otherwise billboarding/lighting will not work correctly.
+
+The tree grass couldn't be instanced because the prefab contains no valid mesh renderer.
+
+The tree 02 must use the Nature/Soft Occlusion shader. Otherwise billboarding/lighting will not work correctly.
+
+The tree 3 must use the Nature/Soft Occlusion shader. Otherwise billboarding/lighting will not work correctly.
+
+The tree 10 must use the Nature/Soft Occlusion shader. Otherwise billboarding/lighting will not work correctly.
+
+ -> (artifact id: '23bf333d8ca1425f0c1eaa84403f4450') in 0.059997 seconds 
+  Import took 0.074526 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000261 seconds.
+  path: Assets/TerrainData_159c8602-6098-4b01-8484-742071b615f1.asset
+  artifactKey: Guid(529705141cc48d5418fa3b19aca237a4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/TerrainData_159c8602-6098-4b01-8484-742071b615f1.asset using Guid(529705141cc48d5418fa3b19aca237a4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '29231c8747b50e992e63e7be4ade0f7d') in 0.035595 seconds 
+  Import took 0.038239 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000180 seconds.
+  path: Assets/TerrainData_90bcf6c2-5cf3-4b99-baef-13fa43a139da.asset
+  artifactKey: Guid(51c5934edff9dd34e802c7bcea73dad1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/TerrainData_90bcf6c2-5cf3-4b99-baef-13fa43a139da.asset using Guid(51c5934edff9dd34e802c7bcea73dad1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '65c738f8ef73cc4dfd119452b6f426e5') in 0.033817 seconds 
+  Import took 0.045116 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000192 seconds.
+  path: Assets/TerrainData_17c5ae13-2152-4da0-9e57-0ff4ae2c9e16.asset
+  artifactKey: Guid(74fee03387fbad54ab8b888873c1bcd8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/TerrainData_17c5ae13-2152-4da0-9e57-0ff4ae2c9e16.asset using Guid(74fee03387fbad54ab8b888873c1bcd8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '797f1b77c3e75de31bbd86544b807e9d') in 0.033191 seconds 
+  Import took 0.044257 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000182 seconds.
+  path: Assets/TerrainData_20f05241-ccc0-41dc-92a7-783b21448aee.asset
+  artifactKey: Guid(1eaa6425e654319438beb3618cf763f8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/TerrainData_20f05241-ccc0-41dc-92a7-783b21448aee.asset using Guid(1eaa6425e654319438beb3618cf763f8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '79ab207160bd76e9ca8816875156be0a') in 0.034537 seconds 
+  Import took 0.042262 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000186 seconds.
+  path: Assets/TerrainData_d5a66337-8eb2-4ca7-92d8-eb385c94bd46.asset
+  artifactKey: Guid(e7d6790d3533eaf42ac197ffc545c3c6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/TerrainData_d5a66337-8eb2-4ca7-92d8-eb385c94bd46.asset using Guid(e7d6790d3533eaf42ac197ffc545c3c6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8b5a343c22d053fc17d8a07e58a1ee0f') in 0.036415 seconds 
+  Import took 0.043905 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000195 seconds.
+  path: Assets/TerrainData_2ffd49a1-bd0a-4fc3-b4e8-e3c554356f76.asset
+  artifactKey: Guid(d314f679a7b15494a91c7e70e363753e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/TerrainData_2ffd49a1-bd0a-4fc3-b4e8-e3c554356f76.asset using Guid(d314f679a7b15494a91c7e70e363753e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6f7bc426f9dca54031416b8371fb11b7') in 0.043296 seconds 
+  Import took 0.055137 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000188 seconds.
+  path: Assets/TerrainData_9bc221fb-6936-4916-ad90-640772b625da.asset
+  artifactKey: Guid(0b74b29c3769aaf4c8dbaf6271152cff) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/TerrainData_9bc221fb-6936-4916-ad90-640772b625da.asset using Guid(0b74b29c3769aaf4c8dbaf6271152cff) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '611ce9069a9d35e9b4898235761d432a') in 0.047757 seconds 
+  Import took 0.099394 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000365 seconds.
+  path: Assets/TerrainData_f3eb50dd-7abc-4814-81f1-afdf4b10b065.asset
+  artifactKey: Guid(0ac00724340d61a4193ac88fa503d14d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/TerrainData_f3eb50dd-7abc-4814-81f1-afdf4b10b065.asset using Guid(0ac00724340d61a4193ac88fa503d14d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '93f399d2ba409dc5f11c9e5efc8d3e3e') in 0.034803 seconds 
+  Import took 0.044554 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000402 seconds.
+  path: Assets/TerrainData_04ebdf22-c39a-4179-9922-bb287ae8ff5f.asset
+  artifactKey: Guid(a964918430e56e24ea46a4f3bbc610e3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/TerrainData_04ebdf22-c39a-4179-9922-bb287ae8ff5f.asset using Guid(a964918430e56e24ea46a4f3bbc610e3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '859d566c204acf9f23fec98602406dfa') in 0.035020 seconds 
+  Import took 0.038049 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000203 seconds.
+  path: Assets/neil 1/TerrainData_1ebfa91b-0a23-40cf-9afe-e53d3c995ca2.asset
+  artifactKey: Guid(14330572918d0c04db7f6800bef9683a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/neil 1/TerrainData_1ebfa91b-0a23-40cf-9afe-e53d3c995ca2.asset using Guid(14330572918d0c04db7f6800bef9683a) Importer(815301076,1909f56bfc062723c751e8b465ee728b) The tree TREE must use the Nature/Soft Occlusion shader. Otherwise billboarding/lighting will not work correctly.
+
+The tree grass couldn't be instanced because the prefab contains no valid mesh renderer.
+
+The tree 02 must use the Nature/Soft Occlusion shader. Otherwise billboarding/lighting will not work correctly.
+
+The tree Tree_07 must use the Nature/Soft Occlusion shader. Otherwise billboarding/lighting will not work correctly.
+
+The tree ONE must use the Nature/Soft Occlusion shader. Otherwise billboarding/lighting will not work correctly.
+
+The tree f05 must use the Nature/Soft Occlusion shader. Otherwise billboarding/lighting will not work correctly.
+
+The tree treee couldn't be instanced because the prefab contains no valid mesh renderer.
+
+The tree Tree Type1 04 must use the Nature/Soft Occlusion shader. Otherwise billboarding/lighting will not work correctly.
+
+Tree prefab at index 8 is missing.
+
+Tree prefab at index 9 is missing.
+
+Tree prefab at index 10 is missing.
+
+The tree Tree_07 (7) Variant must use the Nature/Soft Occlusion shader. Otherwise billboarding/lighting will not work correctly.
+
+The tree 10 must use the Nature/Soft Occlusion shader. Otherwise billboarding/lighting will not work correctly.
+
+The tree 3 must use the Nature/Soft Occlusion shader. Otherwise billboarding/lighting will not work correctly.
+
+ -> (artifact id: 'e421f90fa8acf644e62dc416adae32e4') in 0.057535 seconds 
+  Import took 0.081858 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000192 seconds.
+  path: Assets/neil 1/TerrainData_31a5522f-7143-453b-a097-754fbcb469e7.asset
+  artifactKey: Guid(98dc5ae581f4aac4dbad1c862c0b1eb0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/neil 1/TerrainData_31a5522f-7143-453b-a097-754fbcb469e7.asset using Guid(98dc5ae581f4aac4dbad1c862c0b1eb0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e516142c00a64e8285657b613fe26d57') in 0.037414 seconds 
+  Import took 0.040157 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.001481 seconds.
+  path: Assets/neil 1/TerrainData_58693a94-27a7-432f-88a0-65ea5f76f20c.asset
+  artifactKey: Guid(3e3a656aa8fc75f4f91858f3d940fc63) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/neil 1/TerrainData_58693a94-27a7-432f-88a0-65ea5f76f20c.asset using Guid(3e3a656aa8fc75f4f91858f3d940fc63) Importer(815301076,1909f56bfc062723c751e8b465ee728b) The tree 02 must use the Nature/Soft Occlusion shader. Otherwise billboarding/lighting will not work correctly.
+
+The tree f05 must use the Nature/Soft Occlusion shader. Otherwise billboarding/lighting will not work correctly.
+
+Tree prefab at index 2 is missing.
+
+The tree 10 must use the Nature/Soft Occlusion shader. Otherwise billboarding/lighting will not work correctly.
+
+The tree 3 must use the Nature/Soft Occlusion shader. Otherwise billboarding/lighting will not work correctly.
+
+The tree Tree Type1 04 must use the Nature/Soft Occlusion shader. Otherwise billboarding/lighting will not work correctly.
+
+ -> (artifact id: '8a8c1cf3689ba809527c9c2c55cf7744') in 0.086538 seconds 
+  Import took 0.090555 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000201 seconds.
+  path: Assets/TerrainData_383fa184-6c57-4709-b947-40381ead2c90.asset
+  artifactKey: Guid(f64a4780553391c448abeaad13f2e4de) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/TerrainData_383fa184-6c57-4709-b947-40381ead2c90.asset using Guid(f64a4780553391c448abeaad13f2e4de) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '10146309c02fba3641ca1a28590edbb3') in 0.035329 seconds 
+  Import took 0.040019 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000179 seconds.
+  path: Assets/neil 1/TerrainData_9422338d-62fe-45ed-86a6-11e853faf1de.asset
+  artifactKey: Guid(a32594f15513a2b4c8c2fa677100a3b6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/neil 1/TerrainData_9422338d-62fe-45ed-86a6-11e853faf1de.asset using Guid(a32594f15513a2b4c8c2fa677100a3b6) Importer(815301076,1909f56bfc062723c751e8b465ee728b) The tree rock must use the Nature/Soft Occlusion shader. Otherwise billboarding/lighting will not work correctly.
+
+The tree TREE must use the Nature/Soft Occlusion shader. Otherwise billboarding/lighting will not work correctly.
+
+The tree 02 must use the Nature/Soft Occlusion shader. Otherwise billboarding/lighting will not work correctly.
+
+ -> (artifact id: '93a622e69b65f23cb9a0ff4006c076a5') in 0.058450 seconds 
+  Import took 0.061057 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000187 seconds.
+  path: Assets/TerrainData_feb05ef1-cad5-4e0c-9199-40de2bc85f35.asset
+  artifactKey: Guid(47b41fcb38e4a334d869dead05b6e109) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/TerrainData_feb05ef1-cad5-4e0c-9199-40de2bc85f35.asset using Guid(47b41fcb38e4a334d869dead05b6e109) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '75f9aaea2115fb6be9d9410c850f9911') in 0.038814 seconds 
+  Import took 0.041716 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000204 seconds.
+  path: Assets/neil 1/TerrainData_728e97aa-8745-4f5b-b3eb-d570a7fbfa6b.asset
+  artifactKey: Guid(cff289dfc18ab4d4eb6356aefaea5ac7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/neil 1/TerrainData_728e97aa-8745-4f5b-b3eb-d570a7fbfa6b.asset using Guid(cff289dfc18ab4d4eb6356aefaea5ac7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a7bfc490506eb764b3675c10d4de5bbe') in 0.035274 seconds 
+  Import took 0.039098 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000555 seconds.
+  path: Assets/TerrainData_08e805ab-2850-43fa-b699-215225965e30.asset
+  artifactKey: Guid(8740393bd0957814693c9135fb9b3a69) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/TerrainData_08e805ab-2850-43fa-b699-215225965e30.asset using Guid(8740393bd0957814693c9135fb9b3a69) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0fa0f65829797966a71b42c09d77f5ea') in 0.041022 seconds 
+  Import took 0.043621 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000208 seconds.
+  path: Assets/TerrainData_def7c455-5e97-447d-b9a4-dbacfae51261.asset
+  artifactKey: Guid(e9a7272730ebdb74fb9151087ff75974) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/TerrainData_def7c455-5e97-447d-b9a4-dbacfae51261.asset using Guid(e9a7272730ebdb74fb9151087ff75974) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6ffdae900a132d6621e7fba7f305468c') in 0.036714 seconds 
+  Import took 0.060834 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000192 seconds.
+  path: Assets/TerrainData_cdc25d4b-782e-475f-aac1-815cd60c779b.asset
+  artifactKey: Guid(3db96f304101ee541b6058ab08f30dc8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/TerrainData_cdc25d4b-782e-475f-aac1-815cd60c779b.asset using Guid(3db96f304101ee541b6058ab08f30dc8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'bea2fd701a3bd6b3e9721606b3acfa38') in 0.033951 seconds 
+  Import took 0.036556 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000251 seconds.
+  path: Assets/neil 1/TerrainData_a8ede560-2477-45ad-b970-29b5874f32bf.asset
+  artifactKey: Guid(1654259e2d3d33b4eab37f9c2b4be83a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/neil 1/TerrainData_a8ede560-2477-45ad-b970-29b5874f32bf.asset using Guid(1654259e2d3d33b4eab37f9c2b4be83a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '705a5fedaf5be1a35e975c8d095084fc') in 0.035263 seconds 
+  Import took 0.037894 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000201 seconds.
+  path: Assets/TerrainData_7654cbfc-9b94-4c5e-8d27-8622c9b26ce8.asset
+  artifactKey: Guid(7c0721c6944ab2841a51dfcb9b095446) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/TerrainData_7654cbfc-9b94-4c5e-8d27-8622c9b26ce8.asset using Guid(7c0721c6944ab2841a51dfcb9b095446) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c02ab81484bd6d2b820a66ba0592e832') in 0.040559 seconds 
+  Import took 0.044359 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000209 seconds.
+  path: Assets/neil 1/TerrainData_847a73ba-ac77-4e3a-9074-051d0fb9a26d.asset
+  artifactKey: Guid(481e89864e1b1cf4db6a3f6bd5ac5789) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/neil 1/TerrainData_847a73ba-ac77-4e3a-9074-051d0fb9a26d.asset using Guid(481e89864e1b1cf4db6a3f6bd5ac5789) Importer(815301076,1909f56bfc062723c751e8b465ee728b) The tree 02 must use the Nature/Soft Occlusion shader. Otherwise billboarding/lighting will not work correctly.
+
+ -> (artifact id: '76a94e59660a3eb7a2ca74343bd7a011') in 0.067477 seconds 
+  Import took 0.070681 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000201 seconds.
+  path: Assets/TerrainData_383a83cc-cb24-441e-a625-beaf086c6a65.asset
+  artifactKey: Guid(1392ca238532cbd4ea32128f1cef6a09) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/TerrainData_383a83cc-cb24-441e-a625-beaf086c6a65.asset using Guid(1392ca238532cbd4ea32128f1cef6a09) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '04a79158bb1d58738523178aa6e34a3a') in 0.035320 seconds 
+  Import took 0.037878 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000214 seconds.
+  path: Assets/neil 1/TerrainData_a802611b-ebf0-4d31-a7fa-72449b90d1a8.asset
+  artifactKey: Guid(062296c22d78c6a47bcfda88ff6a6399) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/neil 1/TerrainData_a802611b-ebf0-4d31-a7fa-72449b90d1a8.asset using Guid(062296c22d78c6a47bcfda88ff6a6399) Importer(815301076,1909f56bfc062723c751e8b465ee728b) The tree 10 must use the Nature/Soft Occlusion shader. Otherwise billboarding/lighting will not work correctly.
+
+ -> (artifact id: '90c8a0b13e3725a289c7b0324ca80419') in 0.071271 seconds 
+  Import took 0.074461 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000229 seconds.
+  path: Assets/neil 1/TerrainData_6343bde1-2a35-483e-8d23-6e6d1d7f55a7.asset
+  artifactKey: Guid(26ad841f6477ab640ab131ed9d608b1e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/neil 1/TerrainData_6343bde1-2a35-483e-8d23-6e6d1d7f55a7.asset using Guid(26ad841f6477ab640ab131ed9d608b1e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e7ad64f641d950776d69b307371aa2da') in 0.050542 seconds 
+  Import took 0.053040 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000199 seconds.
+  path: Assets/neil 1/TerrainData_60d8e390-82e4-46f1-82cd-3a796946bacc.asset
+  artifactKey: Guid(097634693788bd044b9c7a26f2d10c60) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/neil 1/TerrainData_60d8e390-82e4-46f1-82cd-3a796946bacc.asset using Guid(097634693788bd044b9c7a26f2d10c60) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7b119a6dabb5ca3d004c02fe7b990a89') in 0.051798 seconds 
+  Import took 0.091658 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000186 seconds.
+  path: Assets/TerrainData_61ba629e-76cb-4e99-af40-ba289c94ea60.asset
+  artifactKey: Guid(fa7626cccc99e624ebf73726747fe7ea) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/TerrainData_61ba629e-76cb-4e99-af40-ba289c94ea60.asset using Guid(fa7626cccc99e624ebf73726747fe7ea) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '48cd4fa4ecc9a8b665806ee58c1b6673') in 0.038228 seconds 
+  Import took 0.040830 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000181 seconds.
+  path: Assets/neil 1/TerrainData_587587d1-e54a-472a-81ea-0c0bdc7eb8fb.asset
+  artifactKey: Guid(5453ba98473bdb846a1e8363ddb08d65) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/neil 1/TerrainData_587587d1-e54a-472a-81ea-0c0bdc7eb8fb.asset using Guid(5453ba98473bdb846a1e8363ddb08d65) Importer(815301076,1909f56bfc062723c751e8b465ee728b) The tree TREE must use the Nature/Soft Occlusion shader. Otherwise billboarding/lighting will not work correctly.
+
+The tree Tree_07 must use the Nature/Soft Occlusion shader. Otherwise billboarding/lighting will not work correctly.
+
+The tree ONE must use the Nature/Soft Occlusion shader. Otherwise billboarding/lighting will not work correctly.
+
+The tree 10 must use the Nature/Soft Occlusion shader. Otherwise billboarding/lighting will not work correctly.
+
+The tree 02 must use the Nature/Soft Occlusion shader. Otherwise billboarding/lighting will not work correctly.
+
+ -> (artifact id: 'c0f5e78661e718ab7253b8fa658f29df') in 0.068942 seconds 
+  Import took 0.071614 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 134.759298 seconds.
+  path: Assets/Prefab/Level.prefab
+  artifactKey: Guid(590db9148278d5f4cb8b5a6f87cd8bf9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/Level.prefab using Guid(590db9148278d5f4cb8b5a6f87cd8bf9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9a84f38d422f9334d27bfb16e972b58b') in 0.623472 seconds 
+  Import took 0.681123 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 14.063020 seconds.
+  path: Assets/Scenes/Level 1.unity
+  artifactKey: Guid(d1aa8fb92b8ae384096f5b91a823be9f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/Level 1.unity using Guid(d1aa8fb92b8ae384096f5b91a823be9f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8a652c432d4799e0bd44043af78eca3c') in 0.006570 seconds 
+  Import took 0.016495 seconds .
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.003506 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 0.44 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.268 seconds
+Platform modules already initialized, skipping
+Switching build target platform(19) subTarget(0) extendedPlatform(0) -> platform(13) subTarget(65536) extendedPlatform(0)
+Refreshing native plugins compatible for Editor in 0.39 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1411 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 87.2 MB.
+System memory in use after: 87.3 MB.
+
+Unloading 15 unused Assets to reduce memory usage. Loaded Objects now: 1874.
+Total: 2.412500 ms (FindLiveObjects: 0.138900 ms CreateObjectMapping: 0.042600 ms MarkObjects: 2.168100 ms  DeleteObjects: 0.061900 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:graphics/normal-map-encoding: 01000000000000000000000000000000 -> 02000000000000000000000000000000
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.012986 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 0.47 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  3.101 seconds
+Platform modules already initialized, skipping
+Switching build target platform(19) subTarget(0) extendedPlatform(0) -> platform(13) subTarget(65536) extendedPlatform(0)
+Refreshing native plugins compatible for Editor in 3.05 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1411 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 87.3 MB.
+System memory in use after: 87.4 MB.
+
+Unloading 14 unused Assets to reduce memory usage. Loaded Objects now: 1877.
+Total: 4.517100 ms (FindLiveObjects: 0.153000 ms CreateObjectMapping: 0.051500 ms MarkObjects: 4.250000 ms  DeleteObjects: 0.061300 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:graphics/normal-map-encoding: 01000000000000000000000000000000 -> 02000000000000000000000000000000
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Import Request.
+  Time since last request: 1431.177788 seconds.
+  path: Assets/neil 1/ADG_Textures/ground_vol1/ground9/texture png.jpg
+  artifactKey: Guid(4262e365ff5330c4aa19bd7b5d6a7e1f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/neil 1/ADG_Textures/ground_vol1/ground9/texture png.jpg using Guid(4262e365ff5330c4aa19bd7b5d6a7e1f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6cac64a79a4d7244fa2d8d56dc794a74') in 0.965532 seconds 
+  Import took 0.988354 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000394 seconds.
+  path: Assets/neil 1/Samples/Terrain Tools/0.1.0-preview/Terrain Assets/TerrainTextures/moss_albedo.tif
+  artifactKey: Guid(43b54d39e0a4c4d47bef645abec127f1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/neil 1/Samples/Terrain Tools/0.1.0-preview/Terrain Assets/TerrainTextures/moss_albedo.tif using Guid(43b54d39e0a4c4d47bef645abec127f1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9591120268874817f8afd497519e3c71') in 0.269596 seconds 
+  Import took 0.292618 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000217 seconds.
+  path: Assets/neil 1/ADG_Textures/ground_vol1/ground5/ground5_Diffuse.tga
+  artifactKey: Guid(216e2729631e003468211108545a08f1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/neil 1/ADG_Textures/ground_vol1/ground5/ground5_Diffuse.tga using Guid(216e2729631e003468211108545a08f1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0edc33803111ceba77a48c757035af64') in 0.691785 seconds 
+  Import took 0.775926 seconds .
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.003327 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 0.45 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.414 seconds
+Platform modules already initialized, skipping
+Switching build target platform(19) subTarget(0) extendedPlatform(0) -> platform(13) subTarget(65536) extendedPlatform(0)
+Refreshing native plugins compatible for Editor in 0.42 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1411 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 87.3 MB.
+System memory in use after: 87.4 MB.
+
+Unloading 14 unused Assets to reduce memory usage. Loaded Objects now: 1880.
+Total: 1.924900 ms (FindLiveObjects: 0.153500 ms CreateObjectMapping: 0.049100 ms MarkObjects: 1.664700 ms  DeleteObjects: 0.056400 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:graphics/normal-map-encoding: 01000000000000000000000000000000 -> 02000000000000000000000000000000
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.003705 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 0.39 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.111 seconds
+Platform modules already initialized, skipping
+Switching build target platform(19) subTarget(0) extendedPlatform(0) -> platform(13) subTarget(65536) extendedPlatform(0)
+Refreshing native plugins compatible for Editor in 0.39 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1411 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 87.3 MB.
+System memory in use after: 87.4 MB.
+
+Unloading 14 unused Assets to reduce memory usage. Loaded Objects now: 1883.
+Total: 5.254500 ms (FindLiveObjects: 0.185500 ms CreateObjectMapping: 0.064600 ms MarkObjects: 4.925000 ms  DeleteObjects: 0.077400 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:graphics/normal-map-encoding: 01000000000000000000000000000000 -> 02000000000000000000000000000000
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+AssetImportWorkerClient::OnTransportError - code=2 error=End of file

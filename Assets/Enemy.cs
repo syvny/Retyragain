@@ -12,7 +12,7 @@ public class Enemy : MonoBehaviour
     public Animator animator;
 
     public Collider col;
-    public int damage = 10;
+    public int damage = 20;
 
     
     //Dropable Items
@@ -39,8 +39,9 @@ public class Enemy : MonoBehaviour
     public float sightRange = 10f;
     public float attackRange  = 5f; 
 
-    public bool attacking = true;
-    public float attackTimer;
+   //sword, activate collider in animation event
+
+   public GameObject sword;
     
     // Start is called before the first frame update
 
@@ -59,6 +60,7 @@ public class Enemy : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        agent.enabled = true;
         
         animator.SetBool("IDLE", true);
         UpdateHealth();
@@ -75,20 +77,10 @@ public class Enemy : MonoBehaviour
             chasePlayer();
 
                 if(distance<=attackRange){
-
+                    facePlayer();
                     
                     // Debug.Log("IN Attack RANGE");
-                    // //attack timer
-                    // if(attacking){
-                    //     attackTimer-=Time.deltaTime;
-                    //     if(attackTimer<=0){
-                    //         attacking = false;
-                    //     }
-
-                    // }else{
-                    //     //enemy attacks
-                    //     attacking = true;
-                    //     attackTimer = 2f;
+                   
                         
                     //     animator.SetBool("RUNNING",false);
                     //     animator.SetTrigger("ENEMY ATTACK");
@@ -99,6 +91,8 @@ public class Enemy : MonoBehaviour
         }
         else if(distance>sightRange){
             //go back or stop
+            //disable navmesh agent to stop set destination
+            agent.enabled =false;
             animator.SetBool("RUNNING", false);
             animator.SetBool("IDLE", true);
         }
@@ -109,7 +103,7 @@ public class Enemy : MonoBehaviour
     }
 
     void chasePlayer(){
-         Debug.Log("IN SIGHT RANGE");
+       
             animator.SetBool("IDLE", false);
             animator.SetBool("RUNNING",true);
             agent.SetDestination(player.position);
@@ -118,8 +112,15 @@ public class Enemy : MonoBehaviour
 
     void attackPlayer(){
         //set collider of sword to active
+        
         animator.SetBool("RUNNING",false);
         animator.SetTrigger("ENEMY ATTACK");
+    }
+
+    void facePlayer(){
+        Vector3 direction =  (player.position - transform.position).normalized;
+        Quaternion lookRotation = Quaternion.LookRotation(new Vector3(direction.x,0,direction.z));
+        transform.rotation = lookRotation;
     }
     void OnCollisionEnter(Collision other){
         if(other.gameObject.tag == "playerAttack" && PlayerController.attacking == true){
@@ -168,5 +169,13 @@ public class Enemy : MonoBehaviour
 
         Destroy(gameObject);
 
+    }
+
+    void activateSword(){
+        sword.GetComponent<Collider>().enabled = true;
+    }
+
+    void deactivateSword(){
+        sword.GetComponent<Collider>().enabled = false;
     }
 }

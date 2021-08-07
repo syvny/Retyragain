@@ -8,23 +8,29 @@ public class enemySword : MonoBehaviour
 
     public Enemy wielder;
     public GameObject edge;
+
+    public PlayerStats playerStats;
+
+    
     void Start()
     {
         if (wielder == null)
         {
             wielder = GetComponentInParent<Enemy>();
         }
+
+        playerStats = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerStats>();
     }
 
     // Update is called once per frame
     void Update()
     {
-       if(wielder.attacking){
-           
-           edge.GetComponent<Collider>().enabled = true;
-       } 
-       else{
-            edge.GetComponent<Collider>().enabled = false;
-       }
+     
+    }
+
+    void OnCollisionEnter(Collision other){
+        if(other.gameObject.tag == "Player"){
+            playerStats.takeDamage(wielder.damage);
+        }
     }
 }

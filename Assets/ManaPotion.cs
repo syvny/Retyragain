@@ -6,12 +6,13 @@ public class ManaPotion : MonoBehaviour
 {
     // Start is called before the first frame update
 
-    public PlayerStats playerStats;
+    
     public int restoreValue = 50;
+    public PlayerStats playerStats;
 
     void Start()
     {
-        
+        playerStats = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerStats>();
     }
 
     // Update is called once per frame

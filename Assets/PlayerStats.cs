@@ -43,15 +43,18 @@ public class PlayerStats : MonoBehaviour
     public int healValue = 50;
     public int restoreValue = 50;
 
+    public Animator animator;
     void Start()
     {
-        
+        animator = GetComponent<Animator>();
     }
 
     // Update is called once per frame
     void Update()
     {
         UpdateStats();
+
+    
     }
 
     void UpdateStats(){
@@ -91,5 +94,18 @@ public class PlayerStats : MonoBehaviour
             maxMana+=50;
         }
 
+     
+
     }
+
+public void takeDamage(int damage){
+    health -= damage;
+
+        if(health<=0){
+          
+            PlayerController.isDead = true;
+            animator.SetTrigger("DEAD");
+        }
+}
+  
 }
