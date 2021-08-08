@@ -13,6 +13,10 @@ public class Quest : MonoBehaviour
     public bool canAccept;
     //Check if quest is active
     public bool isActive = false;
+
+    //Check if player can Complete quest
+
+    public bool canComplete = false;
     //Check if quest is completed
     public bool Completed;
 
@@ -54,6 +58,8 @@ public class Quest : MonoBehaviour
             canAccept=true;
         }
 
+       
+
         //quest not completed yet
         if(!Completed){
             if(isActive){
@@ -68,9 +74,9 @@ public class Quest : MonoBehaviour
                    }
             //check Criteria, current amount meets requirement
                  if(currentAmount >= requiredAmount){
-                //completed quest
-                      Completed = true;
-                      PlayerStats.playerOnQuest = false;
+                //can Complete quest, return to quest giver
+                      canComplete = true;
+
                       //reward player experience points
                       PlayerStats.experience+=rewardExperience;
                 //isActive false to allow next quest to be active
@@ -80,6 +86,11 @@ public class Quest : MonoBehaviour
                
             }
         }
+        else{
+
+            //quest has been completed
+            canAccept=false;
+        }
     }
 
 public void acceptQuest(){
@@ -87,6 +98,17 @@ public void acceptQuest(){
     if(canAccept==true){
         PlayerStats.playerOnQuest = true;
         isActive = true;
+        canAccept =false;
+        
+    }
+}
+
+public void completeQuest(){
+    if(canComplete == true){
+        PlayerStats.playerOnQuest = false;
+        Completed = true;
+        canComplete=false;
+        isActive=false;
     }
 }
 

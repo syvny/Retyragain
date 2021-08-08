@@ -21,22 +21,45 @@ public class questGiver : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(quest.canAccept){
-            overlay.text= "!";
+        if(quest.canComplete){
+            overlay.text = "!";
+            overlay.color = Color.green;
         }
+        
         canInteract = checkInteract();
         if(canInteract){
-            if(Input.GetKeyDown("space")){
-                //trigger dialogue but for now activate quest
-                    if(quest.canAccept){
+
+            if(quest.canAccept){
+                if(Input.GetKeyDown("space")){
+                //trigger quest dialogue but for now activate quest
+                    
                         quest.acceptQuest();
                          overlay.text = "";
-                    }else{
-                        //other dialougue
-                        Debug.Log("Cant accept quest yet");
+                        
+                        Debug.Log("Pleyer accepted quest");
+                }
 
-                    }
             }
+            else{
+                    //other dialougue
+                    Debug.Log("Cant accept quest yet");
+            }
+            if(quest.canComplete){
+                if(Input.GetKeyDown("space")){
+                //trigger quest dialogue but for now activate quest
+                    
+                        quest.completeQuest();
+                         overlay.text = "";
+                        
+                       
+                }
+            }
+            else{
+                //other dialougue
+                Debug.Log("Player cant complete quest yet");
+
+            }
+           
         }
     }
 
