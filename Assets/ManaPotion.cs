@@ -23,7 +23,7 @@ public class ManaPotion : MonoBehaviour
 
     void OnTriggerEnter(Collider other){
         if(other.tag == "Player"){
-            playerStats.mana+=restoreValue;
+            playerStats.manaPotions++;
             Destroy(gameObject);
         }
     }

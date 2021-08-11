@@ -7,7 +7,7 @@ public class enemySword : MonoBehaviour
     // Start is called before the first frame update
 
     public Enemy wielder;
-    public GameObject edge;
+    
 
     public PlayerStats playerStats;
 
@@ -19,18 +19,20 @@ public class enemySword : MonoBehaviour
             wielder = GetComponentInParent<Enemy>();
         }
 
-        playerStats = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerStats>();
+       playerStats = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerStats>();
     }
 
     // Update is called once per frame
     void Update()
     {
-     
+       
     }
 
     void OnCollisionEnter(Collision other){
         if(other.gameObject.tag == "Player"){
+            
             playerStats.takeDamage(wielder.damage);
+            
         }
     }
 }

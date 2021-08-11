@@ -59,8 +59,14 @@ public class Enemy : MonoBehaviour
 
     // Update is called once per frame
     void Update()
-    {
-        agent.enabled = true;
+    {   
+
+        if(PlayerController.isDead){
+            animator.SetBool("IDLE", true);
+
+        }
+       else{
+           agent.enabled = true;
         
         
         animator.SetBool("IDLE", true);
@@ -94,6 +100,8 @@ public class Enemy : MonoBehaviour
             animator.SetBool("IDLE", true);
         }
 
+       }
+        
 
         
         

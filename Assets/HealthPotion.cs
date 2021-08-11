@@ -9,7 +9,7 @@ public class HealthPotion : MonoBehaviour
     public int healValue = 50;
     void Start()
     {
-        
+  
     }
 
     // Update is called once per frame

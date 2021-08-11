@@ -41,6 +41,11 @@ public class PlayerController : MonoBehaviour
     public PlayerStats playerStats;
 
 
+    //Respawn
+
+    public GameObject respawnPanel;
+
+
 //Attacking
     public static bool attacking;
     public float attackTimer;
@@ -80,14 +85,20 @@ public class PlayerController : MonoBehaviour
 
     void Update(){
 
+
+        
         
         if(isDead){
             canMove=false;
-            
+            animator.SetTrigger("DEAD");
+            respawnPanel.SetActive(true);
+        }
+        else{
+            canMove=true;
         }
 
      
-        canMove=true;
+        
 
         //using Potions
 
@@ -225,11 +236,29 @@ public class PlayerController : MonoBehaviour
 
     void OnCollisionEnter(Collision other){
         if(other.gameObject.tag == "enemyAttack"){
-            Debug.Log(playerStats.health);
+            
             animator.SetTrigger("Get Hit");
 
         }
     }
 
-}
+    void OnTriggerEnter(Collider other){
+        if(other.tag == "Respawn Checkpoint"){
+            Debug.Log("Respawn ");
+            playerRespawnPosition = other.transform;
+        }   
+    }
 
+    public void playerRespawn(){
+        transform.position = playerRespawnPosition.transform.position;
+        isDead =false;
+      
+        //experience penalty
+        playerStats.health = playerStats.maxHealth;
+        playerStats.mana = playerStats.maxMana;
+        PlayerStats.experience-=100;
+        animator.ResetTrigger("DEAD");
+        animator.SetBool("IDLE",true);
+        respawnPanel.SetActive(false);
+    }
+}

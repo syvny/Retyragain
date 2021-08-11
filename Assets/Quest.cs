@@ -49,13 +49,22 @@ public class Quest : MonoBehaviour
             //predecessor is completed
             if(predecessor.Completed){
                 //this quest is activated
-                canAccept = true;
+                if(!isActive){
+                    canAccept = true;
+                }
+                
                 
             }
         }
         else{
             //first quest has no predecessor
-            canAccept=true;
+            if(!isActive){
+                    canAccept = true;
+                }
+            
+        }
+        if(canComplete){
+            canAccept=false;
         }
 
        
@@ -77,8 +86,7 @@ public class Quest : MonoBehaviour
                 //can Complete quest, return to quest giver
                       canComplete = true;
 
-                      //reward player experience points
-                      PlayerStats.experience+=rewardExperience;
+                     
                 //isActive false to allow next quest to be active
                       isActive = false;
 

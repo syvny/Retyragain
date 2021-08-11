@@ -1,7 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using TMPro;
 public class PlayerStats : MonoBehaviour
 {
     // Start is called before the first frame update
@@ -14,7 +14,7 @@ public class PlayerStats : MonoBehaviour
     public int level = 1;
 
     public static int experience = 0;
-    public int maxExperience;
+    public int maxExperience = 100;
 
     //Stats
 
@@ -29,9 +29,14 @@ public class PlayerStats : MonoBehaviour
 
     //Potions
 
-    public int healthPotions;
+    public int healthPotions = 0;
 
-    public int manaPotions;
+    public int manaPotions = 0;
+
+    public TMP_Text healthPotionCount;
+    public TMP_Text manaPotionCount;
+
+    
 
     //max number of potions player can carry
     public int maxPotions = 10;
@@ -55,7 +60,8 @@ public class PlayerStats : MonoBehaviour
     void Update()
     {
         UpdateStats();
-
+        healthPotionCount.text = healthPotions.ToString();
+        manaPotionCount.text = manaPotions.ToString();
     
     }
 
@@ -72,12 +78,12 @@ public class PlayerStats : MonoBehaviour
         }
 
         //Potions
-        if(healthPotions>maxPotions){
+        if(healthPotions>=maxPotions){
             healthPotions=maxPotions;
 
         }
 
-        if(manaPotions>maxPotions){
+        if(manaPotions>=maxPotions){
             manaPotions=maxPotions;
         }
 
@@ -106,7 +112,7 @@ public void takeDamage(int damage){
         if(health<=0){
           
             PlayerController.isDead = true;
-            animator.SetTrigger("DEAD");
+            
         }
 }
   
