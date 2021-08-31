@@ -31,6 +31,12 @@ public class questGiver : MonoBehaviour
 
     public float interactRange = 3f;
     public bool canInteract;
+
+    //currentquests
+
+    public GameObject currentQuestPanel;
+    public TMP_Text currentQuestTitle;
+    public TMP_Text currentQuestProgress;
     void Start()
     {
         player = GameObject.FindGameObjectWithTag("Player").transform;
@@ -41,6 +47,18 @@ public class questGiver : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        //just to show quest progress
+        if(quest.isActive){
+
+            updateProgress();
+        }
+        else{
+            if(quest.canComplete){
+                updateProgress();
+            }
+        }
+        
+
         if(quest.canComplete){
             overlay.text = "!";
             overlay.color = Color.green;
@@ -76,6 +94,7 @@ public class questGiver : MonoBehaviour
                         quest.completeQuest();
                         rewardPlayer();
                          overlay.text = "";
+                         hideQuestProgress();
                         
                        
                 }
@@ -104,6 +123,7 @@ public class questGiver : MonoBehaviour
 
 
     void showQuestPanel(){
+        input.text = "";
 
         questTitle.text = quest.questName;
         questDescription.text = quest.questDescription;
@@ -130,6 +150,7 @@ public class questGiver : MonoBehaviour
                         
             Debug.Log("Pleyer accepted quest");
             questPanel.SetActive(false);
+            showQuestProgress();
             
         }
         else{
@@ -153,5 +174,25 @@ public class questGiver : MonoBehaviour
     
     void closePanelQuest(){
         questPanel.SetActive(false);
+    }
+
+
+    public void showQuestProgress(){
+        currentQuestTitle.text = "";
+        currentQuestProgress.text = "";
+        currentQuestTitle.text = quest.questName;
+        currentQuestProgress.text = quest.currentAmount + "/"+ quest.requiredAmount;
+
+        currentQuestPanel.SetActive(true); 
+
+    }
+
+    public void hideQuestProgress(){
+        currentQuestTitle.text = "";
+        currentQuestProgress.text = "";
+        currentQuestPanel.SetActive(false); 
+    }
+    void updateProgress(){
+        currentQuestProgress.text = quest.currentAmount + "/" + quest.requiredAmount;
     }
 }

@@ -7,9 +7,11 @@ public class HealthPotion : MonoBehaviour
     // Start is called before the first frame update
     public PlayerStats playerStats;
     public int healValue = 50;
+
+
     void Start()
     {
-  
+         playerStats = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerStats>();
     }
 
     // Update is called once per frame

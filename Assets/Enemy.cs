@@ -11,7 +11,7 @@ public class Enemy : MonoBehaviour
     public Rigidbody rb;
     public Animator animator;
 
-    public Collider col;
+    
     public int damage = 20;
 
     
@@ -46,15 +46,15 @@ public class Enemy : MonoBehaviour
     // Start is called before the first frame update
 
     void Awake(){
-        player = GameObject.FindWithTag("Player").transform;
-        agent = GetComponent<NavMeshAgent>();
-        
+       
 
     }
     void Start()
     {
         
-
+ player = GameObject.FindWithTag("Player").transform;
+        agent = GetComponent<NavMeshAgent>();
+        
     }
 
     // Update is called once per frame
@@ -95,7 +95,7 @@ public class Enemy : MonoBehaviour
         else if(distance>sightRange){
             //go back or stop
             //disable navmesh agent to stop set destination
-            agent.enabled =false;
+            
             animator.SetBool("RUNNING", false);
             animator.SetBool("IDLE", true);
         }
@@ -172,7 +172,7 @@ public class Enemy : MonoBehaviour
         }
 
         
-        col.enabled =false;
+        
 
         Destroy(gameObject);
 
