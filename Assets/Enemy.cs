@@ -141,6 +141,23 @@ public class Enemy : MonoBehaviour
 
     }
 
+     void OnTriggerEnter(Collider other){
+
+         //trigger is the special attack
+        if(other.tag == "playerAttack" && PlayerController.attacking == true){
+            Debug.Log("Hit");
+          
+           
+            animator.SetTrigger("Get hit");
+            //double damage
+            health -= PlayerStats.damage * 2;
+           
+        }
+
+
+
+    }
+
     void UpdateHealth(){
 
         if(health<=0){

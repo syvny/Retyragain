@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class PlayerController : MonoBehaviour
 {
@@ -25,16 +26,16 @@ public class PlayerController : MonoBehaviour
 
     Transform swordHand;
 
-    
 
-    //Buttons
-
-    public FixedButton attackButton;
-    public FixedButton dashButton;
-    public FixedButton specialAttackButton;
-
+    //Potions
     public FixedButton useHealthPotion;
+    public Image healthpotionImage;
     public FixedButton useManaPotion;
+    public Image manapotionImage;
+
+    //Cooldown Values
+    public float healthpotionCooldown = 10f;
+    float manapotionCooldown = 10f;
 
     //Ref Player Stats
 
@@ -52,10 +53,7 @@ public class PlayerController : MonoBehaviour
 
      public bool canMove;
 
-//Dashing
-    public bool dashing;
 
-    float dashTimer;
 
 //Has Killed Enemy ID of recent kill
     public static int hasKilled;
@@ -103,81 +101,59 @@ public class PlayerController : MonoBehaviour
         //using Potions
 
         if(useHealthPotion.Pressed && playerStats.healthPotions>=1){
-            playerStats.health+=playerStats.healValue;
-            playerStats.healthPotions--;
-
+            if(healthpotionCooldown<=0){
+                //not on cooldown
+                healSelf();
+                healthpotionCooldown = 10f;
+            }
         }
+
+        if(healthpotionCooldown>=0){
+            healthpotionImage.fillAmount = 1/healthpotionCooldown;
+        }
+        else{
+            healthpotionImage.fillAmount = 1;
+        }
+        healthpotionCooldown-=Time.deltaTime;
+
+
    
         if(useManaPotion.Pressed && playerStats.manaPotions>=1){
-            playerStats.mana+=playerStats.restoreValue;
-            playerStats.manaPotions--;
-
-        }
-        
-
-
-        //attacking
-        
-        if (attacking)
-        {
-            attackTimer -= Time.deltaTime;
-            if (attackTimer <= 0)
-            {
-                
-                attacking = false;
-                
-               
+            if(manapotionCooldown<=0){
+                restoreMana();
+                manapotionCooldown  = 10f;
             }
-            canMove=false;
-        
-        }
-        else if (attackButton.Pressed)
-        {
-            
-            attacking = true;
-            attackTimer = 1.2f;
-            canMove=false;
-
-            animator.SetBool("MOVING", false);
-            animator.SetTrigger("Attack Sword");
             
         }
-         else if (specialAttackButton.Pressed)
-        {
-            //spin attack still not working
-            attacking = true;
-            attackTimer = 2f;
-            canMove=false;
-            animator.SetBool("MOVING", false);
-            animator.SetTrigger("Special Attack");
+        if(manapotionCooldown>=0){
+            manapotionImage.fillAmount = 1/manapotionCooldown;
         }
-
-
-        if(canMove){
-            
-              if(dashing){
-                dashTimer -= Time.deltaTime;
-                if (dashTimer <= 0)
-                     {
-                 
-                    dashing = false;
-                    MoveSpeed -= 10f;
-                    
-                    }
-                
-                
-            }
-            else if(dashButton.Pressed){
-                Debug.Log("Dahs");
-                dashing=true;
-                MoveSpeed +=10f;
-                dashTimer = 3f;
-            }
-           
-            Movement();
+        else{
+            manapotionImage.fillAmount = 1;
         }
+        manapotionCooldown-=Time.deltaTime;
+        
+
 
        
+
+
+        
+           
+            Movement();
+        
+
+       
+    }
+
+    void healSelf(){
+         playerStats.health+=playerStats.healValue;
+         playerStats.healthPotions--;
+    }
+
+    void restoreMana(){
+             playerStats.mana+=playerStats.restoreValue;
+            playerStats.manaPotions--;
     }
 
     void Movement(){

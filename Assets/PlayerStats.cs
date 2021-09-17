@@ -98,8 +98,8 @@ public class PlayerStats : MonoBehaviour
             //leveled up
             level++;
             damage+=10;
-            maxHealth+=50;
-            maxMana+=50;
+            maxHealth+=10;
+            maxMana+=10;
         }
 
      
