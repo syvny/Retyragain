@@ -7,6 +7,7 @@ public class warriorAbilities : MonoBehaviour
 {
 
     public PlayerController playerController;
+    public PlayerStats playerStats;
     public Animator animator;
     public FixedButton attackButton;
     public FixedButton dashButton;
@@ -35,7 +36,8 @@ public class warriorAbilities : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        playerController = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerController>();
+        playerStats = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerStats>();
     }
 
     // Update is called once per frame
@@ -71,8 +73,9 @@ public class warriorAbilities : MonoBehaviour
         {
             
 
-            if(specialAttackCooldown<=0){ //not on cooldown
+            if(specialAttackCooldown<=0 && playerStats.mana>=50){ //not on cooldown
                 PlayerController.attacking = true;
+                playerStats.mana-=40;
                 attackTimer = 2f;
                 specialAttackCooldown = 7f;
                 canMove=false;
@@ -91,28 +94,46 @@ public class warriorAbilities : MonoBehaviour
         specialAttackCooldown-=Time.deltaTime;
 
 
-        if(canMove){
+        if(playerController.canMove){
             
-              if(dashing){
+              if(playerController.dashing){
                 dashTimer -= Time.deltaTime;
                 if (dashTimer <= 0)
                      {
                  
-                    dashing = false;
-                    playerController.MoveSpeed -= 10f;
+                    playerController.dashing = false;
+                    playerController.MoveSpeed -= 7f;
                     
                     }
                 
                 
             }
             else if(dashButton.Pressed){
-                Debug.Log("Dahs");
-                dashing=true;
-                playerController.MoveSpeed +=10f;
+
+                if(dashCooldown<=0 && playerStats.mana>=20){ //not on cooldown
+                  
+                     playerStats.mana-=20;
+                   Debug.Log("Dahs");
+                 playerController.dashing=true;
+                playerController.MoveSpeed +=7f;
+                dashCooldown = 10f;
                 dashTimer = 3f;
+                    
             }
+            
+        }
+
+
+            }
+            if(dashCooldown>=0){
+            dashImage.fillAmount = 1/dashCooldown;
+        }
+        else{
+            dashImage.fillAmount = 1;
+        }
+       dashCooldown-=Time.deltaTime;
     }
-    }
+    
 
     public void activateSword(){
         sword.GetComponent<Collider>().enabled = true;

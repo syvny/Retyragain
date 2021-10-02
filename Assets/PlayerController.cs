@@ -53,6 +53,8 @@ public class PlayerController : MonoBehaviour
 
      public bool canMove;
 
+     public bool dashing;
+
 
 
 //Has Killed Enemy ID of recent kill
