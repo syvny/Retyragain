@@ -42,6 +42,9 @@ public class Enemy : MonoBehaviour
    //sword, activate collider in animation event
 
    public GameObject sword;
+
+
+   public ParticleSystem deathEffect;
     
     // Start is called before the first frame update
 
@@ -193,6 +196,7 @@ public class Enemy : MonoBehaviour
 
         Destroy(gameObject);
 
+
     }
 
     void activateSword(){
@@ -202,4 +206,6 @@ public class Enemy : MonoBehaviour
     void deactivateSword(){
         sword.GetComponent<Collider>().enabled = false;
     }
+
+    
 }

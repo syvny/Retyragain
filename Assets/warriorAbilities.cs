@@ -32,7 +32,9 @@ public class warriorAbilities : MonoBehaviour
     public Image specialAttackImage;
     public Image dashImage;
 
-    
+
+    public ParticleSystem burst;
+    public AudioSource slashSound;
     // Start is called before the first frame update
     void Start()
     {
@@ -150,5 +152,16 @@ public class warriorAbilities : MonoBehaviour
 
     public void deactivateSpecialAttack(){
          specialAttackRadius.GetComponent<Collider>().enabled = false;
+    }
+
+    public void burstEffect(){
+        //burst effect animation event
+        burst.Play();
+        
+    }
+
+    public void slashEffect(){
+
+        slashSound.Play();
     }
 }
