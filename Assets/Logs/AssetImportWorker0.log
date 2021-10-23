@@ -1,0 +1,140 @@
+Using pre-set license
+Built from '2020.3/staging' branch; Version is '2020.3.13f1 (71691879b7f5) revision 7432472'; Using compiler version '192528614'; Build Type 'Release'
+OS: 'Windows 7  (6.1.0) 64bit' Language: 'en' Physical Memory: 6109 MB
+BatchMode: 1, IsHumanControllingUs: 0, StartBugReporterOnCrash: 0, Is64bit: 1, IsPro: 0
+
+ COMMAND LINE ARGUMENTS:
+D:\unity\2020.3.13f1\Editor\Unity.exe
+-adb2
+-batchMode
+-noUpm
+-name
+AssetImportWorker0
+-projectPath
+D:/map1/map1/Assets
+-logFile
+Logs/AssetImportWorker0.log
+-srvPort
+59766
+Successfully changed project path to: D:/map1/map1/Assets
+D:/map1/map1/Assets
+Using Asset Import Pipeline V2.
+Multiple plugins with the same name 'zlib64plastic' (found at 'Packages/com.unity.collab-proxy/Lib/Editor/PlasticSCM/zlib64Plastic.dll' and 'Assets/Library/PackageCache/com.unity.collab-proxy@1.9.0/Lib/Editor/PlasticSCM/zlib64Plastic.dll'). That means one or more plugins are set to be compatible with Editor. Only one plugin at the time can be used by Editor.
+
+Multiple plugins with the same name 'lz4x64plastic' (found at 'Assets/Library/PackageCache/com.unity.collab-proxy@1.9.0/Lib/Editor/PlasticSCM/lz4x64Plastic.dll' and 'Packages/com.unity.collab-proxy/Lib/Editor/PlasticSCM/lz4x64Plastic.dll'). That means one or more plugins are set to be compatible with Editor. Only one plugin at the time can be used by Editor.
+
+Refreshing native plugins compatible for Editor in 1358.12 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Initialize engine version: 2020.3.13f1 (71691879b7f5)
+[Subsystems] Discovering subsystems at path D:/unity/2020.3.13f1/Editor/Data/Resources/UnitySubsystems
+[Subsystems] Discovering subsystems at path D:/map1/map1/Assets/Assets
+GfxDevice: creating device client; threaded=0
+d3d11: CreateDXGIFactory2(...) not found, fallbacking to CreateDXGIFactory1(...).
+d3d11: QueryInterface(IDXGIFactory5) failed (80004002).
+Direct3D:
+    Version:  Direct3D 11.0 [level 11.0]
+    Renderer: NVIDIA GeForce GTX 750 Ti (ID=0x1380)
+    Vendor:   
+    VRAM:     1984 MB
+    Driver:   30.0.14.7111
+Initialize mono
+Mono path[0] = 'D:/unity/2020.3.13f1/Editor/Data/Managed'
+Mono path[1] = 'D:/unity/2020.3.13f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit'
+Mono config path = 'D:/unity/2020.3.13f1/Editor/Data/MonoBleedingEdge/etc'
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56820
+Begin MonoManager ReloadAssembly
+Registering precompiled unity dll's ...
+Register platform support module: D:/unity/2020.3.13f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
+Registered in 0.029583 seconds.
+Native extension for WindowsStandalone target not found
+Multiple plugins with the same name 'zlib64plastic' (found at 'Packages/com.unity.collab-proxy/Lib/Editor/PlasticSCM/zlib64Plastic.dll' and 'Assets/Library/PackageCache/com.unity.collab-proxy@1.9.0/Lib/Editor/PlasticSCM/zlib64Plastic.dll'). That means one or more plugins are set to be compatible with Editor. Only one plugin at the time can be used by Editor.
+
+Multiple plugins with the same name 'lz4x64plastic' (found at 'Assets/Library/PackageCache/com.unity.collab-proxy@1.9.0/Lib/Editor/PlasticSCM/lz4x64Plastic.dll' and 'Packages/com.unity.collab-proxy/Lib/Editor/PlasticSCM/lz4x64Plastic.dll'). That means one or more plugins are set to be compatible with Editor. Only one plugin at the time can be used by Editor.
+
+Refreshing native plugins compatible for Editor in 233.66 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in 12.153 seconds
+Platform modules already initialized, skipping
+Registering precompiled user dll's ...
+Registered in 0.878755 seconds.
+Assembly with name 'UnityEngine.UI.Tests' already exists (Packages/com.unity.ugui/Tests/Runtime/UnityEngine.UI.Tests.asmdef)
+
+Assembly with name 'UnityEngine.UI.Tests' already exists (Assets/Library/PackageCache/com.unity.ugui@1.0.0/Tests/Runtime/UnityEngine.UI.Tests.asmdef)
+
+Assembly with name 'Unity.Timeline' already exists (Packages/com.unity.timeline/Runtime/Unity.Timeline.asmdef)
+
+Assembly with name 'Unity.Timeline' already exists (Assets/Library/PackageCache/com.unity.timeline@1.5.6/Runtime/Unity.Timeline.asmdef)
+
+Assembly with name 'UnityEditor.UI' already exists (Packages/com.unity.ugui/Editor/UnityEditor.UI.asmdef)
+
+Assembly with name 'UnityEditor.UI' already exists (Assets/Library/PackageCache/com.unity.ugui@1.0.0/Editor/UnityEditor.UI.asmdef)
+
+Assembly with name 'Unity.PlasticSCM.Editor' already exists (Assets/Library/PackageCache/com.unity.collab-proxy@1.9.0/Editor/PlasticSCM/Unity.PlasticSCM.Editor.asmdef)
+
+Assembly with name 'Unity.PlasticSCM.Editor' already exists (Packages/com.unity.collab-proxy/Editor/PlasticSCM/Unity.PlasticSCM.Editor.asmdef)
+
+Assembly with name 'UnityEditor.TestRunner' already exists (Assets/Library/PackageCache/com.unity.test-framework@1.1.29/UnityEditor.TestRunner/UnityEditor.TestRunner.asmdef)
+
+Assembly with name 'UnityEditor.TestRunner' already exists (Packages/com.unity.test-framework/UnityEditor.TestRunner/UnityEditor.TestRunner.asmdef)
+
+Assembly with name 'Unity.VisualStudio.Editor' already exists (Assets/Library/PackageCache/com.unity.ide.visualstudio@2.0.11/Editor/com.unity.ide.visualstudio.asmdef)
+
+Assembly with name 'Unity.VisualStudio.Editor' already exists (Packages/com.unity.ide.visualstudio/Editor/com.unity.ide.visualstudio.asmdef)
+
+Assembly with name 'Unity.Rider.Editor' already exists (Assets/Library/PackageCache/com.unity.ide.rider@3.0.7/Rider/Editor/com.unity.ide.rider.asmdef)
+
+Assembly with name 'Unity.Rider.Editor' already exists (Packages/com.unity.ide.rider/Rider/Editor/com.unity.ide.rider.asmdef)
+
+Assembly with name 'Unity.TextMeshPro.Editor' already exists (Assets/Library/PackageCache/com.unity.textmeshpro@3.0.6/Scripts/Editor/Unity.TextMeshPro.Editor.asmdef)
+
+Assembly with name 'Unity.TextMeshPro.Editor' already exists (Packages/com.unity.textmeshpro/Scripts/Editor/Unity.TextMeshPro.Editor.asmdef)
+
+Assembly with name 'UnityEngine.TestRunner' already exists (Assets/Library/PackageCache/com.unity.test-framework@1.1.29/UnityEngine.TestRunner/UnityEngine.TestRunner.asmdef)
+
+Assembly with name 'UnityEngine.TestRunner' already exists (Packages/com.unity.test-framework/UnityEngine.TestRunner/UnityEngine.TestRunner.asmdef)
+
+Assembly with name 'UnityEngine.UI' already exists (Assets/Library/PackageCache/com.unity.ugui@1.0.0/Runtime/UnityEngine.UI.asmdef)
+
+Assembly with name 'UnityEngine.UI' already exists (Packages/com.unity.ugui/Runtime/UnityEngine.UI.asmdef)
+
+Assembly with name 'Unity.Timeline.Editor' already exists (Packages/com.unity.timeline/Editor/Unity.Timeline.Editor.asmdef)
+
+Assembly with name 'Unity.Timeline.Editor' already exists (Assets/Library/PackageCache/com.unity.timeline@1.5.6/Editor/Unity.Timeline.Editor.asmdef)
+
+Assembly with name 'Unity.CollabProxy.EditorTests' already exists (Packages/com.unity.collab-proxy/Tests/Editor/Collaborate/Unity.CollabProxy.EditorTests.asmdef)
+
+Assembly with name 'Unity.CollabProxy.EditorTests' already exists (Assets/Library/PackageCache/com.unity.collab-proxy@1.9.0/Tests/Editor/Collaborate/Unity.CollabProxy.EditorTests.asmdef)
+
+Assembly with name 'Unity.CollabProxy.Editor' already exists (Assets/Library/PackageCache/com.unity.collab-proxy@1.9.0/Editor/Collaborate/Unity.CollabProxy.Editor.asmdef)
+
+Assembly with name 'Unity.CollabProxy.Editor' already exists (Packages/com.unity.collab-proxy/Editor/Collaborate/Unity.CollabProxy.Editor.asmdef)
+
+Assembly with name 'Unity.TextMeshPro.Editor.Tests' already exists (Assets/Library/PackageCache/com.unity.textmeshpro@3.0.6/Tests/Editor/Unity.TextMeshPro.Editor.Tests.asmdef)
+
+Assembly with name 'Unity.TextMeshPro.Editor.Tests' already exists (Packages/com.unity.textmeshpro/Tests/Editor/Unity.TextMeshPro.Editor.Tests.asmdef)
+
+Assembly with name 'DocCodeExamples' already exists (Assets/Library/PackageCache/com.unity.timeline@1.5.6/DocCodeExamples/DocCodeExamples.asmdef)
+
+Assembly with name 'DocCodeExamples' already exists (Packages/com.unity.timeline/DocCodeExamples/DocCodeExamples.asmdef)
+
+Assembly with name 'UnityEditor.UI.EditorTests' already exists (Packages/com.unity.ugui/Tests/Editor/UnityEditor.UI.EditorTests.asmdef)
+
+Assembly with name 'UnityEditor.UI.EditorTests' already exists (Assets/Library/PackageCache/com.unity.ugui@1.0.0/Tests/Editor/UnityEditor.UI.EditorTests.asmdef)
+
+Assembly with name 'Unity.PlasticSCM.EditorTests' already exists (Packages/com.unity.collab-proxy/Tests/Editor/PlasticSCM/Unity.PlasticSCM.EditorTests.asmdef)
+
+Assembly with name 'Unity.PlasticSCM.EditorTests' already exists (Assets/Library/PackageCache/com.unity.collab-proxy@1.9.0/Tests/Editor/PlasticSCM/Unity.PlasticSCM.EditorTests.asmdef)
+
+Assembly with name 'Unity.TextMeshPro' already exists (Assets/Library/PackageCache/com.unity.textmeshpro@3.0.6/Scripts/Runtime/Unity.TextMeshPro.asmdef)
+
+Assembly with name 'Unity.TextMeshPro' already exists (Packages/com.unity.textmeshpro/Scripts/Runtime/Unity.TextMeshPro.asmdef)
+
+Assembly with name 'Unity.TextMeshPro.Tests' already exists (Assets/Library/PackageCache/com.unity.textmeshpro@3.0.6/Tests/Runtime/Unity.TextMeshPro.Tests.asmdef)
+
+Assembly with name 'Unity.TextMeshPro.Tests' already exists (Packages/com.unity.textmeshpro/Tests/Runtime/Unity.TextMeshPro.Tests.asmdef)
+
+Assembly with name 'Unity.VSCode.Editor' already exists (Assets/Library/PackageCache/com.unity.ide.vscode@1.2.4/Editor/Unity.com.unity.vscode.Editor.asmdef)
+
+Assembly with name 'Unity.VSCode.Editor' already exists (Packages/com.unity.ide.vscode/Editor/Unity.com.unity.vscode.Editor.asmdef)
+
