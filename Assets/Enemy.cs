@@ -45,6 +45,9 @@ public class Enemy : MonoBehaviour
 
 
    public ParticleSystem deathEffect;
+
+   public bool isSlowed = false;
+   public float slowDuration;
     
     // Start is called before the first frame update
 
@@ -63,7 +66,15 @@ public class Enemy : MonoBehaviour
     // Update is called once per frame
     void Update()
     {   
-
+        if(isSlowed){
+            agent.enabled=false;
+            slowDuration-=Time.deltaTime;
+            //slow attack stops enemy for 5 seconds
+        }
+        if(slowDuration<=0){
+            isSlowed = false;
+            agent.enabled=true;
+        }
         if(PlayerController.isDead){
             animator.SetBool("IDLE", true);
 
@@ -140,7 +151,15 @@ public class Enemy : MonoBehaviour
            
         }
 
+        if(other.gameObject.tag == "Snowball"){
+            Debug.Log("Slowed");
+            
+            isSlowed=true;
+            slowDuration = 5f;
 
+            animator.SetTrigger("Get hit");
+            health -= PlayerStats.damage;
+        }
 
     }
 
