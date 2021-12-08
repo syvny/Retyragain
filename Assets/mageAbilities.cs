@@ -28,8 +28,14 @@ public class mageAbilities : MonoBehaviour
      public float burstAttackCooldown;
     public float slowAttackCooldown;
 
+    public bool canBurstAttack;
+    public bool canSlowAttack;
+
     public Image burstAttackImage;
     public Image slowAttackImage;
+
+    //particle effects
+    public ParticleSystem burst;
     
 
     //position
@@ -45,6 +51,21 @@ public class mageAbilities : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if(burstAttackCooldown<=0){
+            canBurstAttack = true;
+        }
+        else{
+            canBurstAttack = false;
+        }
+
+        if(slowAttackCooldown<=0){
+            canSlowAttack = true;
+        }
+        else{
+            canSlowAttack = false;
+        }
+
+
         if (PlayerController.attacking)
         {
             attackTimer -= Time.deltaTime;
@@ -73,7 +94,7 @@ public class mageAbilities : MonoBehaviour
         {
             
 
-            if(burstAttackCooldown<=0 && playerStats.mana>=50){ //not on cooldown
+            if(canBurstAttack && playerStats.mana>=50){ //not on cooldown
                 PlayerController.attacking = true;
                 playerStats.mana-=40;
                 attackTimer = 2f;
@@ -85,7 +106,7 @@ public class mageAbilities : MonoBehaviour
             
         }
         else if(slowAttackButton.Pressed){
-              if(slowAttackCooldown<=0 && playerStats.mana>=50){ //not on cooldown
+              if(canSlowAttack && playerStats.mana>=50){ //not on cooldown
                 PlayerController.attacking = true;
                 playerStats.mana-=40;
                 attackTimer = 2f;
@@ -134,5 +155,9 @@ public class mageAbilities : MonoBehaviour
 
     void burstAttackdeActivate(){
         burstAttackRadius.GetComponent<Collider>().enabled = false;
+    }
+
+    public void playBurst(){
+        burst.Play();
     }
 }

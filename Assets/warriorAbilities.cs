@@ -29,6 +29,9 @@ public class warriorAbilities : MonoBehaviour
     public float specialAttackCooldown;
     public float dashCooldown;
 
+    public bool canSpecialAttack;
+    public bool canDash;
+
     public Image specialAttackImage;
     public Image dashImage;
 
@@ -46,6 +49,20 @@ public class warriorAbilities : MonoBehaviour
     void Update()
     {
          //attacking
+
+         if(specialAttackCooldown<=0){
+             canSpecialAttack = true;
+         }
+         else{
+             canSpecialAttack = false;
+         }
+
+         if(dashCooldown<=0){
+             canDash = true;
+         }
+         else{
+             canDash = false;
+         }
         
         if (PlayerController.attacking)
         {
@@ -75,7 +92,7 @@ public class warriorAbilities : MonoBehaviour
         {
             
 
-            if(specialAttackCooldown<=0 && playerStats.mana>=50){ //not on cooldown
+            if(canSpecialAttack && playerStats.mana>=50){ //not on cooldown
                 PlayerController.attacking = true;
                 playerStats.mana-=40;
                 attackTimer = 2f;
@@ -112,7 +129,7 @@ public class warriorAbilities : MonoBehaviour
             }
             else if(dashButton.Pressed){
 
-                if(dashCooldown<=0 && playerStats.mana>=20){ //not on cooldown
+                if(canDash && playerStats.mana>=20){ //not on cooldown
                   
                      playerStats.mana-=20;
                    Debug.Log("Dahs");
@@ -157,6 +174,7 @@ public class warriorAbilities : MonoBehaviour
     public void burstEffect(){
         //burst effect animation event
         burst.Play();
+        
         
     }
 

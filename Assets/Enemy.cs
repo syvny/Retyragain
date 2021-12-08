@@ -58,7 +58,7 @@ public class Enemy : MonoBehaviour
     void Start()
     {
         
- player = GameObject.FindWithTag("Player").transform;
+        player = GameObject.FindWithTag("Player").transform;
         agent = GetComponent<NavMeshAgent>();
         
     }
