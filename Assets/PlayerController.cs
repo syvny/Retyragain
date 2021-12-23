@@ -225,6 +225,11 @@ public class PlayerController : MonoBehaviour
             Debug.Log("Respawn ");
             playerRespawnPosition = other.transform;
         }   
+        if(other.tag == "enemyAttack"){
+            
+            animator.SetTrigger("Get Hit");
+
+        }
     }
 
     public void playerRespawn(){
