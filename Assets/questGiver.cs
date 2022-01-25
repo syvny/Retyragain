@@ -37,6 +37,12 @@ public class questGiver : MonoBehaviour
     public GameObject currentQuestPanel;
     public TMP_Text currentQuestTitle;
     public TMP_Text currentQuestProgress;
+
+    public FixedButton playerInteractButton;
+
+    public GameObject wrongAnswerPanel;
+
+    public Button closeWrongAnswerPanel;
     void Start()
     {
         player = GameObject.FindGameObjectWithTag("Player").transform;
@@ -72,9 +78,9 @@ public class questGiver : MonoBehaviour
         
         canInteract = checkInteract();
         if(canInteract){
-
+        
             if(quest.canAccept){
-                if(Input.GetKeyDown("space")){
+                if(playerInteractButton.Pressed){
                 //trigger quest dialogue but for now activate quest
                     showQuestPanel();
                     
@@ -102,10 +108,11 @@ public class questGiver : MonoBehaviour
             else{
                 //other dialougue
                 // Debug.Log("Player cant complete quest yet");
-
+            
             }
            
         }
+      
     }
 
 
@@ -113,9 +120,11 @@ public class questGiver : MonoBehaviour
         
          float distance = Vector3.Distance(transform.position, player.position);
          if(distance<=interactRange){
+            
              return true;
          }
         else{
+            
             return false;
         }
          
@@ -139,6 +148,17 @@ public class questGiver : MonoBehaviour
 
         questPanel.SetActive(false);
     }
+
+    void showWrongAnswerPanel(){
+
+        wrongAnswerPanel.SetActive(true);
+        closeWrongAnswerPanel.onClick.AddListener(hideWrongAnswerPanel);
+
+    }
+
+    void hideWrongAnswerPanel(){
+        wrongAnswerPanel.SetActive(false);
+    }
      public void answerQuestion(){
         //button
         int playerAnswer = int.Parse(input.text);
@@ -156,6 +176,8 @@ public class questGiver : MonoBehaviour
         else{
             //wrong answer
             Debug.Log("Wrong Answer");
+            showWrongAnswerPanel();
+            hideQuestPanel();
            
         }
 
