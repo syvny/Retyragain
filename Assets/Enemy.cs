@@ -48,6 +48,8 @@ public class Enemy : MonoBehaviour
 
    public bool isSlowed = false;
    public float slowDuration;
+
+   public GameObject nearestSpawner;
     
     // Start is called before the first frame update
 
@@ -60,6 +62,8 @@ public class Enemy : MonoBehaviour
         
         player = GameObject.FindWithTag("Player").transform;
         agent = GetComponent<NavMeshAgent>();
+        nearestSpawner = FindClosestSpawner();
+        
         
     }
 
@@ -211,8 +215,10 @@ public class Enemy : MonoBehaviour
         }
 
         
-        
 
+        enemySpawner eS = (enemySpawner)nearestSpawner.GetComponent(typeof(enemySpawner));
+        eS.initiateSpawn();
+        
         Destroy(gameObject);
 
 
@@ -226,5 +232,24 @@ public class Enemy : MonoBehaviour
         sword.GetComponent<Collider>().enabled = false;
     }
 
+     public GameObject FindClosestSpawner()
+    {
+        GameObject[] gos;
+        gos = GameObject.FindGameObjectsWithTag("EnemySpawner");
+        GameObject closest = null;
+        float distance = Mathf.Infinity;
+        Vector3 position = transform.position;
+        foreach (GameObject go in gos)
+        {
+            Vector3 diff = go.transform.position - position;
+            float curDistance = diff.sqrMagnitude;
+            if (curDistance < distance)
+            {
+                closest = go;
+                distance = curDistance;
+            }
+        }
+        return closest;
+    }
     
 }
