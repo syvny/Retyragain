@@ -28,6 +28,8 @@ public class Enemy : MonoBehaviour
    
    //Player
     public Transform player;
+
+    public int expReward = 2;
     
     
     
@@ -214,6 +216,8 @@ public class Enemy : MonoBehaviour
             PlayerController.hasKilled = 0;
         }
 
+        //reward experience to player for defeating mob
+        PlayerStats.experience += expReward;
         
 
         enemySpawner eS = (enemySpawner)nearestSpawner.GetComponent(typeof(enemySpawner));

@@ -94,7 +94,7 @@ public class questGiver : MonoBehaviour
                     //Debug.Log("Cant accept quest yet");
             }
             if(quest.canComplete){
-                if(Input.GetKeyDown("space")){
+                if(playerInteractButton.Pressed){
                 //trigger quest dialogue but for now complete quest
                     
                         quest.completeQuest();

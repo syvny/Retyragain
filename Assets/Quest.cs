@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+
 public class Quest : MonoBehaviour
 {
 
@@ -29,16 +30,43 @@ public class Quest : MonoBehaviour
 
     //Quest Object -- Enemy
     public Enemy questObject;
+    public int questID = 1;
 
     //Reward
 
     public int rewardExperience = 100;
 
+    public TextAsset qList;
 
+    [System.Serializable]
+    public class QuestDeetz{
+        public string title;
+        public string questDetails;
+        public string category;
+        public int answer;
+    }
+
+    [System.Serializable]
+    public class QuestList{
+        public QuestDeetz[] qL;
+    }
+
+    public QuestList myQuestList = new QuestList();
     // Start is called before the first frame update
+
+  
     void Start()
     {
-        
+        //get details from json
+        myQuestList = JsonUtility.FromJson<QuestList>(qList.text);
+
+        //put load quest here
+        QuestDeetz qD = loadQuestDetails(myQuestList); 
+        questName = qD.title;
+        questDescription = qD.questDetails;
+        requiredAmount = qD.answer;
+
+        Debug.Log(qD.title);
     }
 
     // Update is called once per frame
@@ -119,5 +147,14 @@ public void completeQuest(){
         isActive=false;
     }
 }
+
+public QuestDeetz loadQuestDetails(QuestList q){
+    //get random index from questlist array and load the details of the quest to the variables
+    int randKey = Random.Range(0,q.qL.Length);
+    QuestDeetz newQ = q.qL[randKey];
+
+    return newQ;
+}
+
 
 }
