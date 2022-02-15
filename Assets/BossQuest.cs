@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 
-public class Quest : MonoBehaviour
+public class BossQuest : MonoBehaviour
 {
 
     //Quest details
@@ -29,52 +29,18 @@ public class Quest : MonoBehaviour
     public Quest predecessor;
 
     //Quest Object -- Enemy
-    public Enemy questObject;
+    public GameObject questObject;
     public int questID = 1;
 
     //Reward
 
     public int rewardExperience = 100;
+    public GameObject bossSpawnPosition;
+
 
   
+    void Start(){
 
-    public TextAsset qList;
-
-    [System.Serializable]
-    public class QuestDeetz{
-        public string title;
-        public string questDetails;
-        public string category;
-        public int answer;
-    }
-
-    [System.Serializable]
-    public class QuestList{
-        public QuestDeetz[] qL;
-    }
-
-    public QuestList myQuestList = new QuestList();
-    // Start is called before the first frame update
-
-  
-    void Start()
-    {
-        //get details from json
-        myQuestList = JsonUtility.FromJson<QuestList>(qList.text);
-
-
-        // if quest is boss quest dont get from json
-    
-            //put load quest here
-            QuestDeetz qD = loadQuestDetails(myQuestList); 
-            questName = qD.title;
-            questDescription = qD.questDetails;
-            requiredAmount = qD.answer;
-
-            Debug.Log(qD.title);
-        
-
-       
     }
 
     // Update is called once per frame
@@ -109,11 +75,9 @@ public class Quest : MonoBehaviour
         if(!Completed){
             if(isActive){
 
-                 //Listen to quest needs, kill skeleton
-
-              if(PlayerController.hasKilled == questObject.enemyID){
+              if(questObject == null){
                  currentAmount++;
-                //revert to zero
+                
     
                  PlayerController.hasKilled = 0;
                    }
@@ -143,6 +107,7 @@ public void acceptQuest(){
         PlayerStats.playerOnQuest = true;
         isActive = true;
         canAccept =false;
+        spawnBoss();
         
     }
 }
@@ -156,15 +121,10 @@ public void completeQuest(){
     }
 }
 
-public QuestDeetz loadQuestDetails(QuestList q){
-    //get random index from questlist array and load the details of the quest to the variables
-    int randKey = Random.Range(0,q.qL.Length);
-    QuestDeetz newQ = q.qL[randKey];
 
-    return newQ;
+public void spawnBoss(){
+    var spawnBoss = (GameObject) Instantiate(questObject,bossSpawnPosition.transform.position,bossSpawnPosition.transform.rotation);
 }
-
-
 
 
 }
