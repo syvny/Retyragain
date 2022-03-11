@@ -1,7 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using System.IO;
+using QuestBase;
 
 public class BossQuest : MonoBehaviour
 {
@@ -30,17 +31,32 @@ public class BossQuest : MonoBehaviour
 
     //Quest Object -- Enemy
     public GameObject questObject;
-    public int questID = 1;
+    public int questID = 4;
 
     //Reward
 
     public int rewardExperience = 100;
     public GameObject bossSpawnPosition;
 
+    public int bossID = 11;
+
+    public TextAsset qdList;
+
+
+    public QuestDataList myQuestDataList = new QuestDataList();
+
+
+
 
   
     void Start(){
+        myQuestDataList = JsonUtility.FromJson<QuestDataList>(qdList.text);
+        
+        QuestData newQuestData = loadQuestProgress(myQuestDataList);
+        Debug.Log(newQuestData.questDataID + " " + newQuestData.questDataCompleted);
+        Completed = newQuestData.questDataCompleted;
 
+        
     }
 
     // Update is called once per frame
@@ -75,7 +91,7 @@ public class BossQuest : MonoBehaviour
         if(!Completed){
             if(isActive){
 
-              if(questObject == null){
+              if(PlayerController.hasKilled == bossID){
                  currentAmount++;
                 
     
@@ -118,6 +134,13 @@ public void completeQuest(){
         Completed = true;
         canComplete=false;
         isActive=false;
+
+        QuestData newData = new QuestData();
+        newData.questDataID = questID;
+        newData.questDataCompleted = Completed;
+        saveQuestProgress(myQuestDataList,newData);
+        string output = JsonUtility.ToJson(myQuestDataList);
+        File.WriteAllText(Application.dataPath + "/Khe Assets/JSON FILES/questProgress.txt", output);
     }
 }
 
@@ -125,6 +148,20 @@ public void completeQuest(){
 public void spawnBoss(){
     var spawnBoss = (GameObject) Instantiate(questObject,bossSpawnPosition.transform.position,bossSpawnPosition.transform.rotation);
 }
+
+public QuestData loadQuestProgress(QuestDataList q){
+    QuestData newQuestData = new QuestData();
+    newQuestData = q.qdL[questID - 1];
+
+    return newQuestData;
+
+
+}
+
+public void saveQuestProgress(QuestDataList q, QuestData data){
+    q.qdL[data.questDataID - 1].questDataCompleted = data.questDataCompleted;  
+}
+
 
 
 }

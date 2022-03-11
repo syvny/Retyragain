@@ -1,8 +1,26 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System.IO;
+using QuestBase;
 
 
+
+namespace QuestBase{
+    [System.Serializable]
+    public class QuestData{
+        //set quest as completed
+        public int questDataID;
+        public bool questDataCompleted;
+    }
+
+    [System.Serializable]
+    public class QuestDataList{
+        //set quest as completed
+        public QuestData[] qdL;
+
+    }
+}
 public class Quest : MonoBehaviour
 {
 
@@ -37,8 +55,11 @@ public class Quest : MonoBehaviour
     public int rewardExperience = 100;
 
   
-
+    //randomize quests
     public TextAsset qList;
+    //quest progress
+    public TextAsset qdList;
+
 
     [System.Serializable]
     public class QuestDeetz{
@@ -54,6 +75,14 @@ public class Quest : MonoBehaviour
     }
 
     public QuestList myQuestList = new QuestList();
+
+
+    public QuestDataList myQuestDataList = new QuestDataList();
+
+
+     
+   
+
     // Start is called before the first frame update
 
   
@@ -61,20 +90,25 @@ public class Quest : MonoBehaviour
     {
         //get details from json
         myQuestList = JsonUtility.FromJson<QuestList>(qList.text);
+        //get progress from json
+        myQuestDataList = JsonUtility.FromJson<QuestDataList>(qdList.text);
+
+        QuestData newQuestData = loadQuestProgress(myQuestDataList);
+        Debug.Log(newQuestData.questDataID + " " + newQuestData.questDataCompleted);
+        Completed = newQuestData.questDataCompleted;
 
 
-        // if quest is boss quest dont get from json
-    
+        
+
+        if(!Completed){
             //put load quest here
             QuestDeetz qD = loadQuestDetails(myQuestList); 
             questName = qD.title;
             questDescription = qD.questDetails;
             requiredAmount = qD.answer;
 
-            Debug.Log(qD.title);
-        
-
-       
+        }
+   
     }
 
     // Update is called once per frame
@@ -134,6 +168,7 @@ public class Quest : MonoBehaviour
 
             //quest has been completed
             canAccept=false;
+            
         }
     }
 
@@ -153,6 +188,15 @@ public void completeQuest(){
         Completed = true;
         canComplete=false;
         isActive=false;
+
+
+        QuestData newData = new QuestData();
+        newData.questDataID = questID;
+        newData.questDataCompleted = Completed;
+        saveQuestProgress(myQuestDataList,newData);
+        string output = JsonUtility.ToJson(myQuestDataList);
+        File.WriteAllText(Application.dataPath + "/Khe Assets/JSON FILES/questProgress.txt", output);
+        
     }
 }
 
@@ -164,7 +208,19 @@ public QuestDeetz loadQuestDetails(QuestList q){
     return newQ;
 }
 
+ 
 
 
+public QuestData loadQuestProgress(QuestDataList q){
+    QuestData newQuestData = new QuestData();
+    newQuestData = q.qdL[questID - 1];
+
+    return newQuestData;
+
+}
+
+public void saveQuestProgress(QuestDataList q, QuestData data){
+    q.qdL[data.questDataID - 1].questDataCompleted = data.questDataCompleted;  
+}
 
 }

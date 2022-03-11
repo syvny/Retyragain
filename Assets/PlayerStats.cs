@@ -14,7 +14,8 @@ public class PlayerStats : MonoBehaviour
     public int level = 1;
 
     public static int experience = 0;
-    public int maxExperience = 100;
+    public int maxExperience = 1000; //level threshold
+    
 
     //Stats
 
@@ -87,19 +88,9 @@ public class PlayerStats : MonoBehaviour
             manaPotions=maxPotions;
         }
 
-        //Levels
-
         if(experience>=maxExperience){
-
-            //reset experience
-            experience = experience - maxExperience;
-            //maxexp = maxexp*1.5
-            maxExperience = maxExperience + 100;
-            //leveled up
             level++;
-            damage+=10;
-            maxHealth+=10;
-            maxMana+=10;
+            experience = experience - maxExperience;
         }
 
      
@@ -115,5 +106,7 @@ public void takeDamage(int damage){
             
         }
 }
+
+
   
 }
