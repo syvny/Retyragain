@@ -92,6 +92,9 @@ public class PlayerStats : MonoBehaviour
             level++;
             experience = experience - maxExperience;
         }
+        if(experience<=maxExperience){
+            experience = 0;
+        }
 
      
 

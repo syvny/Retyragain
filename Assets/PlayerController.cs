@@ -239,7 +239,7 @@ public class PlayerController : MonoBehaviour
         //experience penalty
         playerStats.health = playerStats.maxHealth;
         playerStats.mana = playerStats.maxMana;
-        PlayerStats.experience-=100;
+        PlayerStats.experience-=10;
         animator.ResetTrigger("DEAD");
         animator.SetBool("IDLE",true);
         respawnPanel.SetActive(false);
