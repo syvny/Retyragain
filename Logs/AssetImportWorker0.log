@@ -1,6 +1,6 @@
 Using pre-set license
 Built from '2020.3/release' branch; Version is '2020.3.12f1 (b3b2c6512326) revision 11776710'; Using compiler version '192528614'; Build Type 'Release'
-OS: 'Windows 10 Pro; OS build 19044.1586; Version 2009; 64bit' Language: 'en' Physical Memory: 8150 MB
+OS: 'Windows 10 Pro; OS build 19044.1620; Version 2009; 64bit' Language: 'en' Physical Memory: 8150 MB
 BatchMode: 1, IsHumanControllingUs: 0, StartBugReporterOnCrash: 0, Is64bit: 1, IsPro: 0
 
  COMMAND LINE ARGUMENTS:
@@ -15,11 +15,11 @@ E:/unity projects/Retyragain
 -logFile
 Logs/AssetImportWorker0.log
 -srvPort
-58113
+64306
 Successfully changed project path to: E:/unity projects/Retyragain
 E:/unity projects/Retyragain
 Using Asset Import Pipeline V2.
-Refreshing native plugins compatible for Editor in 173.52 ms, found 2 plugins.
+Refreshing native plugins compatible for Editor in 245.68 ms, found 2 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Initialize engine version: 2020.3.12f1 (b3b2c6512326)
 [Subsystems] Discovering subsystems at path D:/UnityEditors/2020.3.12f1/Editor/Data/Resources/UnitySubsystems
@@ -30,45 +30,45 @@ Direct3D:
     Renderer: NVIDIA GeForce GTX 1050 Ti (ID=0x1c82)
     Vendor:   
     VRAM:     4018 MB
-    Driver:   30.0.15.1215
+    Driver:   30.0.14.7196
 Initialize mono
 Mono path[0] = 'D:/UnityEditors/2020.3.12f1/Editor/Data/Managed'
 Mono path[1] = 'D:/UnityEditors/2020.3.12f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit'
 Mono config path = 'D:/UnityEditors/2020.3.12f1/Editor/Data/MonoBleedingEdge/etc'
-Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56180
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56328
 Begin MonoManager ReloadAssembly
 Registering precompiled unity dll's ...
 Register platform support module: D:/UnityEditors/2020.3.12f1/Editor/Data/PlaybackEngines/WebGLSupport/UnityEditor.WebGL.Extensions.dll
 Register platform support module: D:/UnityEditors/2020.3.12f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
-Registered in 0.001235 seconds.
+Registered in 0.002425 seconds.
 Native extension for WindowsStandalone target not found
 Native extension for WebGL target not found
-Refreshing native plugins compatible for Editor in 165.73 ms, found 2 plugins.
+Refreshing native plugins compatible for Editor in 159.48 ms, found 2 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Mono: successfully reloaded assembly
-- Completed reload, in  1.876 seconds
+- Completed reload, in  2.331 seconds
 Platform modules already initialized, skipping
 Registering precompiled user dll's ...
-Registered in 0.003971 seconds.
+Registered in 0.005468 seconds.
 Begin MonoManager ReloadAssembly
 Native extension for WindowsStandalone target not found
 Native extension for WebGL target not found
-Refreshing native plugins compatible for Editor in 1.63 ms, found 2 plugins.
+Refreshing native plugins compatible for Editor in 1.93 ms, found 2 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Mono: successfully reloaded assembly
-- Completed reload, in  1.091 seconds
+- Completed reload, in  1.055 seconds
 Platform modules already initialized, skipping
 ========================================================================
 Worker process is ready to serve import requests
-Launched and connected shader compiler UnityShaderCompiler.exe after 0.07 seconds
-Refreshing native plugins compatible for Editor in 1.70 ms, found 2 plugins.
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.14 seconds
+Refreshing native plugins compatible for Editor in 1.67 ms, found 2 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Unloading 1486 Unused Serialized files (Serialized files now loaded: 0)
 System memory in use before: 94.2 MB.
 System memory in use after: 94.2 MB.
 
 Unloading 18 unused Assets to reduce memory usage. Loaded Objects now: 1945.
-Total: 1.881800 ms (FindLiveObjects: 0.157700 ms CreateObjectMapping: 0.058600 ms MarkObjects: 1.495300 ms  DeleteObjects: 0.169000 ms)
+Total: 1.850500 ms (FindLiveObjects: 0.155900 ms CreateObjectMapping: 0.052100 ms MarkObjects: 1.501500 ms  DeleteObjects: 0.139500 ms)
 
 AssetImportParameters requested are different than current active one (requested -> active):
   custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
@@ -82,17 +82,41 @@ AssetImportParameters requested are different than current active one (requested
   custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
 ========================================================================
 Received Import Request.
-  path: Assets/Khe Assets/Materials/St.Elmos Fire.mat
-  artifactKey: Guid(b467e6d0bb5a3094bade6810849061e1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Khe Assets/Materials/St.Elmos Fire.mat using Guid(b467e6d0bb5a3094bade6810849061e1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e0e424cf1b7cb09f50a606f21808c285') in 0.149657 seconds 
-  Import took 0.153374 seconds .
+  path: Assets/Scenes/Level 5 Mage.unity
+  artifactKey: Guid(c9034c9f7ef06ff43b1961df17a62b88) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/Level 5 Mage.unity using Guid(c9034c9f7ef06ff43b1961df17a62b88) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6e7b3b0677f9a00849f87738dc1969fe') in 0.147820 seconds 
+  Import took 0.245827 seconds .
 
 ========================================================================
 Received Import Request.
-  Time since last request: 291.103060 seconds.
-  path: Assets/Prefab/Mummy.prefab
-  artifactKey: Guid(db7110004812c114a8cc73d44dc655b1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefab/Mummy.prefab using Guid(db7110004812c114a8cc73d44dc655b1) Importer(815301076,1909f56bfc062723c751e8b465ee728b) Asset 'MummyController': Transition 'AnyState -> Idle' in state 'AnyState' doesn't have an Exit Time or any condition, transition will be ignored
+  Time since last request: 7.358964 seconds.
+  path: Assets/Scenes/Level 5 Mage 1.unity
+  artifactKey: Guid(390a0dc4812747344b9a1b410c3e230c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/Level 5 Mage 1.unity using Guid(390a0dc4812747344b9a1b410c3e230c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4805350bc45076e8d6427aafe1c4ad09') in 0.015349 seconds 
+  Import took 0.083921 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 21.516041 seconds.
+  path: Assets/Scenes/Level 5 Warrior 1.unity
+  artifactKey: Guid(4bf04aa1c72676b408ff43036201b18f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/Level 5 Warrior 1.unity using Guid(4bf04aa1c72676b408ff43036201b18f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '321f66c7b9ef07267f6fd608dddba099') in 0.008828 seconds 
+  Import took 0.057443 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 8.976875 seconds.
+  path: Assets/Scenes/Level 6 Warrior.unity
+  artifactKey: Guid(4bf04aa1c72676b408ff43036201b18f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/Level 6 Warrior.unity using Guid(4bf04aa1c72676b408ff43036201b18f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '66df2b72d9b4760434ea18046d4aa28b') in 0.013083 seconds 
+  Import took 0.039444 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 473.111318 seconds.
+  path: Assets/Prefab/Evil Wizard.prefab
+  artifactKey: Guid(afe03f60c1cd6c14c909bbdf979cd363) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/Evil Wizard.prefab using Guid(afe03f60c1cd6c14c909bbdf979cd363) Importer(815301076,1909f56bfc062723c751e8b465ee728b) Asset 'witchAndWizardController': Transition 'AnyState -> Idle' in state 'AnyState' doesn't have an Exit Time or any condition, transition will be ignored
 UnityEngine.StackTraceUtility:ExtractStackTrace ()
 UnityEditor.EditorUtility:Internal_InstantiateRemoveAllNonAnimationComponentsSingle (UnityEngine.Object,UnityEngine.Vector3,UnityEngine.Quaternion)
 UnityEditor.EditorUtility:InstantiateRemoveAllNonAnimationComponents (UnityEngine.Object,UnityEngine.Vector3,UnityEngine.Quaternion)
@@ -105,15 +129,15 @@ UnityEditor.AssetPreviewUpdater:CreatePreviewForAsset (UnityEngine.Object,UnityE
 
 [C:\buildslave\unity\build\Editor/Src/Animation/StateMachine.cpp line 1847]
 
- -> (artifact id: '0e663a2b450dec1b5a1e878013ee7f02') in 0.136942 seconds 
-  Import took 0.143484 seconds .
+ -> (artifact id: 'c7059243f8fda2081c3c79572ae9f5ea') in 0.290027 seconds 
+  Import took 0.351622 seconds .
 
 ========================================================================
 Received Import Request.
-  Time since last request: 29.704393 seconds.
-  path: Assets/Prefab/Mummy.prefab
-  artifactKey: Guid(db7110004812c114a8cc73d44dc655b1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefab/Mummy.prefab using Guid(db7110004812c114a8cc73d44dc655b1) Importer(815301076,1909f56bfc062723c751e8b465ee728b) Asset 'MummyController': Transition 'AnyState -> Idle' in state 'AnyState' doesn't have an Exit Time or any condition, transition will be ignored
+  Time since last request: 148.126699 seconds.
+  path: Assets/Prefab/golem Variant.prefab
+  artifactKey: Guid(093ba711a50027346b8d763c205a0cdd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/golem Variant.prefab using Guid(093ba711a50027346b8d763c205a0cdd) Importer(815301076,1909f56bfc062723c751e8b465ee728b) Asset 'GolemController': Transition 'AnyState -> Idle' in state 'AnyState' doesn't have an Exit Time or any condition, transition will be ignored
 UnityEngine.StackTraceUtility:ExtractStackTrace ()
 UnityEditor.EditorUtility:Internal_InstantiateRemoveAllNonAnimationComponentsSingle (UnityEngine.Object,UnityEngine.Vector3,UnityEngine.Quaternion)
 UnityEditor.EditorUtility:InstantiateRemoveAllNonAnimationComponents (UnityEngine.Object,UnityEngine.Vector3,UnityEngine.Quaternion)
@@ -126,15 +150,15 @@ UnityEditor.AssetPreviewUpdater:CreatePreviewForAsset (UnityEngine.Object,UnityE
 
 [C:\buildslave\unity\build\Editor/Src/Animation/StateMachine.cpp line 1847]
 
- -> (artifact id: '58111cf98f0e7f8d2d56955443e1d4f6') in 0.047451 seconds 
-  Import took 0.053216 seconds .
+ -> (artifact id: 'b2d8569675180d02494ae28eb1e420ad') in 0.093865 seconds 
+  Import took 0.155673 seconds .
 
 ========================================================================
 Received Import Request.
-  Time since last request: 12.115666 seconds.
-  path: Assets/Prefab/Desert Skeleton.prefab
-  artifactKey: Guid(9e4c7016300bde846b5db235681de28a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefab/Desert Skeleton.prefab using Guid(9e4c7016300bde846b5db235681de28a) Importer(815301076,1909f56bfc062723c751e8b465ee728b) Asset 'Bandit Controller 1': Transition 'AnyState -> Idle' in state 'AnyState' doesn't have an Exit Time or any condition, transition will be ignored
+  Time since last request: 6.282162 seconds.
+  path: Assets/Prefab/golem Variant.prefab
+  artifactKey: Guid(093ba711a50027346b8d763c205a0cdd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/golem Variant.prefab using Guid(093ba711a50027346b8d763c205a0cdd) Importer(815301076,1909f56bfc062723c751e8b465ee728b) Asset 'GolemController': Transition 'AnyState -> Idle' in state 'AnyState' doesn't have an Exit Time or any condition, transition will be ignored
 UnityEngine.StackTraceUtility:ExtractStackTrace ()
 UnityEditor.EditorUtility:Internal_InstantiateRemoveAllNonAnimationComponentsSingle (UnityEngine.Object,UnityEngine.Vector3,UnityEngine.Quaternion)
 UnityEditor.EditorUtility:InstantiateRemoveAllNonAnimationComponents (UnityEngine.Object,UnityEngine.Vector3,UnityEngine.Quaternion)
@@ -147,60 +171,31 @@ UnityEditor.AssetPreviewUpdater:CreatePreviewForAsset (UnityEngine.Object,UnityE
 
 [C:\buildslave\unity\build\Editor/Src/Animation/StateMachine.cpp line 1847]
 
- -> (artifact id: 'fd6ee63a8143575339e0d6b133526471') in 0.088438 seconds 
-  Import took 0.094263 seconds .
+ -> (artifact id: '7fcda99ed2cbe1a063e9ddc3b5479aea') in 0.096466 seconds 
+  Import took 0.131685 seconds .
 
 ========================================================================
 Received Import Request.
-  Time since last request: 302.685842 seconds.
-  path: Assets/Prefab/Desert Skeleton.prefab
-  artifactKey: Guid(9e4c7016300bde846b5db235681de28a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefab/Desert Skeleton.prefab using Guid(9e4c7016300bde846b5db235681de28a) Importer(815301076,1909f56bfc062723c751e8b465ee728b) Asset 'Bandit Controller 1': Transition 'AnyState -> Idle' in state 'AnyState' doesn't have an Exit Time or any condition, transition will be ignored
-UnityEngine.StackTraceUtility:ExtractStackTrace ()
-UnityEditor.EditorUtility:Internal_InstantiateRemoveAllNonAnimationComponentsSingle (UnityEngine.Object,UnityEngine.Vector3,UnityEngine.Quaternion)
-UnityEditor.EditorUtility:InstantiateRemoveAllNonAnimationComponents (UnityEngine.Object,UnityEngine.Vector3,UnityEngine.Quaternion)
-UnityEditor.EditorUtility:InstantiateForAnimatorPreview (UnityEngine.Object)
-UnityEditor.GameObjectInspector/PreviewData:UpdateGameObject (UnityEngine.Object)
-UnityEditor.GameObjectInspector/PreviewData:.ctor (UnityEngine.Object)
-UnityEditor.GameObjectInspector:GetPreviewData ()
-UnityEditor.GameObjectInspector:RenderStaticPreview (string,UnityEngine.Object[],int,int)
-UnityEditor.AssetPreviewUpdater:CreatePreviewForAsset (UnityEngine.Object,UnityEngine.Object[],string)
-
-[C:\buildslave\unity\build\Editor/Src/Animation/StateMachine.cpp line 1847]
-
- -> (artifact id: 'cc20b75e723f217967e6f3fd96e6846a') in 0.054544 seconds 
-  Import took 0.061909 seconds .
+  Time since last request: 149.430068 seconds.
+  path: Assets/Scenes/Level 6 Warrior.unity
+  artifactKey: Guid(4bf04aa1c72676b408ff43036201b18f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/Level 6 Warrior.unity using Guid(4bf04aa1c72676b408ff43036201b18f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '439b2a621ef0913874181054997c39bd') in 0.006978 seconds 
+  Import took 0.024811 seconds .
 
 ========================================================================
 Received Import Request.
-  Time since last request: 129.598869 seconds.
-  path: Assets/Scenes/Level 4 Warrior.unity
-  artifactKey: Guid(f78e6ab5fa5f2e94dbba57cf874d4da7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scenes/Level 4 Warrior.unity using Guid(f78e6ab5fa5f2e94dbba57cf874d4da7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'fd570376b9e78ef3371dfaac95502dc9') in 0.013222 seconds 
-  Import took 0.017500 seconds .
+  Time since last request: 0.598039 seconds.
+  path: Assets/Scenes/Level 6 Warrior 1.unity
+  artifactKey: Guid(59e9fa1f9f625bb468023a36266b8696) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/Level 6 Warrior 1.unity using Guid(59e9fa1f9f625bb468023a36266b8696) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f2c6f1917d38faa477052f16ee4d9f31') in 0.039678 seconds 
+  Import took 0.060554 seconds .
 
 ========================================================================
 Received Import Request.
-  Time since last request: 0.934408 seconds.
-  path: Assets/Scenes/Level 4 Warrior 1.unity
-  artifactKey: Guid(3b2eca8e7cb78714994e2930194b5a3f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scenes/Level 4 Warrior 1.unity using Guid(3b2eca8e7cb78714994e2930194b5a3f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '69f3e846e9863680f7c532c6f33ecc0c') in 0.013224 seconds 
-  Import took 0.017849 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.001021 seconds.
-  path: Assets/Scenes/Level 4 Warrior 1.unity
-  artifactKey: Guid(3b2eca8e7cb78714994e2930194b5a3f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scenes/Level 4 Warrior 1.unity using Guid(3b2eca8e7cb78714994e2930194b5a3f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '69f3e846e9863680f7c532c6f33ecc0c') in 0.007182 seconds 
-  Import took 0.011148 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 9.837667 seconds.
-  path: Assets/Scenes/Level 4 Mage.unity
-  artifactKey: Guid(3b2eca8e7cb78714994e2930194b5a3f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scenes/Level 4 Mage.unity using Guid(3b2eca8e7cb78714994e2930194b5a3f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ef41efa74f1546423cdb0b3b82db4a67') in 0.010599 seconds 
-  Import took 0.015991 seconds .
+  Time since last request: 7.426556 seconds.
+  path: Assets/Scenes/Level 6 Mage.unity
+  artifactKey: Guid(59e9fa1f9f625bb468023a36266b8696) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/Level 6 Mage.unity using Guid(59e9fa1f9f625bb468023a36266b8696) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '985204049b834438c191c4eda0f20669') in 0.008827 seconds 
+  Import took 0.033392 seconds .
 
 AssetImportWorkerClient::OnTransportError - code=2 error=End of file
