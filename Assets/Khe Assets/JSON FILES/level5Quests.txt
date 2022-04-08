@@ -1,0 +1,70 @@
+{
+	"qL": [
+		{
+			"title": "Defeat Skeleton Mages",
+			"questDetails": "Defeat (3912/12)-(4494/14) Skeleton Mages for me",
+			"category": "Counting",
+			"answer": 8
+		},
+		{
+			"title": "Feed my Dog",
+			"questDetails": "My dog love eating Skeleton Bones! If my dog eats 3 times a day and eats 2 of bones each meal? How many bones do I need to feed him for 2 days?",
+			"category": "Word",
+			"answer": 12
+		},
+		{
+			"title": "Defeat More Skeleton Mages",
+			"questDetails": "Defeat (456 X 19) - (7201 + 1459) Skeleton Mages for me",
+			"category": "Counting",
+			"answer": 4
+		},
+		{
+			"title": "Defeat Even More Skeleton Mages",
+			"questDetails": "Defeat (45+45) / 15  skeleton mages for me",
+			"category": "Counting",
+			"answer": 6
+		},
+		{
+			"title": "Defeat Skeleton Mages",
+			"questDetails": "Can you defeat 3 4/5 + 1/5 Skeleton Mages for me?",
+			"category": "Counting",
+			"answer": 4
+		},
+		{
+			"title": "Defeat Skeleton Mages",
+			"questDetails": "Can you defeat 3/4 + 6 3/12 Skeleton mages for me?",
+			"category": "Counting",
+			"answer": 7
+		},
+		{
+			"title": "Defeat Skeleton Mages",
+			"questDetails": "Can you defeat 4 3/9 + 1 2/3 Skeleton Mages for me?",
+			"category": "Counting",
+			"answer": 5
+		},
+		{
+			"title": "Defeat Skeleton Mages",
+			"questDetails": "Can you defeat 1.25 X 4 Skeleton Mages for me?",
+			"category": "Counting",
+			"answer": 5
+		},
+		{
+			"title": "Defeat Skeleton Mages",
+			"questDetails": "Defeat 3.75 X 4 Skeleton Mages for me",
+			"category": "Counting",
+			"answer": 15
+		},
+		{
+			"title": "Magical Bone Meal",
+			"questDetails": "Farmers in this area use Magic Bone Meal gathered from Skeleton Mages, Crops grow twice as fast! One crop need 1.75 bonemeal, how much bonemeal do I need for 14 crops?",
+			"category": "Word",
+			"answer": 8
+		},
+		{
+			"title": "Magic Bones",
+			"questDetails": "A Skeleton Mages bones hold a lot of magical power! They can be used to power lights! If there are 40 lamps and each lamp requires 1/8 of a magic bone each day, how many bones do we need for today?",
+			"category": "Word",
+			"answer": 5
+		}
+	]
+}
