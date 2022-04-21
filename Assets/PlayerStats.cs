@@ -54,6 +54,7 @@ public class PlayerStats : MonoBehaviour
     public static bool playerOnQuest = false;
     void Start()
     {
+        damage = damage * level;
         animator = GetComponent<Animator>();
     }
 

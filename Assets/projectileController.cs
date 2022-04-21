@@ -8,6 +8,7 @@ public class projectileController : MonoBehaviour
 
     
     public Rigidbody rigidbody;
+    public ParticleSystem explosion;
     
     void Start()
     {
@@ -17,11 +18,12 @@ public class projectileController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        rigidbody.AddForce(rigidbody.transform.forward * 4);
+        rigidbody.AddForce(rigidbody.transform.forward * 8, ForceMode.Acceleration);
     }
 
     void OnCollisionEnter(Collision other){
         Destroy(gameObject);
+        
 
     }
 }
