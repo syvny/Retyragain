@@ -52,6 +52,8 @@ public class Enemy : MonoBehaviour
    public float slowDuration;
 
    public GameObject nearestSpawner;
+
+   public GameObject dustCloud;
     
     // Start is called before the first frame update
 
@@ -222,6 +224,9 @@ public class Enemy : MonoBehaviour
 
         enemySpawner eS = (enemySpawner)nearestSpawner.GetComponent(typeof(enemySpawner));
         eS.initiateSpawn();
+
+        var dc = (GameObject) Instantiate(dustCloud,gameObject.transform.position,gameObject.transform.rotation);
+
         
         Destroy(gameObject);
 

@@ -8,7 +8,7 @@ public class projectileController : MonoBehaviour
 
     
     public Rigidbody rigidbody;
-    public ParticleSystem explosion;
+    public GameObject dustCloud;
     
     void Start()
     {
@@ -22,6 +22,8 @@ public class projectileController : MonoBehaviour
     }
 
     void OnCollisionEnter(Collision other){
+        var dc = (GameObject) Instantiate(dustCloud,gameObject.transform.position,gameObject.transform.rotation);
+
         Destroy(gameObject);
         
 

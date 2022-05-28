@@ -9,6 +9,7 @@ public class enemyProjectile : MonoBehaviour
     
     public Rigidbody rigidbody;
     public PlayerStats playerStats;
+    public GameObject dustCloud;
     //enemy projectiles have different types varying damage
     
     public int damage = 50;
@@ -29,6 +30,8 @@ public class enemyProjectile : MonoBehaviour
             playerStats.takeDamage(damage);
         }
         
+        var dc = (GameObject) Instantiate(dustCloud,gameObject.transform.position,gameObject.transform.rotation);
+
         Destroy(gameObject);
 
     }
