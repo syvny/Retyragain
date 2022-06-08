@@ -1,0 +1,70 @@
+{
+	"qL": [
+		{
+			"title": "Defeat Snow Bandits",
+			"questDetails": "Defeat 26 - 18 snow bandits for me",
+			"category": "Counting",
+			"answer": 8
+		},
+		{
+			"title": "Stolen Food",
+			"questDetails": "I used to have 12 packets of food and the bandits stole them!, leaving me only 3 left. Can you retrieve them for me?",
+			"category": "Word",
+			"answer": 9
+		},
+		{
+			"title": "Defeat More Snow Bandits",
+			"questDetails": "Defeat (5+13) - 9 snow bandits for me",
+			"category": "Counting",
+			"answer": 8
+		},
+		{
+			"title": "Defeat Even More Snow Bandits",
+			"questDetails": "Defeat 30-22 snow bandits for me",
+			"category": "Counting",
+			"answer": 8
+		},
+		{
+			"title": "Defeat Snow Bandits",
+			"questDetails": "Can you defeat 2 X 3 Bandits for me",
+			"category": "Counting",
+			"answer": 6
+		},
+		{
+			"title": "Defeat Snow Bandits",
+			"questDetails": "Can you defeat 16 / 8 Bandits for me",
+			"category": "Counting",
+			"answer": 2
+		},
+		{
+			"title": "Defeat Snow Bandits",
+			"questDetails": "Can you defeat 3 X 3 Bandits for me",
+			"category": "Counting",
+			"answer": 9
+		},
+		{
+			"title": "Defeat Snow Bandits",
+			"questDetails": "Can you defeat 12 / 4 Bandits for me",
+			"category": "Counting",
+			"answer": 3
+		},
+		{
+			"title": "Defeat Snow Bandits",
+			"questDetails": "Can you defeat 4 X 1 Bandits for me?",
+			"category": "Counting",
+			"answer": 4
+		},
+		{
+			"title": "Stolen Firewood",
+			"questDetails": "We use firewood to keep ourselves warm, but some of the snowbandits stole our firewood. There are 4 houses that are missing 3 firewood each, can you retrieve it from the bandits?",
+			"category": "Word",
+			"answer": 12
+		},
+		{
+			"title": "Snow bandits stole my Food!",
+			"questDetails": "Some snow bandits stole food from my family, I, my wife, and my daughter had 2 pieces of food each. Can you retrieve our food from them?",
+			"category": "Word",
+			"answer": 6
+		}
+	]
+}

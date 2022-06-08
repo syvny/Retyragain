@@ -76,8 +76,11 @@ public class Quest : MonoBehaviour
 
     public QuestList myQuestList = new QuestList();
 
+    public string questFileName;
 
     public QuestDataList myQuestDataList = new QuestDataList();
+
+    public bool isSideQuest = false;
 
 
      
@@ -88,7 +91,9 @@ public class Quest : MonoBehaviour
   
     void Start()
     {
-        myQuestList = JsonUtility.FromJson<QuestList>(qList.text);
+        TextAsset newqList = Resources.Load<TextAsset>(questFileName);
+        myQuestList = JsonUtility.FromJson<QuestList>(newqList.text);
+        
         string path = Application.persistentDataPath+"/questProgress.txt";
         
         //get progress from json
@@ -115,22 +120,32 @@ public class Quest : MonoBehaviour
 
         
         Completed = myQuestDataList.qdL[questID - 1].questDataCompleted;
-        
-        Debug.Log("Completed:  "+Completed);
 
+        if(isSideQuest == true){
+            Completed = false;
+            Debug.Log("I AM A SIDE QUEST: " + Completed);
+
+            QuestDeetz qD = loadQuestDetails(myQuestList); 
+            
+            questName = qD.title;
+            questDescription = qD.questDetails;
+            requiredAmount = qD.answer;
+
+            Debug.Log("SIDE QUEST TITLE:" + requiredAmount);
+        }
+            
         // QuestData newQuestData = loadQuestProgress(myQuestDataList);
         // Debug.Log(newQuestData.questDataID + " " + newQuestData.questDataCompleted);
         // Completed = newQuestData.questDataCompleted;
 
-
-        
-
         if(!Completed){
             //put load quest here
             QuestDeetz qD = loadQuestDetails(myQuestList); 
+            
             questName = qD.title;
             questDescription = qD.questDetails;
             requiredAmount = qD.answer;
+            
 
         }
    
@@ -231,7 +246,7 @@ public QuestDeetz loadQuestDetails(QuestList q){
     //get random index from questlist array and load the details of the quest to the variables
     int randKey = Random.Range(0,q.qL.Length);
     QuestDeetz newQ = q.qL[randKey];
-
+    
     return newQ;
 }
 

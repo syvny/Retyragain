@@ -52,9 +52,30 @@ public class BossQuest : MonoBehaviour
     void Start(){
         myQuestDataList = JsonUtility.FromJson<QuestDataList>(qdList.text);
         
-        QuestData newQuestData = loadQuestProgress(myQuestDataList);
-        Debug.Log(newQuestData.questDataID + " " + newQuestData.questDataCompleted);
-        Completed = newQuestData.questDataCompleted;
+        string path = Application.persistentDataPath+"/questProgress.txt";
+        
+        //get progress from json
+        
+        if(File.Exists(path)){
+            string json = File.ReadAllText(path);
+            myQuestDataList = JsonUtility.FromJson<QuestDataList>(json);
+            
+        }else{
+
+            myQuestDataList = JsonUtility.FromJson<QuestDataList>(qdList.text);
+
+            var someString = File.ReadAllText(Application.dataPath + "/Khe Assets/JSON FILES/questProgress.txt");
+            
+            //no file
+            FileStream stream = File.Create(path);
+            stream.Close();
+            File.WriteAllText(path, someString);
+            var check = File.ReadAllText(path);
+            Debug.Log("From path: " + check);
+
+        }
+
+        Completed = myQuestDataList.qdL[questID - 1].questDataCompleted;
 
         
     }
@@ -140,7 +161,7 @@ public void completeQuest(){
         newData.questDataCompleted = Completed;
         saveQuestProgress(myQuestDataList,newData);
         string output = JsonUtility.ToJson(myQuestDataList);
-        File.WriteAllText(Application.dataPath + "/Khe Assets/JSON FILES/questProgress.txt", output);
+        File.WriteAllText(Application.persistentDataPath + "/questProgress.txt", output);
     }
 }
 

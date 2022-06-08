@@ -1,0 +1,40 @@
+{
+	"qL": [
+		{
+			"title": "Defeat Bandits",
+			"questDetails": "Defeat these many bandits for me  <sprite=0><sprite=0><sprite=0>",
+			"category": "Counting",
+			"answer": 3
+		},
+		{
+			"title": "Stolen Vegetables",
+			"questDetails": "2 Bandits each stole 2 vegetables from me! How many bandits do you need to defeat to retrieve them from me?",
+			"category": "Word",
+			"answer": 4
+		},
+		{
+			"title": "Defeat More Bandits",
+			"questDetails": "Defeat these many bandits for me <sprite=0><sprite=0><sprite=0><sprite=0>",
+			"category": "Counting",
+			"answer": 4
+		},
+		{
+			"title": "Defeat Even More Bandits",
+			"questDetails": "Defeat these many bandits for me  <sprite=0><sprite=0><sprite=0><sprite=0><sprite=0>",
+			"category": "Counting",
+			"answer": 5
+		},
+		{
+			"title": "Bandits?",
+			"questDetails": "Can you defeat these many bandits <sprite=0><sprite=0><sprite=0> plus these many skeletons <sprite=0><sprite=0><sprite=0>",
+			"category": "Counting",
+			"answer": 6
+		},
+		{
+			"title": "Soup",
+			"questDetails": "Bandits stole some vegetables from me! I need those vegetables for the soup I'm making. I need to feed 4 people and each person eats 2 vegetables. How many vegetables do I need? Can you retrieve them for me?",
+			"category": "Word",
+			"answer": 8
+		}
+	]
+}

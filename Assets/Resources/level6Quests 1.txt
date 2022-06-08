@@ -1,0 +1,70 @@
+{
+	"qL": [
+		{
+			"title": "Defeat Rock Golems",
+			"questDetails": "Defeat the sum of six and two Rock Golems for me",
+			"category": "Counting",
+			"answer": 8
+		},
+		{
+			"title": "Rocks to Cook",
+			"questDetails": "Rocks from Rock Golems can be used as fuel for stoves! If I can three rocks can cook five fish, how many rocks do I need to cook fifteen fish?",
+			"category": "Word",
+			"answer": 9
+		},
+		{
+			"title": "Defeat More Rock Golems",
+			"questDetails": "Defeat seven subtracted from fifteen Rock Golems for me",
+			"category": "Counting",
+			"answer": 8
+		},
+		{
+			"title": "Defeat Even More Rock Golems",
+			"questDetails": "Defeat three times two Rock Golems for me",
+			"category": "Counting",
+			"answer": 6
+		},
+		{
+			"title": "Defeat Rock Golems",
+			"questDetails": "Can you defeat the quotient of sixteen and four Rock Golems for me?",
+			"category": "Counting",
+			"answer": 4
+		},
+		{
+			"title": "Defeat Rock Golems Again",
+			"questDetails": "Can you defeat a third of nine Rock Golems for me?",
+			"category": "Counting",
+			"answer": 3
+		},
+		{
+			"title": "Defeat Rock Golems",
+			"questDetails": "Can you defeat ((72 / 12) + 9) / 3 Rock Golems for me?",
+			"category": "Counting",
+			"answer": 5
+		},
+		{
+			"title": "Defeat Rock Golems",
+			"questDetails": "Can you defeat ((45 / 9) + 4) - (35 / 7) Rock Golems for me?",
+			"category": "Counting",
+			"answer": 4
+		},
+		{
+			"title": "Defeat Rock Golems",
+			"questDetails": "Defeat (100 + 4 X 3) - (25 X 5 - 25) Rock Golems for me?",
+			"category": "Counting",
+			"answer": 12
+		},
+		{
+			"title": "Sauna Rocks",
+			"questDetails": "We use the rocks from Rock Golems as sauna rocks! If two rocks can give us twelve hours in the sauna, how many rocks do we need for three days?",
+			"category": "Word",
+			"answer": 12
+		},
+		{
+			"title": "Rock to Build",
+			"questDetails": "Rocks from rock golems can be used to build houses! A house has 4 walls and each wall uses 3 1/2 rocks, If I can build 1 house in 2 days how many rocks do I need today? ",
+			"category": "Word",
+			"answer": 7
+		}
+	]
+}

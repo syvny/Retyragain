@@ -1,0 +1,40 @@
+{
+	"qL": [
+		{
+			"title": "Defeat Skeletons",
+			"questDetails": "Defeat these many skeletons for me  <sprite=0><sprite=0><sprite=0>",
+			"category": "Counting",
+			"answer": 3
+		},
+		{
+			"title": "Feed my Dogs",
+			"questDetails": "My 2 dogs love eating skeleton bones and they eat 1 bone a day! Can you get me enough bones to feed them today? How many bones do I need?",
+			"category": "Word",
+			"answer": 2
+		},
+		{
+			"title": "Defeat More Skeletons",
+			"questDetails": "Defeat these many skeletons for me <sprite=0><sprite=0><sprite=0><sprite=0>",
+			"category": "Counting",
+			"answer": 4
+		},
+		{
+			"title": "Defeat Even More Skeletons",
+			"questDetails": "Defeat these many skeletons for me  <sprite=0><sprite=0><sprite=0><sprite=0><sprite=0>",
+			"category": "Counting",
+			"answer": 5
+		},
+		{
+			"title": "Skeletons?",
+			"questDetails": "Can you defeat these many skeletons <sprite=0><sprite=0> plus these many skeletons <sprite=0><sprite=0>",
+			"category": "Counting",
+			"answer": 4
+		},
+		{
+			"title": "Bone Meal",
+			"questDetails": "I have a farmer friend that needs Skeleton bones to make bone meal. Bone Meal is good for plants. He needs 1 bone for a plot of land and he has 3 plots of land. How many bones does he need?",
+			"category": "Word",
+			"answer": 3
+		}
+	]
+}

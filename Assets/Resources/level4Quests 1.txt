@@ -1,0 +1,64 @@
+{
+	"qL": [
+		{
+			"title": "Defeat Desert Skeletons",
+			"questDetails": "Defeat XI - VII Desert Skeletons for me",
+			"category": "Counting",
+			"answer": 4
+		},
+		{
+			"title": "Sickles",
+			"questDetails": "Desert Skeletons use Sickles as weapons but farmers use to harvest wheat! A sickle can harvest 5000 bundles of wheat before breaking, how many sickles do I need to harvest 50000 bundles?",
+			"category": "Word",
+			"answer": 10
+		},
+		{
+			"title": "Defeat More Desert Skeletons",
+			"questDetails": "Defeat XC - LXXX Desert Skeletons for me",
+			"category": "Counting",
+			"answer": 10
+		},
+		{
+			"title": "Defeat Even More Desert Skeletons",
+			"questDetails": "Defeat XL - XXXV Desert Skeletons for me",
+			"category": "Counting",
+			"answer": 5
+		},
+		{
+			"title": "Defeat Desert Skeletons!",
+			"questDetails": "Can you defeat 2^2 Desert Skeletons for me",
+			"category": "Counting",
+			"answer": 4
+		},
+		{
+			"title": "Defeat Desert Skeletons",
+			"questDetails": "Can you defeat 4^2 Desert Skeletons for me?",
+			"category": "Counting",
+			"answer": 16
+		},
+		{
+			"title": "Desert Skeleton Bones",
+			"questDetails": "Desert skeleton bones work great as a firewood substitute and the nights in the desert are dark! My lantern uses 1 1/3 bones to keep lit a night, how many bones do I need for 3 nights?",
+			"category": "Word",
+			"answer": 4
+		},
+		{
+			"title": "Defeat Desert Skeletons",
+			"questDetails": "Can you defeat 2 2/4 + 1 2/4 Desert Skeletons for me?",
+			"category": "Counting",
+			"answer": 4
+		},
+		{
+			"title": "Defeat Desert Skeletons",
+			"questDetails": "Can you defeat 5 3/9 + 2/3 Desert Skeletons for me?",
+			"category": "Counting",
+			"answer": 6
+		},
+		{
+			"title": "Desert skeleton bones",
+			"questDetails": "Desert skeleton bones work great as a firewood substitute and the nights in the desert are cold! Every night I need to use 2 bones to keep warm, how many bones do I need to keep me warm for a week?",
+			"category": "Word",
+			"answer": 14
+		}
+	]
+}
