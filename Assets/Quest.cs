@@ -88,14 +88,39 @@ public class Quest : MonoBehaviour
   
     void Start()
     {
-        //get details from json
         myQuestList = JsonUtility.FromJson<QuestList>(qList.text);
+        string path = Application.persistentDataPath+"/questProgress.txt";
+        
         //get progress from json
-        myQuestDataList = JsonUtility.FromJson<QuestDataList>(qdList.text);
+        
+        if(File.Exists(path)){
+            string json = File.ReadAllText(path);
+            myQuestDataList = JsonUtility.FromJson<QuestDataList>(json);
+            
+        }else{
 
-        QuestData newQuestData = loadQuestProgress(myQuestDataList);
-        Debug.Log(newQuestData.questDataID + " " + newQuestData.questDataCompleted);
-        Completed = newQuestData.questDataCompleted;
+            myQuestDataList = JsonUtility.FromJson<QuestDataList>(qdList.text);
+
+            var someString = File.ReadAllText(Application.dataPath + "/Khe Assets/JSON FILES/questProgress.txt");
+            
+            //no file
+            FileStream stream = File.Create(path);
+            stream.Close();
+            File.WriteAllText(path, someString);
+            var check = File.ReadAllText(path);
+            Debug.Log("From path: " + check);
+
+        }
+        // myQuestDataList = JsonUtility.FromJson<QuestDataList>(qdList.text);
+
+        
+        Completed = myQuestDataList.qdL[questID - 1].questDataCompleted;
+        
+        Debug.Log("Completed:  "+Completed);
+
+        // QuestData newQuestData = loadQuestProgress(myQuestDataList);
+        // Debug.Log(newQuestData.questDataID + " " + newQuestData.questDataCompleted);
+        // Completed = newQuestData.questDataCompleted;
 
 
         
@@ -193,9 +218,11 @@ public void completeQuest(){
         QuestData newData = new QuestData();
         newData.questDataID = questID;
         newData.questDataCompleted = Completed;
+
         saveQuestProgress(myQuestDataList,newData);
+        
         string output = JsonUtility.ToJson(myQuestDataList);
-        File.WriteAllText(Application.dataPath + "/Khe Assets/JSON FILES/questProgress.txt", output);
+        File.WriteAllText(Application.persistentDataPath + "/questProgress.txt", output);
         
     }
 }

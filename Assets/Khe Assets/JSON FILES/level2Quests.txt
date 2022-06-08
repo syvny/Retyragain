@@ -14,7 +14,7 @@
 		},
 		{
 			"title": "Defeat More Bandits",
-			"questDetails": "Defeat these many skeletons for me <sprite=0><sprite=0><sprite=0><sprite=0>",
+			"questDetails": "Defeat these many bandits for me <sprite=0><sprite=0><sprite=0><sprite=0>",
 			"category": "Counting",
 			"answer": 4
 		},

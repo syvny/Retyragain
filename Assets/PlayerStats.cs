@@ -6,15 +6,11 @@ public class PlayerStats : MonoBehaviour
 {
     // Start is called before the first frame update
 
-
-    
-
-
     //leveling
     public int level = 1;
 
     public static int experience = 0;
-    public int maxExperience = 1000; //level threshold
+    int maxExperience = 1000; //level threshold
     
 
     //Stats
@@ -26,7 +22,7 @@ public class PlayerStats : MonoBehaviour
 
 
     //Damage increases as player levels up
-    public static int damage = 25;
+    public static int damage = 5;
 
     //Potions
 
@@ -54,7 +50,7 @@ public class PlayerStats : MonoBehaviour
     public static bool playerOnQuest = false;
     void Start()
     {
-        damage = damage * level;
+        damage = damage + (level * 20);
         animator = GetComponent<Animator>();
     }
 
@@ -91,13 +87,9 @@ public class PlayerStats : MonoBehaviour
 
         if(experience>=maxExperience){
             level++;
-            experience = experience - maxExperience;
-        }
-        if(experience<=maxExperience){
             experience = 0;
         }
-
-     
+    
 
     }
 

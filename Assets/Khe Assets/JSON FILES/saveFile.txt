@@ -1,0 +1,1 @@
+{"playerHealth":100,"playerMaxHealth":100,"playerMana":20,"playerMaxMana":100,"playerLevel":1,"playerExperience":0,"playerHpPotions":0,"playerMpPotions":0}
