@@ -135,12 +135,6 @@ public class PlayerController : MonoBehaviour
         }
         manapotionCooldown-=Time.deltaTime;
         
-
-
-       
-
-
-        
            
             Movement();
         
@@ -236,10 +230,14 @@ public class PlayerController : MonoBehaviour
         transform.position = playerRespawnPosition.transform.position;
         isDead =false;
       
-        //experience penalty
+        
         playerStats.health = playerStats.maxHealth;
         playerStats.mana = playerStats.maxMana;
-        PlayerStats.experience-=10;
+
+        //you lose some health potions when you die
+        playerStats.healthPotions -= 2;
+        playerStats.manaPotions -= 2;
+
         animator.ResetTrigger("DEAD");
         animator.SetBool("IDLE",true);
         respawnPanel.SetActive(false);

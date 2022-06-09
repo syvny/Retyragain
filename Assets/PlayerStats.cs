@@ -80,13 +80,23 @@ public class PlayerStats : MonoBehaviour
             healthPotions=maxPotions;
 
         }
+        if(healthPotions<=0){
+            healthPotions = 0;
+        }
 
         if(manaPotions>=maxPotions){
             manaPotions=maxPotions;
         }
 
+        if(manaPotions<=0){
+            manaPotions = 0;
+        }
+
         if(experience>=maxExperience){
             level++;
+            experience = 0;
+        }
+        if(experience<=0){
             experience = 0;
         }
     

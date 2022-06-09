@@ -15,11 +15,11 @@ E:/unity projects/Retyragain
 -logFile
 Logs/AssetImportWorker0.log
 -srvPort
-50182
+50368
 Successfully changed project path to: E:/unity projects/Retyragain
 E:/unity projects/Retyragain
 Using Asset Import Pipeline V2.
-Refreshing native plugins compatible for Editor in 1105.92 ms, found 5 plugins.
+Refreshing native plugins compatible for Editor in 208.86 ms, found 5 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Initialize engine version: 2020.3.12f1 (b3b2c6512326)
 [Subsystems] Discovering subsystems at path D:/UnityEditors/2020.3.12f1/Editor/Data/Resources/UnitySubsystems
@@ -35,18 +35,176 @@ Initialize mono
 Mono path[0] = 'D:/UnityEditors/2020.3.12f1/Editor/Data/Managed'
 Mono path[1] = 'D:/UnityEditors/2020.3.12f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit'
 Mono config path = 'D:/UnityEditors/2020.3.12f1/Editor/Data/MonoBleedingEdge/etc'
-Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56340
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56376
 Begin MonoManager ReloadAssembly
 Registering precompiled unity dll's ...
 Register platform support module: D:/UnityEditors/2020.3.12f1/Editor/Data/PlaybackEngines/WebGLSupport/UnityEditor.WebGL.Extensions.dll
 Register platform support module: D:/UnityEditors/2020.3.12f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
-Registered in 0.040513 seconds.
+Registered in 0.001331 seconds.
 Native extension for WindowsStandalone target not found
 Native extension for WebGL target not found
-Refreshing native plugins compatible for Editor in 160.51 ms, found 5 plugins.
+Refreshing native plugins compatible for Editor in 151.31 ms, found 5 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Mono: successfully reloaded assembly
-- Completed reload, in 10.251 seconds
+- Completed reload, in  1.580 seconds
 Platform modules already initialized, skipping
 Registering precompiled user dll's ...
-Registered in 0.819197 seconds.
+Registered in 0.004483 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 2.34 ms, found 5 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.350 seconds
+Platform modules already initialized, skipping
+========================================================================
+Worker process is ready to serve import requests
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.06 seconds
+Refreshing native plugins compatible for Editor in 1.85 ms, found 5 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1632 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 96.2 MB.
+System memory in use after: 96.3 MB.
+
+Unloading 25 unused Assets to reduce memory usage. Loaded Objects now: 2078.
+Total: 1.961900 ms (FindLiveObjects: 0.163300 ms CreateObjectMapping: 0.069700 ms MarkObjects: 1.647500 ms  DeleteObjects: 0.080100 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Import Request.
+  path: Assets/Scenes/Level 4 Mage.unity
+  artifactKey: Guid(3b2eca8e7cb78714994e2930194b5a3f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/Level 4 Mage.unity using Guid(3b2eca8e7cb78714994e2930194b5a3f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'dfac4dd4a3724bdb9cdf8bfeb388c62a') in 0.059214 seconds 
+  Import took 0.062534 seconds .
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.005337 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 2.29 ms, found 5 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.875 seconds
+Platform modules already initialized, skipping
+Switching build target platform(19) subTarget(0) extendedPlatform(0) -> platform(13) subTarget(65536) extendedPlatform(0)
+Refreshing native plugins compatible for Editor in 1.62 ms, found 5 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1608 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 93.6 MB.
+System memory in use after: 93.7 MB.
+
+Unloading 20 unused Assets to reduce memory usage. Loaded Objects now: 2081.
+Total: 1.928100 ms (FindLiveObjects: 0.143100 ms CreateObjectMapping: 0.054100 ms MarkObjects: 1.712500 ms  DeleteObjects: 0.017400 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:graphics/normal-map-encoding: 01000000000000000000000000000000 -> 02000000000000000000000000000000
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Import Request.
+  Time since last request: 180.475386 seconds.
+  path: Assets/Scenes/Level 4 Mage.unity
+  artifactKey: Guid(3b2eca8e7cb78714994e2930194b5a3f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/Level 4 Mage.unity using Guid(3b2eca8e7cb78714994e2930194b5a3f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '91f84540371b5560e95efe7fff8d96a0') in 0.013227 seconds 
+  Import took 0.046723 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 1.048610 seconds.
+  path: Assets/Scenes/Level 4 Warrior.unity
+  artifactKey: Guid(f78e6ab5fa5f2e94dbba57cf874d4da7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/Level 4 Warrior.unity using Guid(f78e6ab5fa5f2e94dbba57cf874d4da7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4036bfb3111fce81e02a2e2a29ae3e73') in 0.020264 seconds 
+  Import took 0.023986 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 47.895783 seconds.
+  path: Assets/Scenes/Level 4 Warrior.unity
+  artifactKey: Guid(f78e6ab5fa5f2e94dbba57cf874d4da7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/Level 4 Warrior.unity using Guid(f78e6ab5fa5f2e94dbba57cf874d4da7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8335c1d44dbaf9238e581655058e972e') in 0.003051 seconds 
+  Import took 0.007249 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 102.054003 seconds.
+  path: Assets/Scenes/Level 5 Mage.unity
+  artifactKey: Guid(c9034c9f7ef06ff43b1961df17a62b88) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/Level 5 Mage.unity using Guid(c9034c9f7ef06ff43b1961df17a62b88) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f33d6a758a3427d90e7c5552fb12f7c2') in 0.031270 seconds 
+  Import took 0.106010 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 82.704855 seconds.
+  path: Assets/Scenes/Level 5 Warrior.unity
+  artifactKey: Guid(93b379d6b231a67408dd9b203eb149aa) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/Level 5 Warrior.unity using Guid(93b379d6b231a67408dd9b203eb149aa) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c25934b390ba6a4b3ff75b3af27706e5') in 0.047840 seconds 
+  Import took 0.051160 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 2.724413 seconds.
+  path: Assets/Scenes/Level 5 Mage.unity
+  artifactKey: Guid(c9034c9f7ef06ff43b1961df17a62b88) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/Level 5 Mage.unity using Guid(c9034c9f7ef06ff43b1961df17a62b88) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '464cc6c1988f0e409791536d0b069863') in 0.010066 seconds 
+  Import took 0.046308 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 119.106194 seconds.
+  path: Assets/Scenes/Level 4 Warrior.unity
+  artifactKey: Guid(f78e6ab5fa5f2e94dbba57cf874d4da7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/Level 4 Warrior.unity using Guid(f78e6ab5fa5f2e94dbba57cf874d4da7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e20cc66364a1db1e448b63b8ed24ce98') in 0.004742 seconds 
+  Import took 0.010831 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 28.484920 seconds.
+  path: Assets/Scenes/Level 6 Mage.unity
+  artifactKey: Guid(59e9fa1f9f625bb468023a36266b8696) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/Level 6 Mage.unity using Guid(59e9fa1f9f625bb468023a36266b8696) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '90a35aa35091de9c7010932986cbbefd') in 0.016726 seconds 
+  Import took 0.020220 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 121.155328 seconds.
+  path: Assets/Scenes/Level 6 Warrior.unity
+  artifactKey: Guid(4bf04aa1c72676b408ff43036201b18f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/Level 6 Warrior.unity using Guid(4bf04aa1c72676b408ff43036201b18f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a2c1e4552870f382f1c859205ed68e0a') in 0.009942 seconds 
+  Import took 0.028201 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 87.979932 seconds.
+  path: Assets/Scenes/Level 6 Mage.unity
+  artifactKey: Guid(59e9fa1f9f625bb468023a36266b8696) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/Level 6 Mage.unity using Guid(59e9fa1f9f625bb468023a36266b8696) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e1cb18136a933e066cb78634d50953f7') in 0.002371 seconds 
+  Import took 0.007063 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 75.760215 seconds.
+  path: Assets/Scenes/CheatBuild/Level 2 Mage Cheat.unity
+  artifactKey: Guid(b903ad5745cad5147ac03bf1800758d8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/CheatBuild/Level 2 Mage Cheat.unity using Guid(b903ad5745cad5147ac03bf1800758d8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd5661bc150f8808be4c6462d6250c163') in 0.010832 seconds 
+  Import took 0.040616 seconds .
+

@@ -13,6 +13,7 @@ public class camController : MonoBehaviour
 
     void Start()
     {
+        Screen.SetResolution(1280, 720, true);
         target = GameObject.FindGameObjectWithTag("Player");
     }
 
