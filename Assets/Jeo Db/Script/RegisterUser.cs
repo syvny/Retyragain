@@ -16,6 +16,7 @@ public class RegisterUser : MonoBehaviour
             if ((username.text != "" && password.text != "") && password1.text != ""){
                     if (password.text == password1.text){
                         StartCoroutine(Main.Instance.Web.RegisterUser(username.text, password.text));
+                        
                     }
                     else{
                         Debug.Log("Password doesnt match");

@@ -113,8 +113,7 @@ public class Quest : MonoBehaviour
             FileStream stream = File.Create(path);
             stream.Close();
             File.WriteAllText(path, someString);
-            var check = File.ReadAllText(path);
-            Debug.Log("From path: " + check);
+            
 
         }
         // myQuestDataList = JsonUtility.FromJson<QuestDataList>(qdList.text);
