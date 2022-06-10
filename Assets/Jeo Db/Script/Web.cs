@@ -4,6 +4,10 @@ using UnityEngine;
 using UnityEngine.Networking;
 using UnityEngine.SceneManagement;
 using System.Text.RegularExpressions;
+using System.IO;
+using System.Runtime.Serialization.Formatters.Binary;
+using progManager;
+using QuestBase;
 
 public class Web : MonoBehaviour
 {
@@ -87,6 +91,10 @@ public class Web : MonoBehaviour
             if (www.downloadHandler.text == "Login Success.")
             {
                 Debug.Log(www.downloadHandler.text);  
+                PlayerPrefs.SetString("username", username);
+                PlayerPrefs.SetString("password", password);
+
+                Debug.Log("USERNAME: " + PlayerPrefs.GetString("username") + "PASSWORD: " + PlayerPrefs.GetString("password"));
                 SceneManager.LoadScene("HomeScreen");
 
 
@@ -183,5 +191,141 @@ public class Web : MonoBehaviour
         }
     }
 
+
+
+    //KHE
+    public IEnumerator sendSaves(){
+
+        string savePath =  Application.persistentDataPath + "/saveFile.txt";
+
+        BinaryFormatter formatter = new BinaryFormatter();
+        FileStream stream = new FileStream(savePath, FileMode.Open);
+
+        PlayerData loadedPlayerData = formatter.Deserialize(stream) as PlayerData;
+
+        var saveString = JsonUtility.ToJson(loadedPlayerData);
+        
+
+        stream.Close();
+
+        string questPath = Application.persistentDataPath + "/questProgress.txt";
+
+        var questString = File.ReadAllText(questPath);
+
+        Debug.Log(saveString);
+        Debug.Log(questString);
+
+
+        string testPass = PlayerPrefs.GetString("password");
+        string testUser = PlayerPrefs.GetString("username");
+
+        WWWForm Saves = new WWWForm();
+        Saves.AddField("saveFile", saveString);
+        Saves.AddField("questFile", questString);
+        Saves.AddField("username", testUser);
+        Saves.AddField("password", testPass);
+        
+        using (UnityWebRequest www = UnityWebRequest.Post("http://localhost/Reschool/sendSaves.php", Saves))
+        {
+            yield return www.SendWebRequest();
+
+            if (www.downloadHandler.text == "Success")
+            {
+                Debug.Log(www.downloadHandler.text);  
+               
+
+            }
+            else
+            {
+                Debug.Log(www.downloadHandler.text);
+                //SceneManager.LoadScene("HomeScreen");
+                 //StartCoroutine(Leaderboard());
+            }
+        }
+    }
+
+    public IEnumerator retrieveSaveFile(){
+
+        string username = PlayerPrefs.GetString("username");
+        string password = PlayerPrefs.GetString("password");
+
+        WWWForm Saves = new WWWForm();
+        Saves.AddField("username", username);
+        Saves.AddField("password", password);
+
+        using (UnityWebRequest www = UnityWebRequest.Post("http://localhost/Reschool/retrieveSaveFile.php", Saves))
+        {
+            yield return www.SendWebRequest();
+
+            if (www.downloadHandler.text != null)
+            {
+                Debug.Log(www.downloadHandler.text);  
+
+
+                BinaryFormatter formatter = new BinaryFormatter();
+                string path = Application.persistentDataPath + "/saveFile.txt";
+                FileStream stream = new FileStream(path, FileMode.Create);
+
+                if(File.Exists(path)){
+                    //overwrite/create on path
+                    PlayerData playerData = new PlayerData();
+                    playerData = JsonUtility.FromJson<PlayerData>(www.downloadHandler.text);
+                    Debug.Log(playerData.playerHealth);
+
+                    formatter.Serialize(stream, playerData);
+                    stream.Close();
+                }
+                else{
+                    Debug.Log("File not found");
+                }
+               
+            }
+            else
+            {
+                Debug.Log(www.downloadHandler.text);
+                //SceneManager.LoadScene("HomeScreen");
+                 //StartCoroutine(Leaderboard());
+            }
+        }
+
+
+    }
+
+    public IEnumerator retrieveQuestFile(){
+        string username = PlayerPrefs.GetString("username");
+        string password = PlayerPrefs.GetString("password");
+
+        WWWForm Saves = new WWWForm();
+        Saves.AddField("username", username);
+        Saves.AddField("password", password);
+
+        using (UnityWebRequest www = UnityWebRequest.Post("http://localhost/Reschool/retrieveQuestFile.php", Saves))
+        {
+            yield return www.SendWebRequest();
+
+            if (www.downloadHandler.text != null)
+            {
+                Debug.Log(www.downloadHandler.text);  
+
+                string path = Application.persistentDataPath+"/questProgress.txt";
+
+                if(File.Exists(path)){
+                    //Overwrite
+                    File.WriteAllText(path, www.downloadHandler.text);
+                }
+                else{
+
+                    Debug.Log("No Quest FIle Found");
+                }
+               
+            }
+            else
+            {
+                Debug.Log(www.downloadHandler.text);
+                //SceneManager.LoadScene("HomeScreen");
+                 //StartCoroutine(Leaderboard());
+            }
+        }
+    }
     
 }

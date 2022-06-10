@@ -3,6 +3,25 @@ using System.Collections.Generic;
 using UnityEngine;
 using System.IO;
 using System.Runtime.Serialization.Formatters.Binary;
+using progManager;
+
+namespace progManager{
+    
+    [System.Serializable]
+    public class PlayerData{
+
+        public int playerHealth;
+        public int playerMaxHealth;
+        public int playerMana;
+        public int playerMaxMana;
+        public int playerLevel;
+        public int playerExperience;
+
+        public int playerHpPotions;
+        public int playerMpPotions;
+
+    }
+}
 
 public class progressManager : MonoBehaviour
 {
@@ -31,25 +50,8 @@ public class progressManager : MonoBehaviour
     {
         
     }
+    
 
-    [System.Serializable]
-    public class PlayerData{
-
-        
-        public int playerHealth;
-        public int playerMaxHealth;
-        public int playerMana;
-        public int playerMaxMana;
-        public int playerLevel;
-        public int playerExperience;
-
-        public int playerHpPotions;
-        public int playerMpPotions;
-
-        
-    }
-
-   
    public void saveGame(){
 
        BinaryFormatter formatter = new BinaryFormatter();

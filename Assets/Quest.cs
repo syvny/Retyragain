@@ -91,6 +91,7 @@ public class Quest : MonoBehaviour
   
     void Start()
     {
+        
         TextAsset newqList = Resources.Load<TextAsset>(questFileName);
         myQuestList = JsonUtility.FromJson<QuestList>(newqList.text);
         
@@ -123,15 +124,14 @@ public class Quest : MonoBehaviour
 
         if(isSideQuest == true){
             Completed = false;
-            Debug.Log("I AM A SIDE QUEST: " + Completed);
-
+            
             QuestDeetz qD = loadQuestDetails(myQuestList); 
             
             questName = qD.title;
             questDescription = qD.questDetails;
             requiredAmount = qD.answer;
 
-            Debug.Log("SIDE QUEST TITLE:" + requiredAmount);
+            
         }
             
         // QuestData newQuestData = loadQuestProgress(myQuestDataList);
