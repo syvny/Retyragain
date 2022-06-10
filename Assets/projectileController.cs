@@ -10,6 +10,7 @@ public class projectileController : MonoBehaviour
     public Rigidbody rigidbody;
     public GameObject dustCloud;
     
+    
     void Start()
     {
         
@@ -19,13 +20,20 @@ public class projectileController : MonoBehaviour
     void Update()
     {
         rigidbody.AddForce(rigidbody.transform.forward * 8, ForceMode.Acceleration);
+        PlayerController.attacking = true;
     }
 
     void OnCollisionEnter(Collision other){
+
+       
+
         var dc = (GameObject) Instantiate(dustCloud,gameObject.transform.position,gameObject.transform.rotation);
+
+        
 
         Destroy(gameObject);
         
 
     }
+
 }

@@ -36,6 +36,10 @@ public class mageAbilities : MonoBehaviour
 
     //particle effects
     public ParticleSystem burst;
+
+    //SFX
+    public AudioSource fireballSound;
+    public AudioSource snowballSound;
     
 
     //position
@@ -159,5 +163,13 @@ public class mageAbilities : MonoBehaviour
 
     public void playBurst(){
         burst.Play();
+    }
+
+    public void playFireballSound(){
+        fireballSound.Play();
+    }
+
+    public void playSnowballSound(){
+        snowballSound.Play();
     }
 }

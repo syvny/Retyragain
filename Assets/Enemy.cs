@@ -54,6 +54,8 @@ public class Enemy : MonoBehaviour
    public GameObject nearestSpawner;
 
    public GameObject dustCloud;
+
+   bool gotHit = false;
     
     // Start is called before the first frame update
 
@@ -99,7 +101,9 @@ public class Enemy : MonoBehaviour
 
         //Check range from player
         float distance = Vector3.Distance(transform.position, player.position);
-
+        if(gotHit){
+            chasePlayer();
+        }
         if(distance<=sightRange){
             //chase player
             //moving
@@ -118,8 +122,11 @@ public class Enemy : MonoBehaviour
             //go back or stop
             //disable navmesh agent to stop set destination
             
-            animator.SetBool("RUNNING", false);
-            animator.SetBool("IDLE", true);
+            if(!gotHit){
+                animator.SetBool("RUNNING", false);
+                animator.SetBool("IDLE", true);
+            }
+            
         }
 
        }
@@ -149,11 +156,12 @@ public class Enemy : MonoBehaviour
         Quaternion lookRotation = Quaternion.LookRotation(new Vector3(direction.x,0,direction.z));
         transform.rotation = lookRotation;
     }
+
     void OnCollisionEnter(Collision other){
         if(other.gameObject.tag == "playerAttack" && PlayerController.attacking == true){
             Debug.Log("Hit");
-          
-           
+            
+           gotHit = true;
             animator.SetTrigger("Get hit");
             health -= PlayerStats.damage;
            
@@ -167,7 +175,10 @@ public class Enemy : MonoBehaviour
 
             animator.SetTrigger("Get hit");
             health -= PlayerStats.damage;
+            chasePlayer();
         }
+
+        
 
     }
 
@@ -177,7 +188,7 @@ public class Enemy : MonoBehaviour
         if(other.tag == "playerAttack" && PlayerController.attacking == true){
             Debug.Log("Hit");
           
-           
+            gotHit = true;
             animator.SetTrigger("Get hit");
             //double damage
             health -= PlayerStats.damage * 2;
