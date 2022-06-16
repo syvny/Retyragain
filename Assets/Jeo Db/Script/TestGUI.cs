@@ -27,10 +27,16 @@ public class TestGUI : MonoBehaviour {
 
     public void WarriorClass(){
          HeroClass = "Warrior";
+         if (HeroClass != ""){ 
+                    StartCoroutine(Main.Instance.Web.UpdateHeroClass(HeroClass));
+                }
     }
 
     public void MageClass(){
          HeroClass = "Mage";
+         if (HeroClass != ""){ 
+                    StartCoroutine(Main.Instance.Web.UpdateHeroClass(HeroClass));
+                }
     }
 
     // Update is called once per frame

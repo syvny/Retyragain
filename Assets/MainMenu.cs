@@ -26,11 +26,11 @@ public class MainMenu : MonoBehaviour
   }
 
   public void CreateWarrior(){
-      SceneManager.LoadScene("Level 1 Warrior Cheat");
+      SceneManager.LoadScene("Level 1 Warrior");
   }
 
   public void CreateMage(){
-      SceneManager.LoadScene("Level 1 Mage Cheat");
+      SceneManager.LoadScene("Level 1 Mage");
 
   }
 

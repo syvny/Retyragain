@@ -20,9 +20,12 @@ public class PlayerStats : MonoBehaviour
     public int mana = 100;
     public int maxMana = 100;
 
+    int baseHealthAndMana = 100;
+
 
     //Damage increases as player levels up
     public static int damage = 5;
+    int baseDamage = 5;
 
     //Potions
 
@@ -50,13 +53,17 @@ public class PlayerStats : MonoBehaviour
     public static bool playerOnQuest = false;
     void Start()
     {
-        damage = damage + (level * 20);
+        
         animator = GetComponent<Animator>();
     }
 
     // Update is called once per frame
     void Update()
     {
+        damage = baseDamage +(level * 10);
+        maxHealth = baseHealthAndMana * level;
+        maxMana = baseHealthAndMana * level;
+        
         UpdateStats();
         healthPotionCount.text = healthPotions.ToString();
         manaPotionCount.text = manaPotions.ToString();

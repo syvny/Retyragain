@@ -22,7 +22,7 @@ public class enemyProjectile : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        rigidbody.AddForce(rigidbody.transform.forward * 4);
+        rigidbody.AddForce(rigidbody.transform.forward * 8, ForceMode.Acceleration);
     }
 
     void OnCollisionEnter(Collision other){

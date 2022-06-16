@@ -216,7 +216,7 @@ public class PlayerController : MonoBehaviour
 
     void OnTriggerEnter(Collider other){
         if(other.tag == "Respawn Checkpoint"){
-            Debug.Log("Respawn ");
+            
             playerRespawnPosition = other.transform;
         }   
         if(other.tag == "enemyAttack"){
@@ -237,6 +237,9 @@ public class PlayerController : MonoBehaviour
         //you lose some health potions when you die
         playerStats.healthPotions -= 2;
         playerStats.manaPotions -= 2;
+
+        double expPenalty = PlayerStats.experience * .1;
+        PlayerStats.experience -= (int) expPenalty;
 
         animator.ResetTrigger("DEAD");
         animator.SetBool("IDLE",true);

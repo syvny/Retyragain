@@ -10,11 +10,17 @@ public class statsHome : MonoBehaviour
     public TMP_Text usernameText;
     public TMP_Text levelText;
     public TMP_Text classText;
+
+    public static bool isNewPlayer = false;
+
+    void Awake(){
+        StartCoroutine(Main.Instance.Web.getClass());
+        StartCoroutine(Main.Instance.Web.getLevel());
+    }
     // Start is called before the first frame update
     void Start()
     {
-        StartCoroutine(Main.Instance.Web.getClass());
-        StartCoroutine(Main.Instance.Web.getLevel());
+        
 
         string first = PlayerPrefs.GetString("level");
         string second = PlayerPrefs.GetString("class");
@@ -31,8 +37,15 @@ public class statsHome : MonoBehaviour
     }
 
     public void startGame(){
-        string someString = "Level " + PlayerPrefs.GetString("level") + " " + PlayerPrefs.GetString("class") + " Cheat";
-        SceneManager.LoadScene(someString);
+
+        if(isNewPlayer == true){
+            
+            SceneManager.LoadScene("Opening Scene");
+        }else{
+            string someString = "Level " + PlayerPrefs.GetString("level") + " " + PlayerPrefs.GetString("class");
+            SceneManager.LoadScene(someString);
+        }
+        
     }
 
 }

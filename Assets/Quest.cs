@@ -48,6 +48,7 @@ public class Quest : MonoBehaviour
 
     //Quest Object -- Enemy
     public Enemy questObject;
+    public rangedEnemy rangedQuestObject;
     public int questID = 1;
 
     //Reward
@@ -184,7 +185,7 @@ public class Quest : MonoBehaviour
 
                  //Listen to quest needs, kill skeleton
 
-              if(PlayerController.hasKilled == questObject.enemyID){
+              if(PlayerController.hasKilled == questObject.enemyID || PlayerController.hasKilled == rangedQuestObject.enemyID){
                  currentAmount++;
                 //revert to zero
     

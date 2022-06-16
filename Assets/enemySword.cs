@@ -35,4 +35,11 @@ public class enemySword : MonoBehaviour
             
         }
     }
+
+    void OnTriggerEnter(Collider other){
+        if(other.gameObject.tag == "Player"){
+            playerStats.takeDamage(wielder.damage);
+            Debug.Log("Player got hit");
+        }
+    }
 }

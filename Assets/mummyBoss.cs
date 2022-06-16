@@ -198,7 +198,7 @@ public class mummyBoss : MonoBehaviour
   
 
         }
-        if(health==maxhealth/2 && hasSummoned == false){
+        if(health<=maxhealth/2 && hasSummoned == false){
             animator.SetTrigger("SUMMON");
             hasSummoned = true;
         }

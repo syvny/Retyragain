@@ -9,6 +9,8 @@ public class RegisterUser : MonoBehaviour
     public InputField password;
     public InputField password1;
     public Button SubmitBtn;
+    public GameObject notMatchingPasswords;
+    
     // Start is called before the first frame update
     void Start()
     {
@@ -20,6 +22,7 @@ public class RegisterUser : MonoBehaviour
                     }
                     else{
                         Debug.Log("Password doesnt match");
+                        notMatchingPasswords.SetActive(true);
                     }
             }
      

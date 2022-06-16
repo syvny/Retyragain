@@ -8,7 +8,7 @@
 		},
 		{
 			"title": "Stolen Vegetables",
-			"questDetails": "2 Bandits each stole 2 vegetables from me! How many bandits do you need to defeat to retrieve them from me?",
+			"questDetails": "I used to have 8 vegetables, now I only have 4 left after some bandits stole from me! How many bandits do you need to defeat to retrieve my stolen vegetables for me?",
 			"category": "Word",
 			"answer": 4
 		},

@@ -9,7 +9,10 @@ public class cutsceneLoader : MonoBehaviour
     void Start()
     {
         //We have to get the class first
-        SceneManager.LoadScene("Level 1 Warrior Cheat");
+
+        string lev = PlayerPrefs.GetString("level");
+        string cla = PlayerPrefs.GetString("class");
+        SceneManager.LoadScene("Level "+ lev + " " + cla);
     }
 
     // Update is called once per frame

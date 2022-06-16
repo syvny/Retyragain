@@ -72,7 +72,8 @@ public class progressManager : MonoBehaviour
         formatter.Serialize(stream, playerData);
         stream.Close();
 
-        
+        PlayerPrefs.SetInt("trueLevel", playerStats.level);
+        PlayerPrefs.SetInt("experience", PlayerStats.experience);
 
         
 
@@ -118,6 +119,8 @@ public class progressManager : MonoBehaviour
        //load quest data in quest objects?
        
    }
+
+   
 
     void OnApplicationQuit(){
         saveGame();

@@ -14,6 +14,7 @@ public class Web : MonoBehaviour
     ArrayList strings = new ArrayList();
     public GameObject userInfoContainer;
     public GameObject userInfoTemplate;
+    
     void Start()
     {
         // A correct website page.
@@ -95,6 +96,7 @@ public class Web : MonoBehaviour
                 PlayerPrefs.SetString("password", password);
 
                 Debug.Log("USERNAME: " + PlayerPrefs.GetString("username") + "PASSWORD: " + PlayerPrefs.GetString("password"));
+                yield return new WaitForSeconds(3);
                 SceneManager.LoadScene("HomeScreen");
 
 
@@ -102,6 +104,7 @@ public class Web : MonoBehaviour
             else
             {
                 Debug.Log(www.downloadHandler.text);
+                wrongInputPanel.hasWrongPanel =true;
                 //SceneManager.LoadScene("HomeScreen");
                  //StartCoroutine(Leaderboard());
             }
@@ -127,11 +130,15 @@ public class Web : MonoBehaviour
 
                 StartCoroutine(Main.Instance.Web.createFreshSaves());
 
+                
+                statsHome.isNewPlayer = true;
+
                 SceneManager.LoadScene("Class");
             }
             else
             {
                 Debug.Log(www.downloadHandler.text);
+                registerExceptions.registerException = true;
                 
             }
         }
@@ -188,11 +195,13 @@ public class Web : MonoBehaviour
             {
                 Debug.Log(www.error);
                 
+                
             }
             else
             {
                 PlayerPrefs.SetString("class",HeroClass);
                 Debug.Log(www.downloadHandler.text);
+                yield return new WaitForSeconds(3);
                 SceneManager.LoadScene("Main");
                 
             }
@@ -220,8 +229,6 @@ public class Web : MonoBehaviour
 
         var questString = File.ReadAllText(questPath);
 
-        Debug.Log(saveString);
-        Debug.Log(questString);
 
 
         string testPass = PlayerPrefs.GetString("password");
@@ -240,7 +247,7 @@ public class Web : MonoBehaviour
             if (www.downloadHandler.text == "Success")
             {
                 Debug.Log(www.downloadHandler.text);  
-               
+                yield return new WaitForSeconds(3);
 
             }
             else
@@ -278,7 +285,6 @@ public class Web : MonoBehaviour
                     //overwrite/create on path
                     PlayerData playerData = new PlayerData();
                     playerData = JsonUtility.FromJson<PlayerData>(www.downloadHandler.text);
-                    Debug.Log(playerData.playerHealth);
 
                     formatter.Serialize(stream, playerData);
                     stream.Close();
@@ -313,7 +319,7 @@ public class Web : MonoBehaviour
 
             if (www.downloadHandler.text != null)
             {
-                Debug.Log(www.downloadHandler.text);  
+                Debug.Log("QUEST FILE "+ www.downloadHandler.text);  
 
                 string path = Application.persistentDataPath+"/questProgress.txt";
 
@@ -380,6 +386,8 @@ public class Web : MonoBehaviour
         var questString = File.ReadAllText(questPath);
         string testPass = PlayerPrefs.GetString("password");
         string testUser = PlayerPrefs.GetString("username");
+        string lev = PlayerPrefs.GetString("level");
+        string exp = PlayerPrefs.GetString("experience");
 
         Debug.Log(saveString);
         Debug.Log(questString);
@@ -389,6 +397,8 @@ public class Web : MonoBehaviour
         newSaves.AddField("questFile", questString);
         newSaves.AddField("username", testUser);
         newSaves.AddField("password", testPass);
+        newSaves.AddField("level", lev);
+        newSaves.AddField("experience", exp);
 
         using (UnityWebRequest www = UnityWebRequest.Post("http://localhost/Reschool/sendSaves.php", newSaves))
         {
@@ -454,6 +464,40 @@ public class Web : MonoBehaviour
                 Debug.Log(www.downloadHandler.text);  
 
                 PlayerPrefs.SetString("level", www.downloadHandler.text);
+               
+            }
+            else
+            {
+                Debug.Log(www.downloadHandler.text);
+                //SceneManager.LoadScene("HomeScreen");
+                 //StartCoroutine(Leaderboard());
+            }
+        }
+    }
+
+    public IEnumerator setLevelAndExp(){
+        string username = PlayerPrefs.GetString("username");
+        string password = PlayerPrefs.GetString("password");
+        int level = PlayerPrefs.GetInt("trueLevel");
+        int exp = PlayerPrefs.GetInt("experience");
+
+        WWWForm lneForm = new WWWForm();
+        lneForm.AddField("username", username);
+        lneForm.AddField("password", password);
+        lneForm.AddField("level", level);
+        lneForm.AddField("experience", exp);
+
+        Debug.Log("EXP: " + exp + "LEVEL: " + level);
+
+        using (UnityWebRequest www = UnityWebRequest.Post("http://localhost/Reschool/setLevelAndExp.php", lneForm))
+        {
+            yield return www.SendWebRequest();
+
+            if (www.downloadHandler.text == "Success")
+            {
+                Debug.Log(www.downloadHandler.text);  
+
+                
                
             }
             else

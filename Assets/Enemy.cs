@@ -78,6 +78,7 @@ public class Enemy : MonoBehaviour
     {   
         if(isSlowed){
             agent.enabled=false;
+            gotHit = false;
             slowDuration-=Time.deltaTime;
             //slow attack stops enemy for 5 seconds
         }
@@ -107,6 +108,7 @@ public class Enemy : MonoBehaviour
         if(distance<=sightRange){
             //chase player
             //moving
+            facePlayer();
             chasePlayer();
             
 
@@ -171,11 +173,12 @@ public class Enemy : MonoBehaviour
             Debug.Log("Slowed");
             
             isSlowed=true;
-            slowDuration = 5f;
+            slowDuration = 7f;
+            agent.enabled = false;
 
             animator.SetTrigger("Get hit");
             health -= PlayerStats.damage;
-            chasePlayer();
+            
         }
 
         

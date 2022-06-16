@@ -18,7 +18,7 @@ public class witchAndWizardBoss : MonoBehaviour
     //Sight and Attack Ranges
 
     //Enemy Id
-    public int enemyID = 51;
+    public int enemyID = 15;
    
    //Player
     public Transform player;
@@ -26,8 +26,8 @@ public class witchAndWizardBoss : MonoBehaviour
     
     
     
-    int maxhealth = 1000;
-    public int health = 1000;
+    int maxhealth = 500;
+    public int health = 500;
 
     bool hasSummoned = false;
 
@@ -190,7 +190,7 @@ public class witchAndWizardBoss : MonoBehaviour
   
 
         }
-         if(health==maxhealth/2 && hasSummoned == false){
+         if(health<=maxhealth/2 && hasSummoned == false){
             animator.SetTrigger("SUMMON");
             hasSummoned = true;
         }

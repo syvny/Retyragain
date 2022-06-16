@@ -9,7 +9,7 @@ public class slowArea : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        playerController = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerController>();
     }
 
     // Update is called once per frame
@@ -21,6 +21,7 @@ public class slowArea : MonoBehaviour
     void OnTriggerEnter(Collider other){
         if(other.tag == "Player"){
             playerController.MoveSpeed-=3f;
+            Debug.Log("Slowed");
         }
     }
 
