@@ -42,6 +42,8 @@ public class progressManager : MonoBehaviour
 
         //on Start Load Game
         loadGame();
+        Debug.Log("PLayer Level: " + playerStats.level);
+
         
     }
 

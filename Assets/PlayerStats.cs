@@ -99,15 +99,16 @@ public class PlayerStats : MonoBehaviour
             manaPotions = 0;
         }
 
-        if(experience>=maxExperience){
-            level++;
-            experience = 0;
-        }
         if(experience<=0){
             experience = 0;
         }
     
-
+        if(level != 6){
+            if(experience>=maxExperience){
+            level++;
+            experience = 0;
+        }
+        }
     }
 
 public void takeDamage(int damage){

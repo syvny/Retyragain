@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 using UnityEngine.SceneManagement;
+using System.IO;
 
 public class statsHome : MonoBehaviour
 {
@@ -14,13 +15,14 @@ public class statsHome : MonoBehaviour
     public static bool isNewPlayer = false;
 
     void Awake(){
-        StartCoroutine(Main.Instance.Web.getClass());
-        StartCoroutine(Main.Instance.Web.getLevel());
+        
     }
     // Start is called before the first frame update
     void Start()
     {
-        
+        StartCoroutine(Main.Instance.Web.getClass());
+        StartCoroutine(Main.Instance.Web.getLevel());
+        StartCoroutine(waiter());
 
         string first = PlayerPrefs.GetString("level");
         string second = PlayerPrefs.GetString("class");
@@ -42,9 +44,16 @@ public class statsHome : MonoBehaviour
             
             SceneManager.LoadScene("Opening Scene");
         }else{
+            string savePath = Application.persistentDataPath + "/saveFile.txt";
+            string questPath = Application.persistentDataPath + "/questProgress.txt";
             string someString = "Level " + PlayerPrefs.GetString("level") + " " + PlayerPrefs.GetString("class");
             SceneManager.LoadScene(someString);
         }
+        
+    }
+
+    IEnumerator waiter(){
+        yield return new WaitForSeconds(5);
         
     }
 

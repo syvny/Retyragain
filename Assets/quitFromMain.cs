@@ -26,7 +26,12 @@ public class quitFromMain : MonoBehaviour
             File.Delete(savePath);
             File.Delete(questPath);
         }
+        StartCoroutine(waiter());
         Application.Quit();
         Debug.Log("Quit Game");
+    }
+
+    IEnumerator waiter(){
+        yield return new WaitForSeconds(5);
     }
 }

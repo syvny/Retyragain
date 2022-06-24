@@ -48,7 +48,7 @@ public class sendDataTest : MonoBehaviour
     }
 
     IEnumerator waiter(){
-        yield return new WaitForSeconds(5);
+        yield return new WaitForSeconds(7);
         SceneManager.LoadScene("Main");
     }
 }

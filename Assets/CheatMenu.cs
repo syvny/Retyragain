@@ -61,4 +61,8 @@ public class CheatMenu : MonoBehaviour
         
 
     }
+
+    public void addExp(){
+        PlayerStats.experience += 200;
+    }
 }

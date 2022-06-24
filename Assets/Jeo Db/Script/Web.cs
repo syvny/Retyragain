@@ -91,12 +91,19 @@ public class Web : MonoBehaviour
 
             if (www.downloadHandler.text == "Login Success.")
             {
+                
+                
                 Debug.Log(www.downloadHandler.text);  
                 PlayerPrefs.SetString("username", username);
                 PlayerPrefs.SetString("password", password);
 
+                StartCoroutine(Main.Instance.Web.retrieveQuestFile());
+                StartCoroutine(Main.Instance.Web.retrieveSaveFile());
+                StartCoroutine(Main.Instance.Web.getClass());
+                StartCoroutine(Main.Instance.Web.getLevel());
+
                 Debug.Log("USERNAME: " + PlayerPrefs.GetString("username") + "PASSWORD: " + PlayerPrefs.GetString("password"));
-                yield return new WaitForSeconds(3);
+                yield return new WaitForSeconds(5);
                 SceneManager.LoadScene("HomeScreen");
 
 
@@ -129,6 +136,8 @@ public class Web : MonoBehaviour
                 PlayerPrefs.SetString("level", "1");
 
                 StartCoroutine(Main.Instance.Web.createFreshSaves());
+
+                yield return new WaitForSeconds(5);
 
                 
                 statsHome.isNewPlayer = true;
@@ -328,8 +337,11 @@ public class Web : MonoBehaviour
                     File.WriteAllText(path, www.downloadHandler.text);
                 }
                 else{
-
-                    Debug.Log("No Quest FIle Found");
+                    
+                    FileStream stream = new FileStream(path, FileMode.Create);
+                    File.WriteAllText(path, www.downloadHandler.text);
+                    stream.Close();
+                    Debug.Log("Quest File Written");
                 }
                
             }
